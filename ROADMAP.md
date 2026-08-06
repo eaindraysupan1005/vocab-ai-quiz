@@ -10,8 +10,8 @@ build next, in order.
 - [x] **2. DB schema** — `words`, `user_words`, `quizzes`, `quiz_answers` tables + RLS policies
       written in [`supabase/schema.sql`](supabase/schema.sql) (run manually in the Supabase SQL
       Editor). `@supabase/ssr` client utilities added (`src/lib/supabase/{client,server,middleware}.ts`,
-      root `middleware.ts`) so Server/Client Components and Route Handlers can talk to Supabase
-      with session cookies handled automatically.
+      `src/proxy.ts`) so Server/Client Components and Route Handlers can talk to Supabase with
+      session cookies handled automatically.
 - [x] **3. Word list sourcing** — 833 words in `scripts/words.txt`, enriched via Gemini into
       `scripts/enriched-words.json` (`npm run words:enrich`).
 - [x] **4. Seed script** — [`scripts/seed-words.js`](scripts/seed-words.js) (`npm run words:seed`)
@@ -19,12 +19,13 @@ build next, in order.
       words are live in the `words` table.
 - [x] **5. Auth** — `/login` and `/signup` pages using Server Actions
       (`src/app/{login,signup}/actions.ts`) + Supabase Auth, sign-out action in `src/app/actions.ts`.
-      Route protection lives in `src/lib/supabase/middleware.ts` (redirects unauthenticated visitors
-      to `/login`, redirects logged-in visitors away from `/login`/`/signup`). `src/app/page.tsx` is
-      currently just a placeholder "you're signed in" screen — replaced by step 6 next.
-- [ ] **6. Daily learning page** — show a batch of ~15-20 words (new + due-for-review), checkbox
-      to mark learned per user. Ship this first — usable for real study even before quiz features.
-      Replaces the placeholder home page from step 5.
+      Route protection lives in `src/lib/supabase/middleware.ts` + `src/proxy.ts` (redirects
+      unauthenticated visitors to `/login`, redirects logged-in visitors away from `/login`/`/signup`).
+- [x] **6. Daily learning page** — [`src/app/page.tsx`](src/app/page.tsx) shows a batch of up to 20
+      words (due-for-review first, filled with new words) via
+      [`getDailyBatch`](src/lib/daily-batch.ts); checkbox toggles `user_words` through
+      [`toggleWordLearned`](src/app/word-actions.ts). Uses a fixed "review again tomorrow" interval
+      as a placeholder — step 9 replaces it with real spaced-repetition math.
 - [ ] **7. AI daily quiz** — generate next-day quiz from previously learned words; MCQ/fill-in for
       new words, AI-graded sentence production for repeat words.
 - [ ] **8. Weekly review quiz** — larger quiz across the week, weighted toward previously-wrong

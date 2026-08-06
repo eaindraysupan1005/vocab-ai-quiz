@@ -30,6 +30,7 @@ export interface Database {
           created_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["words"]["Insert"]>;
+        Relationships: [];
       };
       user_words: {
         Row: {
@@ -59,6 +60,7 @@ export interface Database {
           created_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["user_words"]["Insert"]>;
+        Relationships: [];
       };
       quizzes: {
         Row: {
@@ -76,6 +78,7 @@ export interface Database {
           created_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["quizzes"]["Insert"]>;
+        Relationships: [];
       };
       quiz_answers: {
         Row: {
@@ -101,7 +104,12 @@ export interface Database {
           created_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["quiz_answers"]["Insert"]>;
+        Relationships: [];
       };
     };
+    Views: Record<string, never>;
+    Functions: Record<string, never>;
+    Enums: Record<string, never>;
+    CompositeTypes: Record<string, never>;
   };
 }
