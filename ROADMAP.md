@@ -17,10 +17,14 @@ build next, in order.
 - [x] **4. Seed script** — [`scripts/seed-words.js`](scripts/seed-words.js) (`npm run words:seed`)
       upserts `enriched-words.json` into the `words` table via the service_role key. Run — all 833
       words are live in the `words` table.
-- [ ] **5. Auth** — sign up / log in UI with Supabase Auth (client utilities already in place from
-      step 2).
+- [x] **5. Auth** — `/login` and `/signup` pages using Server Actions
+      (`src/app/{login,signup}/actions.ts`) + Supabase Auth, sign-out action in `src/app/actions.ts`.
+      Route protection lives in `src/lib/supabase/middleware.ts` (redirects unauthenticated visitors
+      to `/login`, redirects logged-in visitors away from `/login`/`/signup`). `src/app/page.tsx` is
+      currently just a placeholder "you're signed in" screen — replaced by step 6 next.
 - [ ] **6. Daily learning page** — show a batch of ~15-20 words (new + due-for-review), checkbox
       to mark learned per user. Ship this first — usable for real study even before quiz features.
+      Replaces the placeholder home page from step 5.
 - [ ] **7. AI daily quiz** — generate next-day quiz from previously learned words; MCQ/fill-in for
       new words, AI-graded sentence production for repeat words.
 - [ ] **8. Weekly review quiz** — larger quiz across the week, weighted toward previously-wrong
