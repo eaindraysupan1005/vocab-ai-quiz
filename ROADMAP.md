@@ -12,13 +12,14 @@ build next, in order.
       Editor). `@supabase/ssr` client utilities added (`src/lib/supabase/{client,server,middleware}.ts`,
       `src/proxy.ts`) so Server/Client Components and Route Handlers can talk to Supabase with
       session cookies handled automatically.
-- [x] **3. Word list sourcing** — 833 words in `scripts/words.txt` + 477 more in
+- [x] **3. Word list sourcing** — 769 words in `scripts/words.txt` + 451 more in
       `scripts/words1.txt` (deduped against `words.txt`, proper nouns filtered out), enriched via
       Gemini into `enriched-words.json`/`enriched-words1.json`
       (`WORDS_INPUT_FILE=... WORDS_OUTPUT_FILE=... npm run words:enrich`).
 - [x] **4. Seed script** — [`scripts/seed-words.js`](scripts/seed-words.js) (`npm run words:seed`,
       or `WORDS_JSON_FILE=... npm run words:seed` for a specific file) upserts into the `words`
-      table via the service_role key. Run for both files — **1310 words** are live in the table.
+      table via the service_role key. Run for both files, then pruned all band 4.0/4.5 entries (too
+      basic for an 8.0 target) from the live table and source files — **1220 words** are live.
 - [x] **5. Auth** — `/login` and `/signup` pages using Server Actions
       (`src/app/{login,signup}/actions.ts`) + Supabase Auth, sign-out action in `src/app/actions.ts`.
       Route protection lives in `src/lib/supabase/middleware.ts` + `src/proxy.ts` (redirects

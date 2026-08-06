@@ -2172,18 +2172,6 @@
     ]
   },
   {
-    "word": "to bite",
-    "definition": "To cut or tear with the teeth.",
-    "example_sentence": "He took a small bite of the spicy curry, immediately feeling the heat.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "chew",
-      "gnaw",
-      "munch"
-    ]
-  },
-  {
     "word": "to boil",
     "definition": "To cook food by immersing it in rapidly bubbling hot liquid, usually water.",
     "example_sentence": "To prepare pasta al dente, it's essential to boil it for the correct amount of time, usually indicated on the package.",
@@ -2354,30 +2342,6 @@
     ]
   },
   {
-    "word": "to swallow",
-    "definition": "To cause food or drink to pass down the throat into the stomach.",
-    "example_sentence": "It is important to chew food properly before attempting to swallow it, especially for young children.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "ingest",
-      "gulp",
-      "devour"
-    ]
-  },
-  {
-    "word": "to taste",
-    "definition": "To perceive the flavor of something with the tongue.",
-    "example_sentence": "Before serving, the chef always tastes the sauce to adjust the seasoning as needed.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "savour",
-      "sample",
-      "try"
-    ]
-  },
-  {
     "word": "unflavoured",
     "definition": "Lacking any added flavor; plain.",
     "example_sentence": "Many people prefer unflavoured yogurt as a versatile base for adding their own fruits or honey.",
@@ -2465,18 +2429,6 @@
     ]
   },
   {
-    "word": "ambulance",
-    "definition": "A vehicle specially equipped for taking sick or injured people to and from a hospital in emergencies.",
-    "example_sentence": "In an emergency, it is crucial to call an ambulance immediately to ensure prompt medical attention for the patient.",
-    "topic": "health",
-    "band_level": 4,
-    "synonyms": [
-      "emergency vehicle",
-      "medicar",
-      "rescue vehicle"
-    ]
-  },
-  {
     "word": "antibiotics",
     "definition": "Medicines that inhibit the growth of or destroy microorganisms, used to treat bacterial infections.",
     "example_sentence": "Overuse of antibiotics can lead to drug-resistant bacteria, posing a significant public health challenge worldwide.",
@@ -2511,18 +2463,6 @@
     ]
   },
   {
-    "word": "bruises",
-    "definition": "Discolorations of the skin resulting from bleeding underneath, typically caused by impact or injury.",
-    "example_sentence": "Minor bruises are common during contact sports, but more severe ones might indicate underlying injuries that require medical assessment.",
-    "topic": "health",
-    "band_level": 4.5,
-    "synonyms": [
-      "contusions",
-      "ecchymoses",
-      "black-and-blue marks"
-    ]
-  },
-  {
     "word": "childhood",
     "definition": "The period of human life from birth to puberty, characterized by rapid growth and learning.",
     "example_sentence": "A happy childhood is often considered foundational for a person's emotional and psychological well-being throughout their life.",
@@ -2548,18 +2488,6 @@
     ]
   },
   {
-    "word": "cold",
-    "definition": "A common viral infection of the nose and throat that makes you sneeze and cough and can make you feel unwell.",
-    "example_sentence": "Although a common cold is usually mild, it can still disrupt daily activities and productivity due to its uncomfortable symptoms.",
-    "topic": "health",
-    "band_level": 4,
-    "synonyms": [
-      "common cold",
-      "sniffles",
-      "rhinitis"
-    ]
-  },
-  {
     "word": "contagious",
     "definition": "(Of a disease) spread from one person or organism to another by direct or indirect contact.",
     "example_sentence": "Measles is a highly contagious disease, which is why vaccination is crucial for public health and preventing widespread outbreaks.",
@@ -2570,43 +2498,6 @@
       "transmissible",
       "communicable",
       "catchable"
-    ]
-  },
-  {
-    "word": "cough",
-    "definition": "A sudden, noisy expulsion of air from the lungs, usually caused by irritation in the throat or airways.",
-    "example_sentence": "A persistent cough can be a symptom of various respiratory conditions, warranting medical evaluation to determine the cause.",
-    "topic": "health",
-    "band_level": 4.5,
-    "synonyms": [
-      "hack",
-      "clearing throat",
-      "expectoration"
-    ]
-  },
-  {
-    "word": "cuts",
-    "definition": "Injuries where the skin is broken by a sharp object, often resulting in bleeding.",
-    "example_sentence": "Minor cuts should be cleaned and disinfected promptly to prevent infection and promote proper healing.",
-    "topic": "health",
-    "band_level": 4,
-    "synonyms": [
-      "lacerations",
-      "gashes",
-      "incisions",
-      "wounds"
-    ]
-  },
-  {
-    "word": "dentist",
-    "definition": "A person qualified to treat diseases and conditions that affect the teeth and gums.",
-    "example_sentence": "Regular visits to the dentist are essential for maintaining good oral hygiene and preventing cavities and gum disease.",
-    "topic": "health",
-    "band_level": 4.5,
-    "synonyms": [
-      "dental surgeon",
-      "orthodontist",
-      "periodontist"
     ]
   },
   {
@@ -2631,31 +2522,6 @@
     "synonyms": [
       "high blood sugar",
       "impaired glucose tolerance"
-    ]
-  },
-  {
-    "word": "doctor",
-    "definition": "A person who is qualified to practice medicine, providing medical care and advice.",
-    "example_sentence": "It is advisable to consult a doctor if you experience any unusual or persistent symptoms to get a professional diagnosis.",
-    "topic": "health",
-    "band_level": 4,
-    "synonyms": [
-      "physician",
-      "medical practitioner",
-      "medic",
-      "GP"
-    ]
-  },
-  {
-    "word": "a dose of medicine",
-    "definition": "A specific quantity of a medicine to be taken at one time, as prescribed.",
-    "example_sentence": "The doctor prescribed a specific dose of medicine to be taken three times a day for optimal therapeutic effect.",
-    "topic": "health",
-    "band_level": 4.5,
-    "synonyms": [
-      "dosage",
-      "medical portion",
-      "measured amount"
     ]
   },
   {
@@ -2734,18 +2600,6 @@
     ]
   },
   {
-    "word": "fever",
-    "definition": "An abnormally high body temperature, usually accompanied by shivering, headache, and in severe instances, delirium.",
-    "example_sentence": "Taking a fever reducer can help manage symptoms, but it's important to address the underlying cause of the elevated temperature.",
-    "topic": "health",
-    "band_level": 4.5,
-    "synonyms": [
-      "pyrexia",
-      "high temperature",
-      "hyperthermia"
-    ]
-  },
-  {
     "word": "flu (influenza)",
     "definition": "A common infectious viral disease of the respiratory system characterized by fever, muscular aches, and catarrh.",
     "example_sentence": "Annual flu vaccinations are recommended, especially for vulnerable populations, to prevent severe illness and complications.",
@@ -2803,44 +2657,6 @@
       "myocardial infarction",
       "cardiac arrest",
       "coronary thrombosis"
-    ]
-  },
-  {
-    "word": "a heavy cold",
-    "definition": "A severe or very strong common cold, characterized by pronounced and disruptive symptoms.",
-    "example_sentence": "Despite taking medicine, she still felt unwell due to a heavy cold that kept her home from work for several days.",
-    "topic": "health",
-    "band_level": 4.5,
-    "synonyms": [
-      "bad cold",
-      "severe cold",
-      "nasty cold"
-    ]
-  },
-  {
-    "word": "hospital/health facility",
-    "definition": "An institution providing medical and surgical treatment and nursing care for sick or injured people.",
-    "example_sentence": "Access to well-equipped hospitals and health facilities is a fundamental aspect of a robust and equitable healthcare system.",
-    "topic": "health",
-    "band_level": 4,
-    "synonyms": [
-      "medical center",
-      "clinic",
-      "infirmary",
-      "sanatorium"
-    ]
-  },
-  {
-    "word": "illness",
-    "definition": "A disease or period of sickness affecting the body or mind, causing discomfort or incapacity.",
-    "example_sentence": "Preventative measures are key to reducing the incidence of chronic illness in the population and promoting public health.",
-    "topic": "health",
-    "band_level": 4.5,
-    "synonyms": [
-      "sickness",
-      "disease",
-      "ailment",
-      "malady"
     ]
   },
   {
@@ -2918,19 +2734,6 @@
     ]
   },
   {
-    "word": "medicines",
-    "definition": "Substances used for treating illness or pain, or for preventing disease.",
-    "example_sentence": "It is crucial to follow the prescribed dosage when taking medicines to avoid adverse effects and ensure efficacy.",
-    "topic": "health",
-    "band_level": 4,
-    "synonyms": [
-      "drugs",
-      "pharmaceuticals",
-      "medication",
-      "remedies"
-    ]
-  },
-  {
     "word": "mortality",
     "definition": "The state of being subject to death; the number of deaths in a given time or place.",
     "example_sentence": "Reducing infant mortality rates is a key indicator of a country's progress in public health and social development.",
@@ -2940,18 +2743,6 @@
       "death rate",
       "fatality",
       "demise"
-    ]
-  },
-  {
-    "word": "nurse",
-    "definition": "A person trained to care for the sick or infirm, especially in a hospital or other healthcare setting.",
-    "example_sentence": "Nurses play a critical role in patient care, often providing both medical assistance and emotional support to individuals.",
-    "topic": "health",
-    "band_level": 4,
-    "synonyms": [
-      "caregiver",
-      "medical assistant",
-      "healthcare provider"
     ]
   },
   {
@@ -2991,18 +2782,6 @@
     ]
   },
   {
-    "word": "patients",
-    "definition": "Persons receiving or registered to receive medical treatment, especially in a hospital or from a doctor.",
-    "example_sentence": "Effective communication between doctors and patients is essential for building trust and ensuring adherence to treatment plans.",
-    "topic": "health",
-    "band_level": 4,
-    "synonyms": [
-      "clients",
-      "recipients of care",
-      "sick individuals"
-    ]
-  },
-  {
     "word": "physical development",
     "definition": "The process of growth and change in the human body, including motor skills, height, weight, and physiological functions.",
     "example_sentence": "Adequate nutrition and physical activity are fundamental for healthy physical development in children and adolescents.",
@@ -3012,19 +2791,6 @@
       "bodily growth",
       "physiological development",
       "motor development"
-    ]
-  },
-  {
-    "word": "pill",
-    "definition": "A small round mass of solid medicine for swallowing whole, typically encased in a gelatin coating.",
-    "example_sentence": "Many daily medications are taken in the form of a pill, making them convenient for patients to administer.",
-    "topic": "health",
-    "band_level": 4,
-    "synonyms": [
-      "tablet",
-      "capsule",
-      "lozenge",
-      "medication"
     ]
   },
   {
@@ -3126,17 +2892,6 @@
     ]
   },
   {
-    "word": "a sore throat",
-    "definition": "A condition marked by pain or irritation in the throat, often making swallowing difficult.",
-    "example_sentence": "One of the most common early symptoms of a cold is a persistent sore throat.",
-    "topic": "health",
-    "band_level": 4.5,
-    "synonyms": [
-      "pharyngitis",
-      "raw throat"
-    ]
-  },
-  {
     "word": "(suicidal) depression",
     "definition": "A severe mental health disorder characterized by persistent sadness, loss of interest, and feelings of hopelessness, sometimes accompanied by thoughts of self-harm.",
     "example_sentence": "Public awareness campaigns are vital to help identify and support individuals struggling with suicidal depression.",
@@ -3204,17 +2959,6 @@
     "synonyms": [
       "dental restoration",
       "tooth filling"
-    ]
-  },
-  {
-    "word": "to have your tooth pulled out",
-    "definition": "To undergo a dental procedure where a tooth is extracted from its socket.",
-    "example_sentence": "If a tooth is severely damaged or infected, the only option may be to have your tooth pulled out.",
-    "topic": "health",
-    "band_level": 4.5,
-    "synonyms": [
-      "tooth extraction",
-      "dental extraction"
     ]
   },
   {
@@ -4944,18 +4688,6 @@
     ]
   },
   {
-    "word": "stars",
-    "definition": "Luminous spheres of plasma, held together by their own gravity, that emit light and heat.",
-    "example_sentence": "Astronomers use powerful telescopes to study distant stars and galaxies, revealing the vastness of the cosmos.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "celestial bodies",
-      "luminaries",
-      "suns"
-    ]
-  },
-  {
     "word": "to collide (collision)",
     "definition": "(verb) To strike against each other or crash together with force; (noun) an instance of one moving object striking violently against another.",
     "example_sentence": "If two celestial bodies were to collide, the resulting impact would release an immense amount of energy.",
@@ -5081,19 +4813,6 @@
     ]
   },
   {
-    "word": "artist",
-    "definition": "A person who creates art, such as paintings, sculptures, music, or literature.",
-    "example_sentence": "The artist's latest exhibition challenged conventional notions of beauty and representation.",
-    "topic": "culture",
-    "band_level": 4.5,
-    "synonyms": [
-      "creator",
-      "painter",
-      "sculptor",
-      "practitioner"
-    ]
-  },
-  {
     "word": "artistry",
     "definition": "Creative skill or ability, especially in art.",
     "example_sentence": "The ballet dancer's performance was marked by exceptional artistry and technical precision.",
@@ -5153,18 +4872,6 @@
       "satire",
       "lampoon",
       "distortion"
-    ]
-  },
-  {
-    "word": "cartoon",
-    "definition": "A humorous drawing often with a political or social message, or a motion picture using animation techniques.",
-    "example_sentence": "Many children's cartoons now incorporate educational themes alongside their entertainment value.",
-    "topic": "culture",
-    "band_level": 4.5,
-    "synonyms": [
-      "animated film",
-      "comic strip",
-      "political drawing"
     ]
   },
   {
@@ -5239,31 +4946,6 @@
       "cold hues",
       "cool tones",
       "receding colors"
-    ]
-  },
-  {
-    "word": "crayons",
-    "definition": "A stick of colored wax, charcoal, or chalk, used for drawing or coloring.",
-    "example_sentence": "Young children often start their artistic journey by experimenting with crayons and coloring books.",
-    "topic": "culture",
-    "band_level": 4,
-    "synonyms": [
-      "wax pastels",
-      "color sticks",
-      "drawing sticks"
-    ]
-  },
-  {
-    "word": "drawing",
-    "definition": "The art or technique of producing images on a surface, typically paper, with lines and marks.",
-    "example_sentence": "Life drawing classes help aspiring artists to improve their observational skills and anatomical understanding.",
-    "topic": "culture",
-    "band_level": 4.5,
-    "synonyms": [
-      "sketch",
-      "illustration",
-      "depiction",
-      "rendition"
     ]
   },
   {

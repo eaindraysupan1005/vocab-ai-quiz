@@ -1,4 +1,3 @@
-Curler
 Grasping
 Skull
 Conscientious
@@ -6,7 +5,6 @@ Hate
 Foyer
 Maneuver
 Numerous
-Wonderful
 Bloodbath
 Cruel
 Important
@@ -15,13 +13,11 @@ In the meantime
 Reminiscence
 Obligatory
 Unforeseen
-After
 Intellectual
 Contemporary
 Humble
 Religious
 Impolite
-Second
 Temper
 Immobile
 Mobile
@@ -35,7 +31,6 @@ Passable
 Contented
 Warranty
 Meager
-Almost
 Afraid
 Dull
 Comic
@@ -44,7 +39,6 @@ To renew
 Hint
 Uncared for
 Damage
-Easy
 Transparent
 Moment
 To beat
@@ -53,15 +47,12 @@ Rude
 Deserted
 To denote
 Unmarried
-Cry
 Foxy
 Depraved
 Ability
 Scrumptious
 Mysterious
-Couch
 Vacancy
-Special
 Daybreak
 Trivial
 Naked
@@ -70,8 +61,6 @@ Arise
 Convention
 Uninjured
 Mild
-Earth
-Movie
 Beneficial
 To illustrate
 To hazard
@@ -87,14 +76,10 @@ To narrate
 Possibility
 Abandon
 Contrary
-Famous
 Militant
 Poisonous
-Dirty
-Help
 To intend
 Association
-Continue
 Branch
 Fool
 Particular
@@ -116,17 +101,14 @@ Believable
 Omnipotent
 To imitate
 Belly
-Nice
 Gratis
 Well mannered
 Able
 To glitter
 Ballot
 Formerly
-New
 Precept
 Approve
-Before
 Fanatic
 Precedence
 Yield
@@ -173,11 +155,9 @@ Legitimate
 Mindless
 Destiny
 Touchy
-Loopy
 Imperative
 Business
 Honest
-Napkin
 Disgrace
 Confederate
 To enquire
@@ -187,7 +167,6 @@ Phantasm
 Scarcity
 Delicate
 Dawn
-About
 To hawk
 Constantly
 To overlook
@@ -196,14 +175,11 @@ Merciless
 Bizarre
 Continuous
 Maximum
-Bum
 To mirror
 Commencement
 Dumb
-Usually
 Becoming
 Concord
-Always
 Bashful
 Soiled
 Daring
@@ -211,9 +187,6 @@ To expire
 Insufficient
 Signal
 Foolish
-Candy
-Happily
-Word
 Inflow
 Surroundings
 Tailored
@@ -241,7 +214,6 @@ Sacristy
 Dreadful
 Immoderate
 Cozy
-Garbage can
 Perception
 Hang
 Immediate
@@ -259,7 +231,6 @@ Disadvantaged
 Abundant
 To misconceive
 Denims
-Connect
 Ecstasy
 Magistrate
 Eager
@@ -274,7 +245,6 @@ Touchdown
 Oblique
 To accomplish
 Hashish
-To close
 Defective
 Mischievous
 Dormant
@@ -286,13 +256,11 @@ Isolated
 Missing
 Drab
 Fortunate
-Off
 Mendacity
 Superb
 Leading
 Chiefly
 Aggressive
-Noon
 Misfortune
 Misread
 Deceptive
@@ -300,7 +268,6 @@ Lacking
 Jealous
 Doubt
 Wrong
-Away
 To notify
 Mannequin
 Dicey
@@ -309,7 +276,6 @@ Misery
 Impartial
 To behave
 Bendy
-Extra
 To administer
 Murderer
 To maintain
@@ -336,7 +302,6 @@ Infamous
 Mirth
 Selection
 To quake
-Today
 Self
 Mean
 Contaminate
@@ -379,7 +344,6 @@ Vacant
 Fragrance
 Maybe
 Aid
-Bad (not good)
 Magician
 Unfortunate
 Gravestone
@@ -402,7 +366,6 @@ Early
 Untimely
 Antagonize
 Citation
-Naughty
 Cheesy
 Huge
 Hole
@@ -430,7 +393,6 @@ Immature
 Artful
 Practically
 Conscious
-Crook
 Unvoiced
 Negligent
 To differentiate
@@ -448,17 +410,14 @@ Disagree
 Invoice
 To withstand
 Insupportable
-Meeting
 To convey
 To denationalize
 Abstract
 Attractive
 Illiberal
 To overhaul
-Anyway
 To respond
 Precis
-Dry
 To minimize
 Satisfied
 Vain
@@ -473,17 +432,13 @@ Intriguing
 Moderate
 Minor
 To infect
-To vacuum
 Removable
-Sundown
-Joy
 Encourage
 Class
 To vanquish
 Turmoil
 To transform
 To deprave
-To chop
 To diminish
 To involve
 Constancy
@@ -504,9 +459,7 @@ Nameless
 To confuse
 Overseas
 To deduce
-High
 Convalesce
-Outside
 To renounce
 More and more
 To grouse
@@ -519,12 +472,10 @@ To appear
 Except
 To survive
 Migrant
-Dead
 Notwithstanding
 A native
 To visualize
 Informal
-To begin
 Infuriate
 Animated
 Chorus
@@ -534,9 +485,7 @@ Remorse
 Domesticate
 Steady
 Testament
-If
 Applicable
-Difficult
 Trustworthy
 Mend
 Moral
@@ -555,26 +504,17 @@ Dossier
 Lucid
 Complete
 Diverse
-Backside
-To answer
-Home
 Matters
-Correct
 Brow
 Remainder
-Object
 Hermetic
-To learn
 Considerate
 Urgent
 Inconsiderate
-Silly
 Neat
 To evaluate
 Substantially
 Dangerous
-Hall
-French dressing
 To explode
 To collapse
 To accumulate
@@ -592,7 +532,6 @@ To emphasize
 Innocent
 Undeniable
 Humiliate
-Beautiful
 To impeach
 Bloodless
 Dubious
@@ -602,7 +541,6 @@ Infantile
 To imagine
 Clever
 Deliberately
-Last
 Brave
 Winery
 absolutely
@@ -761,7 +699,6 @@ outcome
 outline
 overall
 overcome
-parent
 participate
 particularly
 perspective
@@ -791,7 +728,6 @@ resign
 resolve
 respectively
 result
-row
 rural
 screen
 secure

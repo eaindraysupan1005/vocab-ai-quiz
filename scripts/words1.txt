@@ -176,7 +176,6 @@ sugary
 syrupy
 to bake
 to be dying of hunger
-to bite
 to boil
 to broil
 to chew
@@ -191,8 +190,6 @@ to roast
 to savour
 to steam
 to stirfry
-to swallow
-to taste
 unflavoured
 vitamins and minerals
 whole grains
@@ -200,52 +197,36 @@ zesty
 ache
 adolescence
 adulthood
-ambulance
 antibiotics
 asthma
 bronchitis
-bruises
 childhood
 chronic
-cold
 contagious
-cough
-cuts
-dentist
 deterioration
 diabetes
-doctor
-a dose of medicine
 emergency
 emotional development
 epidemic
 epidemic breakout
 eye drops
 fatigue
-fever
 flu (influenza)
 food poisoning
 fracture
 health status
 heart attack
-a heavy cold
-hospital/health facility
-illness
 immediate action
 infancy
 insomnia
 life expectancy/life span
 medical checkup (medical screening)
 medical history
-medicines
 mortality
-nurse
 onset of symptoms
 ophthalmologist
 painkiller
-patients
 physical development
-pill
 prenatal
 preventing something
 psychotherapist
@@ -254,14 +235,12 @@ remedy
 researcher
 shot/injection
 social development
-a sore throat
 (suicidal) depression
 surgeon
 surgery
 symptoms
 therapy
 to have a filling
-to have your tooth pulled out
 to make a speedy recovery
 to perform surgery on
 to reach epidemic proportions
@@ -406,7 +385,6 @@ space exploration
 space shuttle
 space station
 spherical
-stars
 to collide (collision)
 to disintegrate
 to smash
@@ -417,21 +395,17 @@ acrylic paint
 aesthetic
 animation
 art gallery
-artist
 artistry
 auction
 calligraphy
 canvas
 caricature
-cartoon
 classicism
 collage
 composition
 contemporary art
 contents
 cool colors
-crayons
-drawing
 elements of art
 embroidery
 emphasis

@@ -1,17 +1,5 @@
 [
   {
-    "word": "Curler",
-    "definition": "A small tube or roller around which a strand of hair is wound to curl it.",
-    "example_sentence": "While a curler is primarily a styling tool, its design reflects principles of material science and ergonomics.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "roller",
-      "hair roller",
-      "styling tool"
-    ]
-  },
-  {
     "word": "Grasping",
     "definition": "Characterized by an extreme desire for material wealth; avaricious.",
     "example_sentence": "The company's grasping tactics, such as exploiting low-wage workers, led to widespread public condemnation.",
@@ -99,19 +87,6 @@
       "copious",
       "abundant",
       "countless"
-    ]
-  },
-  {
-    "word": "Wonderful",
-    "definition": "Inspiring delight, pleasure, or admiration; extremely good.",
-    "example_sentence": "While the initial results were wonderful, further rigorous research is required to confirm the long-term efficacy of the treatment.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "excellent",
-      "superb",
-      "marvelous",
-      "fantastic"
     ]
   },
   {
@@ -217,18 +192,6 @@
     ]
   },
   {
-    "word": "After",
-    "definition": "Following in time or sequence.",
-    "example_sentence": "After the industrial revolution, societies witnessed unprecedented technological advancements and urban growth.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "following",
-      "subsequently",
-      "later"
-    ]
-  },
-  {
     "word": "Intellectual",
     "definition": "Relating to the intellect; appealing to or exercising the mind.",
     "example_sentence": "The debate sparked a rigorous intellectual discussion among academics, exploring various philosophical viewpoints.",
@@ -290,18 +253,6 @@
       "discourteous",
       "uncivil",
       "disrespectful"
-    ]
-  },
-  {
-    "word": "Second",
-    "definition": "Coming after the first in position or time.",
-    "example_sentence": "The second world war had a profound and lasting impact on global politics and economic structures.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "subsequent",
-      "next",
-      "following"
     ]
   },
   {
@@ -474,19 +425,6 @@
     ]
   },
   {
-    "word": "Almost",
-    "definition": "Very nearly; all but.",
-    "example_sentence": "The experiment was almost successful, but a minor oversight prevented it from reaching the desired outcome.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "nearly",
-      "practically",
-      "virtually",
-      "approximately"
-    ]
-  },
-  {
     "word": "Afraid",
     "definition": "Feeling fear or anxiety; frightened.",
     "example_sentence": "Governments are often afraid of implementing radical policies due to potential public backlash and economic instability.",
@@ -588,19 +526,6 @@
       "injury",
       "destruction",
       "detriment"
-    ]
-  },
-  {
-    "word": "Easy",
-    "definition": "Achieved without great effort; presenting few difficulties.",
-    "example_sentence": "While some find learning a new language easy, for others it presents a considerable cognitive challenge.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "simple",
-      "straightforward",
-      "effortless",
-      "facile"
     ]
   },
   {
@@ -877,19 +802,6 @@
     ]
   },
   {
-    "word": "Nice",
-    "definition": "Pleasant, agreeable, or satisfactory, often in a general or understated way.",
-    "example_sentence": "While a nice environment is desirable for learning, it is the quality of instruction that truly impacts educational outcomes.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "pleasant",
-      "agreeable",
-      "enjoyable",
-      "good"
-    ]
-  },
-  {
     "word": "Gratis",
     "definition": "Without charge; free.",
     "example_sentence": "Many open-source software projects offer their products gratis, relying on community contributions for development.",
@@ -968,19 +880,6 @@
     ]
   },
   {
-    "word": "New",
-    "definition": "Not existing before; recently made, discovered, or introduced.",
-    "example_sentence": "The introduction of new regulations often aims to address emerging challenges in environmental protection or public health.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "recent",
-      "novel",
-      "fresh",
-      "modern"
-    ]
-  },
-  {
     "word": "Precept",
     "definition": "A general rule intended to regulate behavior or thought.",
     "example_sentence": "Ethical leadership is often guided by a strong set of moral precepts that prioritize integrity and transparency.",
@@ -1004,19 +903,6 @@
       "sanction",
       "authorize",
       "validate"
-    ]
-  },
-  {
-    "word": "Before",
-    "definition": "At an earlier time than; previous to.",
-    "example_sentence": "Before implementing any new policy, it is crucial to conduct thorough research and impact assessments.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "prior to",
-      "previously",
-      "earlier than",
-      "in advance of"
     ]
   },
   {
@@ -1618,19 +1504,6 @@
     ]
   },
   {
-    "word": "Loopy",
-    "definition": "Crazy or eccentric in a quirky or amusing way.",
-    "example_sentence": "While the initial idea seemed somewhat loopy, it surprisingly led to an innovative and effective solution for the problem.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "eccentric",
-      "absurd",
-      "quirky",
-      "zany"
-    ]
-  },
-  {
     "word": "Imperative",
     "definition": "Of vital importance; crucial; a command.",
     "example_sentence": "It is imperative that governments prioritize sustainable development to protect future generations.",
@@ -1667,19 +1540,6 @@
       "sincere",
       "candid",
       "upright"
-    ]
-  },
-  {
-    "word": "Napkin",
-    "definition": "A piece of cloth or paper used at meals to wipe the lips or fingers and to protect the clothes.",
-    "example_sentence": "The engineer sketched his initial design ideas on a napkin during a casual lunch meeting, which later became a successful patent.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "serviette",
-      "cloth",
-      "paper",
-      "wipe"
     ]
   },
   {
@@ -1800,19 +1660,6 @@
     ]
   },
   {
-    "word": "About",
-    "definition": "On the subject of; concerning; approximately.",
-    "example_sentence": "The research paper is primarily about the impact of artificial intelligence on employment trends in developed nations.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "concerning",
-      "regarding",
-      "approximately",
-      "nearly"
-    ]
-  },
-  {
     "word": "To hawk",
     "definition": "To offer goods for sale, typically advertising them by shouting.",
     "example_sentence": "Street vendors often hawk their wares in bustling city markets, contributing to the vibrant local economy.",
@@ -1917,19 +1764,6 @@
     ]
   },
   {
-    "word": "Bum",
-    "definition": "An informal and often derogatory term for a homeless person or someone perceived as idle.",
-    "example_sentence": "While 'homeless person' is the preferred term, 'bum' is an informal and often derogatory word used to describe someone without a fixed abode.",
-    "topic": "society",
-    "band_level": 4,
-    "synonyms": [
-      "vagrant",
-      "tramp",
-      "hobo",
-      "derelict"
-    ]
-  },
-  {
     "word": "To mirror",
     "definition": "To reflect; to represent accurately.",
     "example_sentence": "The decline in student engagement often mirrors broader societal trends in attention spans and digital distraction.",
@@ -1968,19 +1802,6 @@
     ]
   },
   {
-    "word": "Usually",
-    "definition": "In the customary or ordinary course of things; generally.",
-    "example_sentence": "Students usually find that consistent practice is key to achieving a high score in the IELTS exam.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "generally",
-      "commonly",
-      "ordinarily",
-      "typically"
-    ]
-  },
-  {
     "word": "Becoming",
     "definition": "The process of starting to be something.",
     "example_sentence": "With the rapid advancement of artificial intelligence, many traditional jobs are becoming automated.",
@@ -2004,19 +1825,6 @@
       "agreement",
       "consensus",
       "accord"
-    ]
-  },
-  {
-    "word": "Always",
-    "definition": "At all times; on all occasions.",
-    "example_sentence": "It is always important to critically evaluate sources when conducting academic research.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "constantly",
-      "perpetually",
-      "invariably",
-      "forever"
     ]
   },
   {
@@ -2108,43 +1916,6 @@
       "silly",
       "imprudent",
       "absurd"
-    ]
-  },
-  {
-    "word": "Candy",
-    "definition": "Sweet foods made from sugar or syrup, often combined with other ingredients and flavorings.",
-    "example_sentence": "While a small amount of candy can be an occasional treat, excessive consumption is linked to various health issues.",
-    "topic": "health",
-    "band_level": 4.5,
-    "synonyms": [
-      "sweets",
-      "confectionary",
-      "treats"
-    ]
-  },
-  {
-    "word": "Happily",
-    "definition": "In a happy manner; with pleasure.",
-    "example_sentence": "The local community happily welcomed the new recycling initiative, eager to contribute to environmental efforts.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "joyfully",
-      "cheerfully",
-      "contentedly",
-      "readily"
-    ]
-  },
-  {
-    "word": "Word",
-    "definition": "A single distinct meaningful element of speech or writing.",
-    "example_sentence": "Precision in choosing the right word is crucial for clear and effective communication in academic essays.",
-    "topic": "education",
-    "band_level": 4,
-    "synonyms": [
-      "term",
-      "expression",
-      "vocable"
     ]
   },
   {
@@ -2495,19 +2266,6 @@
     ]
   },
   {
-    "word": "Garbage can",
-    "definition": "A container for temporarily storing refuse.",
-    "example_sentence": "Proper waste disposal involves separating recyclables from general rubbish and placing them in the appropriate garbage can.",
-    "topic": "environment",
-    "band_level": 4.5,
-    "synonyms": [
-      "trash can",
-      "dustbin",
-      "refuse bin",
-      "waste bin"
-    ]
-  },
-  {
     "word": "Perception",
     "definition": "The way in which something is regarded, understood, or interpreted.",
     "example_sentence": "Public perception of renewable energy technologies has shifted positively as their efficiency and cost-effectiveness improve.",
@@ -2727,19 +2485,6 @@
     ]
   },
   {
-    "word": "Connect",
-    "definition": "To bring together or into contact so that a real or notional link is established.",
-    "example_sentence": "Technology allows individuals from disparate regions to connect and share ideas instantaneously, fostering global collaboration.",
-    "topic": "technology",
-    "band_level": 4.5,
-    "synonyms": [
-      "link",
-      "join",
-      "unite",
-      "associate"
-    ]
-  },
-  {
     "word": "Ecstasy",
     "definition": "An overwhelming feeling of great happiness or joyful excitement.",
     "example_sentence": "The fans erupted in ecstasy as their team scored the winning goal in the final moments of the championship.",
@@ -2920,19 +2665,6 @@
     ]
   },
   {
-    "word": "To close",
-    "definition": "To move parts of something together to obstruct an opening; to bring to an end.",
-    "example_sentence": "Many businesses were forced to close during the pandemic, leading to widespread economic hardship and unemployment.",
-    "topic": "economy",
-    "band_level": 4.5,
-    "synonyms": [
-      "shut",
-      "end",
-      "conclude",
-      "terminate"
-    ]
-  },
-  {
     "word": "Defective",
     "definition": "Imperfect or faulty; suffering from a defect.",
     "example_sentence": "Consumers have a right to return defective products and expect a full refund or replacement.",
@@ -3076,19 +2808,6 @@
     ]
   },
   {
-    "word": "Off",
-    "definition": "Away from the place in question; at a distance from.",
-    "example_sentence": "The project is slightly off schedule due to unforeseen technical difficulties that arose last week.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "away",
-      "separate",
-      "disconnected",
-      "astray"
-    ]
-  },
-  {
     "word": "Mendacity",
     "definition": "Untruthfulness; a tendency to lie.",
     "example_sentence": "The politician's mendacity was exposed during the investigation, leading to public outrage and a decline in trust.",
@@ -3151,18 +2870,6 @@
       "hostile",
       "belligerent",
       "forceful"
-    ]
-  },
-  {
-    "word": "Noon",
-    "definition": "Twelve o'clock in the daytime; midday.",
-    "example_sentence": "The conference session will resume promptly at noon after a short lunch break for all attendees.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "midday",
-      "lunchtime",
-      "twelve o'clock"
     ]
   },
   {
@@ -3254,19 +2961,6 @@
       "erroneous",
       "false",
       "improper"
-    ]
-  },
-  {
-    "word": "Away",
-    "definition": "To or at a distance from a particular place, person, or thing.",
-    "example_sentence": "Many students choose to study away from their hometowns to gain independence and new perspectives.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "absent",
-      "distant",
-      "afar",
-      "elsewhere"
     ]
   },
   {
@@ -3370,19 +3064,6 @@
       "pliable",
       "supple",
       "elastic"
-    ]
-  },
-  {
-    "word": "Extra",
-    "definition": "Added to an existing or usual amount or number; additional.",
-    "example_sentence": "Students often take extra classes to enhance their skill set or to complete their degrees more quickly.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "additional",
-      "supplementary",
-      "surplus",
-      "more"
     ]
   },
   {
@@ -3724,19 +3405,6 @@
     ]
   },
   {
-    "word": "Today",
-    "definition": "On or during the present day.",
-    "example_sentence": "Today's global challenges necessitate international cooperation to find sustainable solutions.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "currently",
-      "nowadays",
-      "presently",
-      "at present"
-    ]
-  },
-  {
     "word": "Self",
     "definition": "A person's essential being that distinguishes them from others, especially considered as the object of introspection or reflexive action.",
     "example_sentence": "Understanding one's authentic self is a crucial aspect of personal development and emotional well-being.",
@@ -3925,18 +3593,6 @@
       "reference",
       "quotation",
       "acknowledgment"
-    ]
-  },
-  {
-    "word": "Naughty",
-    "definition": "Behaving in a disobedient or mischievous way.",
-    "example_sentence": "While 'naughty' describes mild misbehavior, more formal terms are used in psychological studies of child development.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "mischievous",
-      "disobedient",
-      "wayward"
     ]
   },
   {
@@ -4264,18 +3920,6 @@
     ]
   },
   {
-    "word": "Crook",
-    "definition": "A dishonest person or a criminal.",
-    "example_sentence": "While 'crook' is an informal term, the broader issue of organized crime poses a significant threat to national security.",
-    "topic": "crime",
-    "band_level": 4.5,
-    "synonyms": [
-      "criminal",
-      "swindler",
-      "scoundrel"
-    ]
-  },
-  {
     "word": "Unvoiced",
     "definition": "Not expressed or spoken aloud.",
     "example_sentence": "Many students harbor unvoiced concerns about their academic future, which educators should strive to address.",
@@ -4571,45 +4215,6 @@
     ]
   },
   {
-    "word": "Backside",
-    "definition": "The rear part of something, or the buttocks.",
-    "example_sentence": "While a car's design often prioritizes the front, the backside also plays a crucial role in aerodynamics and safety features.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "rear",
-      "posterior",
-      "back",
-      "behind"
-    ]
-  },
-  {
-    "word": "To answer",
-    "definition": "To give a reply or response to a question or request.",
-    "example_sentence": "Students are often encouraged to answer questions in full sentences to demonstrate a comprehensive understanding of the topic.",
-    "topic": "education",
-    "band_level": 4,
-    "synonyms": [
-      "respond",
-      "reply",
-      "retort",
-      "acknowledge"
-    ]
-  },
-  {
-    "word": "Home",
-    "definition": "The place where one lives permanently, especially as a member of a family or household.",
-    "example_sentence": "For many, home represents a fundamental need for security, comfort, and belonging.",
-    "topic": "society",
-    "band_level": 4,
-    "synonyms": [
-      "residence",
-      "dwelling",
-      "abode",
-      "household"
-    ]
-  },
-  {
     "word": "Matters",
     "definition": "Subjects or situations being dealt with or considered.",
     "example_sentence": "The committee discussed several important matters related to urban development and public transport.",
@@ -4620,19 +4225,6 @@
       "concerns",
       "affairs",
       "topics"
-    ]
-  },
-  {
-    "word": "Correct",
-    "definition": "Free from error; in accordance with fact or truth.",
-    "example_sentence": "It is essential to ensure that all data presented in the report is entirely correct to avoid misinterpretation.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "accurate",
-      "right",
-      "precise",
-      "factual"
     ]
   },
   {
@@ -4662,19 +4254,6 @@
     ]
   },
   {
-    "word": "Object",
-    "definition": "A material thing that can be seen and touched.",
-    "example_sentence": "Archaeologists often uncover ancient objects that provide valuable insights into past civilizations.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "item",
-      "thing",
-      "article",
-      "entity"
-    ]
-  },
-  {
     "word": "Hermetic",
     "definition": "(of a seal or closure) airtight; or insulated or protected from outside influence.",
     "example_sentence": "The laboratory maintained hermetic conditions to prevent contamination of the sensitive experiments.",
@@ -4685,19 +4264,6 @@
       "sealed",
       "isolated",
       "cloistered"
-    ]
-  },
-  {
-    "word": "To learn",
-    "definition": "To gain knowledge or skill by study, experience, or being taught.",
-    "example_sentence": "Lifelong learning is increasingly recognized as crucial for adapting to the rapidly changing demands of the modern workforce.",
-    "topic": "education",
-    "band_level": 4,
-    "synonyms": [
-      "acquire",
-      "study",
-      "master",
-      "comprehend"
     ]
   },
   {
@@ -4737,19 +4303,6 @@
       "selfish",
       "disrespectful",
       "uncaring"
-    ]
-  },
-  {
-    "word": "Silly",
-    "definition": "Having or showing a lack of common sense or judgment; foolish.",
-    "example_sentence": "While a certain degree of levity is acceptable, making silly mistakes in academic writing can undermine one's credibility.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "foolish",
-      "absurd",
-      "ridiculous",
-      "trivial"
     ]
   },
   {
@@ -4802,32 +4355,6 @@
       "hazardous",
       "risky",
       "unsafe"
-    ]
-  },
-  {
-    "word": "Hall",
-    "definition": "A corridor in a building, or a large room or building used for public events.",
-    "example_sentence": "The university's main hall is frequently used for graduation ceremonies, lectures, and musical performances.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "corridor",
-      "foyer",
-      "lobby",
-      "auditorium"
-    ]
-  },
-  {
-    "word": "French dressing",
-    "definition": "A type of salad dressing made from oil and vinegar, typically with mustard and herbs.",
-    "example_sentence": "Many restaurants offer a variety of dressings for salads, including classic options like French dressing.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "vinaigrette",
-      "salad dressing",
-      "sauce",
-      "condiment"
     ]
   },
   {
@@ -5052,19 +4579,6 @@
     ]
   },
   {
-    "word": "Beautiful",
-    "definition": "Pleasing to the senses or mind aesthetically.",
-    "example_sentence": "The preservation of natural landscapes, such as national parks, is crucial for maintaining the planet's beautiful biodiversity.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "attractive",
-      "lovely",
-      "stunning",
-      "exquisite"
-    ]
-  },
-  {
     "word": "To impeach",
     "definition": "To charge a public official with misconduct in office.",
     "example_sentence": "In democratic systems, legislative bodies have the power to impeach high-ranking officials suspected of egregious misconduct.",
@@ -5179,19 +4693,6 @@
       "purposely",
       "consciously",
       "on purpose"
-    ]
-  },
-  {
-    "word": "Last",
-    "definition": "Occurring at the end; final in a series, or most recent.",
-    "example_sentence": "The last chapter of the book provided a surprising twist that redefined the entire narrative.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "final",
-      "ultimate",
-      "concluding",
-      "terminal"
     ]
   },
   {
@@ -7243,19 +6744,6 @@
     ]
   },
   {
-    "word": "parent",
-    "definition": "A father or mother; an animal that has produced offspring.",
-    "example_sentence": "Modern society increasingly recognizes the crucial role of engaged parents in a child's early educational development.",
-    "topic": "society",
-    "band_level": 4.5,
-    "synonyms": [
-      "guardian",
-      "progenitor",
-      "mother",
-      "father"
-    ]
-  },
-  {
     "word": "participate",
     "definition": "To take part in an activity or event.",
     "example_sentence": "Encouraging students to actively participate in class discussions can enhance their critical thinking skills.",
@@ -7625,19 +7113,6 @@
       "consequence",
       "effect",
       "upshot"
-    ]
-  },
-  {
-    "word": "row",
-    "definition": "A number of people or things arranged in a line.",
-    "example_sentence": "The data table presents various demographic figures arranged in rows for easy comparison.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "line",
-      "queue",
-      "sequence",
-      "file"
     ]
   },
   {
@@ -8178,19 +7653,6 @@
     ]
   },
   {
-    "word": "Cry",
-    "definition": "To shed tears, typically as an expression of distress, pain, or sorrow.",
-    "example_sentence": "The child began to cry loudly after falling and scraping his knee.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "Weep",
-      "sob",
-      "wail",
-      "lament"
-    ]
-  },
-  {
     "word": "Foxy",
     "definition": "(informal) Clever and cunning.",
     "example_sentence": "The foxy politician managed to outmanoeuvre his opponents with a series of shrewd tactics.",
@@ -8256,19 +7718,6 @@
     ]
   },
   {
-    "word": "Couch",
-    "definition": "A long upholstered seat with a back and arms, for seating more than one person.",
-    "example_sentence": "After a long day, she enjoyed relaxing on the couch and reading a book.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "Sofa",
-      "settee",
-      "divan",
-      "chaise longue"
-    ]
-  },
-  {
     "word": "Vacancy",
     "definition": "An unoccupied position or job.",
     "example_sentence": "The company announced a vacancy for a senior marketing manager, inviting applications from qualified candidates.",
@@ -8279,19 +7728,6 @@
       "position",
       "slot",
       "post"
-    ]
-  },
-  {
-    "word": "Special",
-    "definition": "Better, greater, or otherwise different from what is usual.",
-    "example_sentence": "The school arranged a special ceremony to honour students who had achieved outstanding academic results.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "Exceptional",
-      "distinctive",
-      "extraordinary",
-      "unique"
     ]
   },
   {
@@ -8396,32 +7832,6 @@
       "moderate",
       "slight",
       "weak"
-    ]
-  },
-  {
-    "word": "Earth",
-    "definition": "The planet on which we live; soil or ground.",
-    "example_sentence": "Protecting the Earth's biodiversity is crucial for maintaining ecological balance and supporting human life.",
-    "topic": "environment",
-    "band_level": 4,
-    "synonyms": [
-      "World",
-      "globe",
-      "planet",
-      "ground"
-    ]
-  },
-  {
-    "word": "Movie",
-    "definition": "A motion picture; a film.",
-    "example_sentence": "The new historical movie received critical acclaim for its accurate portrayal of the 19th century.",
-    "topic": "culture",
-    "band_level": 4,
-    "synonyms": [
-      "Film",
-      "picture",
-      "flick",
-      "motion picture"
     ]
   },
   {
@@ -8620,19 +8030,6 @@
     ]
   },
   {
-    "word": "Famous",
-    "definition": "Known about by many people.",
-    "example_sentence": "The city is famous for its historical landmarks and vibrant cultural festivals.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "Renowned",
-      "celebrated",
-      "prominent",
-      "eminent"
-    ]
-  },
-  {
     "word": "Militant",
     "definition": "Aggressive in support of a political or social cause, and typically favouring extreme, violent, or confrontational methods.",
     "example_sentence": "Militant groups often resort to violence to achieve their political objectives, leading to instability and conflict.",
@@ -8659,32 +8056,6 @@
     ]
   },
   {
-    "word": "Dirty",
-    "definition": "Not clean.",
-    "example_sentence": "It is important to wash your hands thoroughly after handling dirty objects to prevent the spread of germs.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "Soiled",
-      "unclean",
-      "grimy",
-      "filthy"
-    ]
-  },
-  {
-    "word": "Help",
-    "definition": "To make it easier or possible for someone to do something by offering them services or resources.",
-    "example_sentence": "International aid organizations provide essential help to communities affected by natural disasters.",
-    "topic": "society",
-    "band_level": 4,
-    "synonyms": [
-      "Assist",
-      "aid",
-      "support",
-      "facilitate"
-    ]
-  },
-  {
     "word": "To intend",
     "definition": "To have as one's purpose or goal.",
     "example_sentence": "The government intends to introduce new legislation aimed at reducing plastic waste.",
@@ -8708,19 +8079,6 @@
       "society",
       "league",
       "alliance"
-    ]
-  },
-  {
-    "word": "Continue",
-    "definition": "To persist in an activity or process.",
-    "example_sentence": "Despite the challenges, researchers decided to continue their experiments, hoping to achieve a breakthrough.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "Persist",
-      "proceed",
-      "carry on",
-      "keep going"
     ]
   },
   {
@@ -9166,19 +8524,6 @@
     ]
   },
   {
-    "word": "Bad (not good)",
-    "definition": "Of poor quality or low standard; unpleasant or unwelcome.",
-    "example_sentence": "The lack of effective policies has had a bad impact on public trust in government institutions.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "poor",
-      "harmful",
-      "negative",
-      "detrimental"
-    ]
-  },
-  {
     "word": "Magician",
     "definition": "A person who performs magic tricks for entertainment.",
     "example_sentence": "While a magician's illusions entertain, critical thinking helps distinguish reality from perception.",
@@ -9413,19 +8758,6 @@
     ]
   },
   {
-    "word": "Meeting",
-    "definition": "An assembly of people for a particular purpose, especially for discussion.",
-    "example_sentence": "The weekly team meeting provided an opportunity to discuss project progress and address any challenges.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "gathering",
-      "conference",
-      "assembly",
-      "session"
-    ]
-  },
-  {
     "word": "To convey",
     "definition": "To make an idea, impression, or feeling known or understandable to someone.",
     "example_sentence": "Effective communication skills are essential to convey complex information clearly in an academic setting.",
@@ -9502,18 +8834,6 @@
     ]
   },
   {
-    "word": "Anyway",
-    "definition": "In any case; regardless.",
-    "example_sentence": "The weather forecast predicted rain, but we decided to go for a walk anyway.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "nonetheless",
-      "anyhow",
-      "regardless"
-    ]
-  },
-  {
     "word": "To respond",
     "definition": "To say or do something in reply or reaction to something else.",
     "example_sentence": "Universities encourage students to respond critically to different viewpoints presented in academic texts.",
@@ -9537,18 +8857,6 @@
       "abstract",
       "synopsis",
       "digest"
-    ]
-  },
-  {
-    "word": "Dry",
-    "definition": "Lacking moisture or not wet.",
-    "example_sentence": "The prolonged period of dry weather has raised concerns about water scarcity in agricultural regions.",
-    "topic": "environment",
-    "band_level": 4.5,
-    "synonyms": [
-      "arid",
-      "parched",
-      "desiccated"
     ]
   },
   {
@@ -9730,18 +9038,6 @@
     ]
   },
   {
-    "word": "To vacuum",
-    "definition": "To clean with a vacuum cleaner.",
-    "example_sentence": "Regular cleaning, including to vacuum carpets and floors, helps to maintain a hygienic living environment.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "clean",
-      "hoover",
-      "sweep"
-    ]
-  },
-  {
     "word": "Removable",
     "definition": "Able to be taken away or off.",
     "example_sentence": "Modern furniture often features removable covers for easier cleaning and maintenance.",
@@ -9751,32 +9047,6 @@
       "detachable",
       "separable",
       "portable"
-    ]
-  },
-  {
-    "word": "Sundown",
-    "definition": "The time in the evening when the sun disappears below the horizon; sunset.",
-    "example_sentence": "The hikers aimed to reach the campsite before sundown to set up their tents in daylight.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "sunset",
-      "dusk",
-      "twilight",
-      "nightfall"
-    ]
-  },
-  {
-    "word": "Joy",
-    "definition": "A feeling of great pleasure and happiness.",
-    "example_sentence": "The community celebrated with great joy upon the successful completion of the new public park.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "happiness",
-      "delight",
-      "pleasure",
-      "elation"
     ]
   },
   {
@@ -9855,19 +9125,6 @@
       "debase",
       "pervert",
       "debauch"
-    ]
-  },
-  {
-    "word": "To chop",
-    "definition": "To cut (something) into small pieces with repeated sharp blows.",
-    "example_sentence": "It is common practice to chop vegetables into uniform pieces for even cooking.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "cut",
-      "dice",
-      "hack",
-      "cleave"
     ]
   },
   {
@@ -10131,19 +9388,6 @@
     ]
   },
   {
-    "word": "High",
-    "definition": "Of great vertical extent, amount, or intensity.",
-    "example_sentence": "The construction of high-rise buildings presents both economic advantages and urban planning challenges.",
-    "topic": "economy",
-    "band_level": 4.5,
-    "synonyms": [
-      "tall",
-      "elevated",
-      "lofty",
-      "significant"
-    ]
-  },
-  {
     "word": "Convalesce",
     "definition": "To recover one's health and strength over a period of time after an illness or operation.",
     "example_sentence": "After a major surgery, patients typically need several weeks to convalesce and regain their full strength.",
@@ -10154,19 +9398,6 @@
       "recover",
       "heal",
       "mend"
-    ]
-  },
-  {
-    "word": "Outside",
-    "definition": "Located, moving, or happening on the exterior of a place.",
-    "example_sentence": "While many tasks are now performed indoors, some professions still require individuals to work predominantly outside.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "exterior",
-      "outdoor",
-      "external",
-      "outdoors"
     ]
   },
   {
@@ -10326,19 +9557,6 @@
     ]
   },
   {
-    "word": "Dead",
-    "definition": "No longer alive.",
-    "example_sentence": "The discovery of dead coral reefs indicates severe environmental degradation in marine ecosystems.",
-    "topic": "environment",
-    "band_level": 4.5,
-    "synonyms": [
-      "deceased",
-      "lifeless",
-      "defunct",
-      "extinct"
-    ]
-  },
-  {
     "word": "Notwithstanding",
     "definition": "In spite of; although.",
     "example_sentence": "Notwithstanding logistical challenges, the project achieved its primary objectives successfully and on schedule.",
@@ -10388,19 +9606,6 @@
       "relaxed",
       "unofficial",
       "familiar"
-    ]
-  },
-  {
-    "word": "To begin",
-    "definition": "To start or commence an action or event.",
-    "example_sentence": "Before researchers begin their studies, they must obtain ethical approval for their methodologies.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "start",
-      "commence",
-      "initiate",
-      "originate"
     ]
   },
   {
@@ -10521,19 +9726,6 @@
     ]
   },
   {
-    "word": "If",
-    "definition": "Introducing a conditional clause; on the condition that.",
-    "example_sentence": "If governments do not implement stricter environmental regulations, pollution levels will continue to rise unchecked.",
-    "topic": "general",
-    "band_level": 4,
-    "synonyms": [
-      "provided that",
-      "supposing",
-      "assuming",
-      "in case"
-    ]
-  },
-  {
     "word": "Applicable",
     "definition": "Relevant or appropriate.",
     "example_sentence": "Students should always cite sources where applicable to avoid plagiarism and acknowledge original ideas.",
@@ -10544,19 +9736,6 @@
       "pertinent",
       "suitable",
       "appropriate"
-    ]
-  },
-  {
-    "word": "Difficult",
-    "definition": "Needing much effort or skill to accomplish, deal with, or understand.",
-    "example_sentence": "Addressing complex global challenges often requires international cooperation and difficult policy decisions.",
-    "topic": "general",
-    "band_level": 4.5,
-    "synonyms": [
-      "challenging",
-      "arduous",
-      "complex",
-      "demanding"
     ]
   },
   {
