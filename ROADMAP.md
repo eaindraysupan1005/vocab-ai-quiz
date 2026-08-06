@@ -31,6 +31,10 @@ build next, in order.
       as a placeholder — step 9 replaces it with real spaced-repetition math.
 - [ ] **7. AI daily quiz** — generate next-day quiz from previously learned words; MCQ/fill-in for
       new words, AI-graded sentence production for repeat words.
+      **UI mock done**: [`src/app/quiz/page.tsx`](src/app/quiz/page.tsx) +
+      [`QuizPlayer`](src/components/QuizPlayer.tsx) render the MCQ/fill-blank/sentence-production
+      layouts with real words but locally-mocked questions/grading (no Gemini, no persistence) —
+      still needs the real generation + AI grading + `quizzes`/`quiz_answers` writes.
 - [ ] **8. Weekly review quiz** — larger quiz across the week, weighted toward previously-wrong
       words.
 - [ ] **9. Spaced repetition scheduling** — track correct/wrong per word, adjust next review date,
