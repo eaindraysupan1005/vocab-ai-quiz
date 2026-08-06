@@ -1,0 +1,477 @@
+abduction/kidnapping
+accomplice
+adverse verdict
+antisocial behavior
+arson
+assassination
+assault
+bail
+blackmailing
+bribery
+burglary
+child abuse
+circumstances of the crime
+community service
+corporal punishment
+a crackdown on crime
+a crime wave
+cybercrime
+death penalty
+defendant
+defense
+driving under the influence (DUI)
+drug trafficking/drug dealing
+embezzlement
+favorable verdict
+felony
+fingerprints
+forgery/counterfeiting
+handcuffs
+hearing
+hijacking
+hit-and-run
+hostage
+in the light of evidence
+judge
+judgement
+jury
+juvenile delinquency
+law-abiding (citizen)
+lawsuit
+lawyer/attorney
+life imprisonment
+life of crime
+malpractice
+manslaughter
+misdemeanor/petty crime
+mugging
+murder
+not a scrap of evidence
+organized crime
+penalty/fine
+pickpocketing
+plaintiff
+police brutality
+prison sentence/custodial sentence/imprisonment
+probation
+the prosecution
+the prosecutor
+ransom
+rape
+robbery
+sentence
+shoplifting
+smuggling
+spy
+surveillance
+suspect
+swindler
+terrorist
+theft
+to appeal against a verdict
+to bail someone out
+to be acquitted of a crime
+to be caught red-handed
+to be charged with a crime
+to be under arrest
+to commit a crime/carry out a crime
+to deter/preclude crime
+to fight crime
+to investigate a crime
+to rehabilitate
+to suspend a license
+to take someone to court
+traffic offences
+trial
+vandalism
+verdict
+victimless crime
+violent crime
+white-collar crime
+witness
+affluence
+antiglobalization movement
+borders
+capitalism (free enterprise)
+consumerism
+cooperation
+cultural convergence
+cultural divergence
+demonstration
+developed countries
+developing countries
+development
+domestic
+economic growth drivers
+emerging economy/emerging market economy
+emigration/to emigrate
+ethnocentric
+fair trade
+global economy
+globalization
+global trade/international trade
+global village
+imbalance/inequality
+immigration/to immigrate
+integration
+interrelated
+investments
+labor union
+local
+multiculturalism/multicultural
+multilateral
+national
+national sovereignty
+outsourcing
+policies and procedures (rules and regulations)
+progress
+prosperity
+protest
+standardization
+standard of living
+strike
+superpower (countries)
+supply and demand
+sweatshop/sweat factory
+tariff
+to accelerate
+to dominate
+to export
+to import
+trade barriers
+unilateral
+addictive (foods)
+ambrosial
+anorexia
+bitter
+bulimia
+carbohydrates
+chewy
+crispy
+crunchy
+delicious
+dessert
+diseases (and disorders)
+eating disorders
+eating patterns (dietary habits)
+eat the rainbow
+famine
+fiber
+food contents
+genetically engineered foods
+international cuisines
+intolerance
+juicy
+lactose intolerance
+nutrients
+nutritious food (nutrient-dense food)
+overweight
+peppery
+processed food
+protein
+savoury
+sour
+spicy
+sugary
+syrupy
+to bake
+to be dying of hunger
+to bite
+to boil
+to broil
+to chew
+to deep fry
+to devour
+to digest
+to grill
+to have a sweet tooth
+to indulge
+to mince
+to roast
+to savour
+to steam
+to stirfry
+to swallow
+to taste
+unflavoured
+vitamins and minerals
+whole grains
+zesty
+ache
+adolescence
+adulthood
+ambulance
+antibiotics
+asthma
+bronchitis
+bruises
+childhood
+chronic
+cold
+contagious
+cough
+cuts
+dentist
+deterioration
+diabetes
+doctor
+a dose of medicine
+emergency
+emotional development
+epidemic
+epidemic breakout
+eye drops
+fatigue
+fever
+flu (influenza)
+food poisoning
+fracture
+health status
+heart attack
+a heavy cold
+hospital/health facility
+illness
+immediate action
+infancy
+insomnia
+life expectancy/life span
+medical checkup (medical screening)
+medical history
+medicines
+mortality
+nurse
+onset of symptoms
+ophthalmologist
+painkiller
+patients
+physical development
+pill
+prenatal
+preventing something
+psychotherapist
+recover
+remedy
+researcher
+shot/injection
+social development
+a sore throat
+(suicidal) depression
+surgeon
+surgery
+symptoms
+therapy
+to have a filling
+to have your tooth pulled out
+to make a speedy recovery
+to perform surgery on
+to reach epidemic proportions
+trend
+vaccine
+youth
+the "3 R's" concept
+acid rain
+adverse environmental effects
+biodegradable
+biodiversity
+carbon dioxide (CO2)
+carbon emissions
+carbon footprint
+carbon monoxide (CO)
+chemicals
+climate change
+climate change mitigation
+contamination
+deforestation
+ecosystem
+emissions
+endangered species
+energy sources
+environmental challenges
+environmentalist (environmental activist)
+exhaust fumes
+extinction (to become extinct)
+fertilizers
+fossil fuels
+global warming
+greenhouse gases (greenhouse emissions)
+habitat
+hazardous waste
+hybrid cars
+industrial waste
+landfill
+melting glaciers
+methane
+natural disaster
+ozone layer
+ozone layer depletion
+pesticides
+pollution
+rainforest
+renewable energy (green energy)
+replanting
+solar panels
+sustainable agriculture
+threatened species
+tidal energy
+to conserve energy
+to recycle
+toxic
+urbanization
+waste disposal
+wind turbines
+applications (apps)
+blog
+breakthrough
+cloud computing
+a computer buff
+computer literate
+connection
+cutting-edge
+cyber
+cyberbullying
+desktop PC
+digital editing
+digital native
+e-commerce
+gadget/equipment/appliance
+hardware
+high-spec (laptop)
+innovation
+Internet security
+intranet
+operating system
+portable
+privacy
+programs
+send an attachment
+social media
+software
+a techie
+technological revolution
+tech-savvy
+to access
+to back up files
+to bookmark a webpage
+to boot up
+to browse websites
+to crash
+to cut and paste
+to download
+to enter a web address
+to go online
+to navigate a website
+to surf the web
+to upgrade
+user-friendly
+video conferencing
+viral
+virtual reality (VR)
+wifi
+wireless hotspot
+wireless network
+aeronautics
+asteroid
+astronaut
+astronomer
+atmosphere
+aurora (northern lights)
+Big Bang Theory
+black holes
+comet
+constellation
+cosmology
+eclipse
+electromagnetic spectrum
+explosion
+galaxy
+gravity/gravitational force
+light year
+lunar eclipse
+meteor
+meteorite
+meteor shower
+moon
+orbit
+phases of the moon (lunar phases)
+planet
+revolution
+rocket
+rotation
+satellite
+season
+solar eclipse
+solar system
+spacecraft
+space exploration
+space shuttle
+space station
+spherical
+stars
+to collide (collision)
+to disintegrate
+to smash
+universe
+waning
+waxing
+acrylic paint
+aesthetic
+animation
+art gallery
+artist
+artistry
+auction
+calligraphy
+canvas
+caricature
+cartoon
+classicism
+collage
+composition
+contemporary art
+contents
+cool colors
+crayons
+drawing
+elements of art
+embroidery
+emphasis
+engraving
+exhibition
+expressionism
+figurative
+foreground
+genre
+graffiti
+harmony
+landscape
+masterpiece
+medium
+mixed media (multimedia)
+modeling
+montage
+performance art
+photographs
+poetry
+pop art
+portrait
+pottery
+printmaking
+properties of color
+romanticism
+sculpture/statue
+sketch
+still life
+structure
+style
+surrealism
+tapestry
+theater arts
+theme
+three-dimensional
+to interpret (interpretation)
+two-dimensional
+variety/assortment
+virtual
+visual literacy
+warm colors
+watercolors
