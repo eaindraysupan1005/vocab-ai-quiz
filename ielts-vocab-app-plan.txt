@@ -1,0 +1,92 @@
+IELTS VOCABULARY PREPARATION APP
+Initial Project Description
+==================================================
+
+PROJECT OVERVIEW
+--------------------------------------------------
+A web application for IELTS vocabulary preparation. Users learn a daily
+batch of IELTS-relevant vocabulary (word, meaning, example sentence),
+mark words as learned, and are tested the next day via an AI-generated
+quiz. A weekly review quiz reinforces retention using spaced repetition.
+The app is being built as an internship project and will also be used
+personally by the developer for real IELTS preparation over 6 months.
+
+
+FUNCTIONAL REQUIREMENTS
+--------------------------------------------------
+
+1. Word Bank
+   - Database of IELTS vocabulary: word, definition, example sentence,
+     topic (e.g. environment, education, technology), band/difficulty level,
+     synonyms.
+   - Source: IELTS Academic Word List + topic-based vocab lists, enriched
+     with AI-generated definitions/examples where needed.
+
+2. Daily Learning Session
+   - Each day, show the user a batch of words (~15-20): new words plus
+     any words due for review (spaced repetition).
+   - User checks off each word once learned; this is recorded per user.
+
+3. AI-Generated Daily Quiz
+   - The next day, generate a quiz based specifically on the words the
+     user learned the previous day.
+   - Quiz format is mixed:
+       - New/first-time words -> recognition-based questions (MCQ /
+         fill-in-the-blank)
+       - Words seen 2+ times -> sentence production ("use this word in
+         a sentence"), graded by AI for correctness, grammar, and
+         appropriate register (closer to actual IELTS Writing/Speaking
+         demands)
+   - AI grading returns: correct/incorrect, brief reason, and a suggested
+     improved sentence when needed.
+
+4. Weekly Review Quiz
+   - Once a week, generate a larger quiz covering that week's words,
+     weighted toward words the user previously got wrong.
+
+5. Spaced Repetition (Review Scheduling)
+   - Track per-word performance (correct/wrong counts).
+   - Correct answers push the word's next review date further out;
+     incorrect answers bring it back sooner.
+   - This schedule determines which "due" words are added to each day's
+     learning batch.
+
+6. Progress Dashboard (simple & transparent)
+   - Words learned this week vs. total goal
+   - Accuracy trend (last 7 days, not just lifetime average)
+   - Explicit list of current weak words (not just a score)
+   - No gamification/badges/XP - plain, honest signal only
+
+7. Authentication
+   - Sign up / log in so progress, quiz history, and word status are
+     saved per user.
+
+
+TECH STACK
+--------------------------------------------------
+- Frontend + Backend: Next.js (React + API routes in one project)
+- Database: PostgreSQL via Supabase (free tier)
+- Authentication: Supabase Auth
+- AI: Google Gemini API (free tier, no credit card required) - used for
+  quiz generation, sentence grading, and word data enrichment
+- Styling: Tailwind CSS
+
+
+FIRST STEPS
+--------------------------------------------------
+1. Set up Supabase project (database + auth).
+2. Design and create database schema:
+   - words
+   - user_words
+   - quizzes
+   - quiz_answers
+3. Scaffold Next.js project with Tailwind CSS.
+4. Source an IELTS word list (Academic Word List + topic-based lists).
+5. Write a seed script to load the word list into the database,
+   using Gemini to fill in missing definitions/examples/synonyms.
+6. Build the daily learning page (word batch + checkbox) first, so it
+   is usable for real study immediately, even before AI quiz features
+   are complete.
+7. Add AI quiz generation (daily, then weekly).
+8. Add spaced repetition scheduling logic.
+9. Add progress dashboard.
