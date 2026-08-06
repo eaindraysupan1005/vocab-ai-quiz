@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "words:enrich": "node scripts/enrich-words.js",
+    "words:seed": "node scripts/seed-words.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
@@ -21,9 +23,11 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "16.3.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "ws": "^8.21.2"
   }
 }

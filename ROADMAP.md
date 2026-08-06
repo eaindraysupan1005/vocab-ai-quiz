@@ -12,9 +12,11 @@ build next, in order.
       Editor). `@supabase/ssr` client utilities added (`src/lib/supabase/{client,server,middleware}.ts`,
       root `middleware.ts`) so Server/Client Components and Route Handlers can talk to Supabase
       with session cookies handled automatically.
-- [ ] **3. Word list sourcing** — IELTS Academic Word List + topic-based vocab lists (raw data).
-- [ ] **4. Seed script** — load word list into `words`, use Gemini to fill missing
-      definitions/examples/synonyms.
+- [x] **3. Word list sourcing** — 833 words in `scripts/words.txt`, enriched via Gemini into
+      `scripts/enriched-words.json` (`npm run words:enrich`).
+- [x] **4. Seed script** — [`scripts/seed-words.js`](scripts/seed-words.js) (`npm run words:seed`)
+      upserts `enriched-words.json` into the `words` table via the service_role key. Run — all 833
+      words are live in the `words` table.
 - [ ] **5. Auth** — sign up / log in UI with Supabase Auth (client utilities already in place from
       step 2).
 - [ ] **6. Daily learning page** — show a batch of ~15-20 words (new + due-for-review), checkbox

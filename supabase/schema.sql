@@ -18,6 +18,9 @@ create table if not exists words (
   created_at timestamptz not null default now()
 );
 
+-- Lets the seed script upsert on word instead of creating duplicates on re-run.
+create unique index if not exists words_word_key on words (word);
+
 alter table words enable row level security;
 
 create policy "words are readable by anyone"
