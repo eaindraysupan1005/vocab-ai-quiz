@@ -6,12 +6,17 @@ build next, in order.
 
 - [x] **0. Scaffold** — Next.js (TS, App Router, Tailwind) project created, `@supabase/supabase-js`
       and `@google/generative-ai` installed as deps. Not wired up yet.
-- [ ] **1. Supabase project** — create project, enable email auth.
-- [ ] **2. DB schema** — `words`, `user_words`, `quizzes`, `quiz_answers` tables + RLS policies.
+- [x] **1. Supabase project** — project created, keys in `.env.local`.
+- [x] **2. DB schema** — `words`, `user_words`, `quizzes`, `quiz_answers` tables + RLS policies
+      written in [`supabase/schema.sql`](supabase/schema.sql) (run manually in the Supabase SQL
+      Editor). `@supabase/ssr` client utilities added (`src/lib/supabase/{client,server,middleware}.ts`,
+      root `middleware.ts`) so Server/Client Components and Route Handlers can talk to Supabase
+      with session cookies handled automatically.
 - [ ] **3. Word list sourcing** — IELTS Academic Word List + topic-based vocab lists (raw data).
 - [ ] **4. Seed script** — load word list into `words`, use Gemini to fill missing
       definitions/examples/synonyms.
-- [ ] **5. Auth** — sign up / log in with Supabase Auth, wired into the app.
+- [ ] **5. Auth** — sign up / log in UI with Supabase Auth (client utilities already in place from
+      step 2).
 - [ ] **6. Daily learning page** — show a batch of ~15-20 words (new + due-for-review), checkbox
       to mark learned per user. Ship this first — usable for real study even before quiz features.
 - [ ] **7. AI daily quiz** — generate next-day quiz from previously learned words; MCQ/fill-in for
