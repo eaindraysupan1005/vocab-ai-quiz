@@ -28,15 +28,15 @@ export default async function QuizPage() {
   const questions = buildMockQuestions(words);
 
   return (
-    <div className="flex flex-1 flex-col items-center gap-6 bg-zinc-50 px-4 py-10 dark:bg-black">
+    <div className="flex flex-1 flex-col items-center gap-6 bg-background px-4 py-10">
       <div className="flex w-full max-w-2xl items-center justify-between">
         <AppNav />
         <div className="flex items-center gap-3">
-          <span className="text-sm text-zinc-600 dark:text-zinc-400">{user?.email}</span>
+          <span className="text-sm text-text/70">{user?.email}</span>
           <form action={signOut}>
             <button
               type="submit"
-              className="rounded-full border border-black/[.08] px-4 py-2 text-sm font-medium transition-colors hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
+              className="rounded-full border border-text/10 px-4 py-2 text-sm font-medium transition-colors hover:bg-text/5"
             >
               Sign out
             </button>
@@ -45,8 +45,8 @@ export default async function QuizPage() {
       </div>
 
       <div className="w-full max-w-2xl">
-        <h1 className="text-xl font-semibold text-black dark:text-zinc-50">Daily quiz</h1>
-        <p className="mt-1 rounded bg-blue-50 px-3 py-2 text-sm text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+        <h1 className="text-xl font-semibold text-text">Daily quiz</h1>
+        <p className="mt-1 rounded bg-secondary/20 px-3 py-2 text-sm text-text">
           Preview only — questions use real words but aren&apos;t AI-generated or graded yet
           (that&apos;s roadmap step 7). Grading here is just local mock logic.
         </p>
@@ -55,7 +55,7 @@ export default async function QuizPage() {
       {questions.length > 0 ? (
         <QuizPlayer questions={questions} />
       ) : (
-        <p className="mt-12 text-zinc-600 dark:text-zinc-400">
+        <p className="mt-12 text-text/70">
           Not enough words in the bank yet to build a preview quiz.
         </p>
       )}

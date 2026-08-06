@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Makes `dark:` classes follow the manual data-theme toggle instead of
+   prefers-color-scheme, so existing dark: usage stays consistent with it. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root,
+:root[data-theme="light"] {
+  --text: #131c06;
+  --background: #f8fdf3;
+  --primary: #91d530;
+  --secondary: #8ae7c2;
+  --accent: #5fdfd3;
+}
+
+:root[data-theme="dark"] {
+  --text: #eff9e2;
+  --background: #080d02;
+  --primary: #8bcf2a;
+  --secondary: #187751;
+  --accent: #20a295;
 }
 
 @theme inline {
+  --color-text: var(--text);
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
 }

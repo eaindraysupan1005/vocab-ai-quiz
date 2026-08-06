@@ -24,11 +24,16 @@ build next, in order.
       (`src/app/{login,signup}/actions.ts`) + Supabase Auth, sign-out action in `src/app/actions.ts`.
       Route protection lives in `src/lib/supabase/middleware.ts` + `src/proxy.ts` (redirects
       unauthenticated visitors to `/login`, redirects logged-in visitors away from `/login`/`/signup`).
-- [x] **6. Daily learning page** — [`src/app/page.tsx`](src/app/page.tsx) shows a batch of up to 20
-      words (due-for-review first, filled with new words) via
+- [x] **6. Daily learning page** — [`src/app/learn/page.tsx`](src/app/learn/page.tsx) shows a
+      batch of up to 20 words (due-for-review first, filled with new words) via
       [`getDailyBatch`](src/lib/daily-batch.ts); checkbox toggles `user_words` through
       [`toggleWordLearned`](src/app/word-actions.ts). Uses a fixed "review again tomorrow" interval
       as a placeholder — step 9 replaces it with real spaced-repetition math.
+- [x] **Theme + public landing page** (not a numbered roadmap step, general UI work) — `/` is now a
+      public landing page ([`src/app/page.tsx`](src/app/page.tsx)) explaining the product; the
+      learning app moved to `/learn`. Added a light/dark theme
+      ([`globals.css`](src/app/globals.css) tokens + [`ThemeToggle`](src/components/ThemeToggle.tsx),
+      persisted, defaults to system preference) and redesigned `/login`/`/signup` to match.
 - [ ] **7. AI daily quiz** — generate next-day quiz from previously learned words; MCQ/fill-in for
       new words, AI-graded sentence production for repeat words.
       **UI mock done**: [`src/app/quiz/page.tsx`](src/app/quiz/page.tsx) +

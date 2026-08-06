@@ -21,5 +21,5 @@ export async function signup(formData: FormData) {
     );
   }
 
-  redirect("/");
+  redirect("/learn");
 }
