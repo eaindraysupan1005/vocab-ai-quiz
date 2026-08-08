@@ -37,7 +37,6 @@ healthcare system
 chronic diseases
 preventive healthcare
 medical treatment
-life expectancy
 nutritional value
 eating habits
 healthy diet
@@ -51,11 +50,9 @@ commit a crime
 deter crime
 law enforcement
 criminal justice system
-prison sentence
 rehabilitation programs
 criminal record
 economic integration
-international trade
 cultural diversity
 multinational corporations
 global market
@@ -153,7 +150,6 @@ scientific mission
 launch a satellite
 deep space
 extraterrestrial life
-gravitational force
 space technology
 astronomical observation
 space research
@@ -235,7 +231,6 @@ fraud
 genetic
 greenhouse
 healthcare
-immigration
 implement
 implication
 incorporate
@@ -287,3 +282,283 @@ variable
 victim
 vulnerability
 wireless
+academic rigour
+intellectual curiosity
+scholarly pursuit
+educational attainment
+academic discipline
+cognitive development
+intellectual development
+knowledge acquisition
+educational resources
+teaching methodology
+curriculum reform
+compulsory education
+tertiary education
+early childhood education
+distance learning
+classroom engagement
+student autonomy
+academic integrity
+educational institution
+learning outcomes
+literacy rate
+educational provision
+merit-based admission
+standardized assessment
+teacher-student ratio
+climate resilience
+greenhouse gas emissions
+climate mitigation
+climate adaptation
+environmental sustainability
+renewable infrastructure
+energy transition
+energy efficiency
+clean energy
+solar power
+wind power
+habitat destruction
+species extinction
+natural habitat
+ecosystem restoration
+environmental conservation
+water scarcity
+air pollution
+soil erosion
+marine pollution
+plastic waste
+environmental stewardship
+technological literacy
+digital competence
+machine learning
+neural networks
+algorithmic bias
+algorithmic decision-making
+artificial neural network
+human-machine interaction
+technological dependency
+digital infrastructure
+cybersecurity threats
+identity theft
+information overload
+digital footprint
+data breach
+personal data
+facial recognition
+autonomous systems
+robotic technology
+emerging technologies
+technological disruption
+innovation-driven economy
+digital economy
+technology-enabled services
+sedentary lifestyle
+physical fitness
+psychological well-being
+emotional well-being
+healthy ageing
+life-threatening illness
+infectious disease
+non-communicable disease
+healthcare provision
+healthcare accessibility
+healthcare expenditure
+medical intervention
+clinical trials
+health awareness
+health-conscious consumers
+dietary intake
+nutritional deficiency
+obesity epidemic
+immune system
+public health campaign
+health inequality
+mental health awareness
+quality healthcare
+medical professionals
+treatment outcomes
+agricultural productivity
+agricultural practices
+agricultural sector
+food production
+food consumption
+food processing
+food distribution
+food waste
+food supply chain
+dietary preferences
+nutritional deficiencies
+food additives
+ultra-processed food
+plant-based diet
+intensive farming
+agricultural land
+crop yields
+food affordability
+criminal activity
+criminal behaviour
+law-abiding citizens
+crime prevention
+crime rates
+repeat offenders
+law enforcement agencies
+judicial system
+legal proceedings
+judicial reform
+law enforcement measures
+deterrent effect
+gross domestic product
+economic downturn
+economic disparity
+wealth distribution
+wealth accumulation
+purchasing power
+disposable income
+household income
+economic burden
+fiscal policy
+monetary policy
+interest rates
+inflationary pressure
+cost of living
+economic slowdown
+financial hardship
+economic resilience
+globalisation
+global supply chain
+international competitiveness
+foreign investment
+economic liberalisation
+export-oriented economy
+economic diversification
+occupational mobility
+career trajectory
+professional expertise
+professional qualifications
+employability
+workforce participation
+labour productivity
+labour shortage
+labour rights
+workplace diversity
+workplace culture
+occupational safety
+employee retention
+staff turnover
+job security
+job prospects
+career progression
+career-oriented
+managerial position
+leadership skills
+interpersonal skills
+transferable skills
+entrepreneurial skills
+remote working
+flexible working arrangements
+urbanisation
+urban sprawl
+population density
+metropolitan areas
+urban infrastructure
+public transit
+mass transit
+transport network
+road infrastructure
+pedestrian-friendly
+cycling infrastructure
+traffic bottlenecks
+rush hour
+vehicle emissions
+private vehicle ownership
+transport accessibility
+urban planning
+smart cities
+residential areas
+overcrowded cities
+media literacy
+journalistic integrity
+investigative journalism
+sensationalist reporting
+biased reporting
+media censorship
+press freedom
+news outlets
+mainstream media
+independent media
+public discourse
+political discourse
+information dissemination
+misinformation
+disinformation
+media consumption
+audience engagement
+online platforms
+viral content
+public sentiment
+social mobility
+social justice
+social inclusion
+social exclusion
+social integration
+social stability
+civic engagement
+civic responsibility
+public administration
+government accountability
+political stability
+institutional reform
+regulatory framework
+legislative measures
+government initiative
+welfare provision
+social safety net
+public spending
+taxpayer-funded services
+bureaucratic procedures
+cultural preservation
+cultural assimilation
+cultural legacy
+indigenous culture
+cultural values
+cultural practices
+cultural norms
+artistic innovation
+creative expression
+artistic achievement
+cultural event
+cultural festival
+historical monument
+architectural heritage
+cultural landscape
+artistic merit
+cultural enrichment
+empirical evidence
+scientific methodology
+scientific consensus
+research methodology
+peer-reviewed research
+empirical research
+groundbreaking discovery
+breakthrough research
+laboratory research
+genetic engineering
+biotechnology
+biomedical research
+planetary science
+astronomical research
+ageing population
+population ageing
+birth rate
+mortality rate
+fertility rate
+population distribution
+demographic transition
+demographic trend
+migration patterns
+migrant communities
+social disparities
+gender equality
+gender discrimination
+equal access

@@ -1,0 +1,3583 @@
+[
+  {
+    "word": "ubiquitous",
+    "definition": "Present, appearing, or found everywhere.",
+    "example_sentence": "Mobile phones have become a ubiquitous part of modern life, deeply integrated into daily routines.",
+    "topic": "technology",
+    "band_level": 7,
+    "synonyms": [
+      "omnipresent",
+      "pervasive",
+      "universal",
+      "widespread"
+    ]
+  },
+  {
+    "word": "esoteric",
+    "definition": "Intended for or likely to be understood by only a small number of people with a specialized knowledge or interest.",
+    "example_sentence": "The lecture delved into esoteric theories of quantum physics that were challenging for the general audience to grasp.",
+    "topic": "education",
+    "band_level": 7.5,
+    "synonyms": [
+      "abstruse",
+      "obscure",
+      "arcane",
+      "recondite"
+    ]
+  },
+  {
+    "word": "ephemeral",
+    "definition": "Lasting for a very short time.",
+    "example_sentence": "The beauty of cherry blossoms is ephemeral, lasting only a few weeks each spring.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "fleeting",
+      "transient",
+      "short-lived",
+      "momentary"
+    ]
+  },
+  {
+    "word": "paradigm shift",
+    "definition": "A fundamental change in approach or underlying assumptions.",
+    "example_sentence": "The invention of the internet represented a major paradigm shift in how information is accessed and shared globally.",
+    "topic": "technology",
+    "band_level": 8,
+    "synonyms": [
+      "revolution",
+      "transformation",
+      "upheaval",
+      "sea change"
+    ]
+  },
+  {
+    "word": "dichotomy",
+    "definition": "A division or contrast between two things that are or are represented as being opposed or entirely different.",
+    "example_sentence": "There is often a clear dichotomy between the theoretical ideals of a policy and its practical implementation.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "contrast",
+      "division",
+      "polarity",
+      "split"
+    ]
+  },
+  {
+    "word": "nuanced",
+    "definition": "Characterized by subtle shades of meaning or expression.",
+    "example_sentence": "Understanding the geopolitical landscape requires a nuanced appreciation of historical context and cultural factors.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "subtle",
+      "intricate",
+      "complex",
+      "refined"
+    ]
+  },
+  {
+    "word": "discernible",
+    "definition": "Able to be perceived or recognized.",
+    "example_sentence": "After months of effort, a discernible improvement in the students' writing skills was evident.",
+    "topic": "education",
+    "band_level": 6.5,
+    "synonyms": [
+      "perceptible",
+      "noticeable",
+      "apparent",
+      "detectable"
+    ]
+  },
+  {
+    "word": "ameliorate",
+    "definition": "To make something bad or unsatisfactory better.",
+    "example_sentence": "Governments are trying to ameliorate the impact of climate change through various environmental policies.",
+    "topic": "environment",
+    "band_level": 7,
+    "synonyms": [
+      "improve",
+      "enhance",
+      "better",
+      "alleviate"
+    ]
+  },
+  {
+    "word": "mitigate",
+    "definition": "To make something less severe, serious, or painful.",
+    "example_sentence": "Measures must be taken to mitigate the risks associated with natural disasters in vulnerable regions.",
+    "topic": "environment",
+    "band_level": 7,
+    "synonyms": [
+      "alleviate",
+      "lessen",
+      "reduce",
+      "diminish"
+    ]
+  },
+  {
+    "word": "exacerbate",
+    "definition": "To make a problem, bad situation, or negative feeling worse.",
+    "example_sentence": "Poor urban planning can exacerbate traffic congestion and air pollution in major cities.",
+    "topic": "environment",
+    "band_level": 7,
+    "synonyms": [
+      "worsen",
+      "aggravate",
+      "intensify",
+      "compound"
+    ]
+  },
+  {
+    "word": "corroborate",
+    "definition": "To confirm or give support to a statement, theory, or finding.",
+    "example_sentence": "Further research is needed to corroborate the initial findings of the study before drawing firm conclusions.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "confirm",
+      "verify",
+      "validate",
+      "substantiate"
+    ]
+  },
+  {
+    "word": "substantiate",
+    "definition": "To provide evidence to support or prove the truth of something.",
+    "example_sentence": "Scientists often need extensive data to substantiate their hypotheses and theories.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "prove",
+      "confirm",
+      "verify",
+      "support"
+    ]
+  },
+  {
+    "word": "refute",
+    "definition": "To prove a statement or theory to be wrong or false.",
+    "example_sentence": "New evidence has emerged that could refute the long-held assumption about the causes of the decline.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "disprove",
+      "invalidate",
+      "rebut",
+      "contradict"
+    ]
+  },
+  {
+    "word": "repudiate",
+    "definition": "To refuse to accept or be associated with; to deny the truth or validity of.",
+    "example_sentence": "The government was forced to repudiate the actions of its rogue official following widespread public outrage.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "reject",
+      "disavow",
+      "renounce",
+      "disown"
+    ]
+  },
+  {
+    "word": "vindicate",
+    "definition": "To clear someone of blame or suspicion; to show or prove to be right, reasonable, or justified.",
+    "example_sentence": "The discovery of new evidence served to vindicate the wrongly accused individual.",
+    "topic": "crime",
+    "band_level": 7.5,
+    "synonyms": [
+      "clear",
+      "absolve",
+      "exonerate",
+      "justify"
+    ]
+  },
+  {
+    "word": "capitulate",
+    "definition": "To cease to resist an opponent or an unwelcome demand; surrender.",
+    "example_sentence": "After prolonged negotiations, the company was forced to capitulate to the union's demands for better working conditions.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "surrender",
+      "yield",
+      "submit",
+      "concede"
+    ]
+  },
+  {
+    "word": "acquiesce",
+    "definition": "To accept something reluctantly but without protest.",
+    "example_sentence": "Despite initial reservations, the committee ultimately decided to acquiesce to the chairman's proposal.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "comply",
+      "consent",
+      "accede",
+      "agree"
+    ]
+  },
+  {
+    "word": "assuage",
+    "definition": "To make an unpleasant feeling less intense.",
+    "example_sentence": "Providing psychological support can help to assuage the fears of people affected by natural disasters.",
+    "topic": "health",
+    "band_level": 7.5,
+    "synonyms": [
+      "relieve",
+      "soothe",
+      "ease",
+      "alleviate"
+    ]
+  },
+  {
+    "word": "placate",
+    "definition": "To make someone less angry or hostile.",
+    "example_sentence": "Diplomacy is often used to placate hostile nations and prevent escalating conflicts.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "appease",
+      "pacify",
+      "calm",
+      "mollify"
+    ]
+  },
+  {
+    "word": "mollify",
+    "definition": "To appease the anger or anxiety of someone.",
+    "example_sentence": "The company attempted to mollify angry customers by offering full refunds and compensation.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "appease",
+      "placate",
+      "calm",
+      "soothe"
+    ]
+  },
+  {
+    "word": "exacting",
+    "definition": "Making great demands on one's skill, attention, or other resources.",
+    "example_sentence": "The process of scientific research is often exacting, requiring meticulous attention to detail and rigorous methodology.",
+    "topic": "education",
+    "band_level": 7,
+    "synonyms": [
+      "demanding",
+      "rigorous",
+      "stringent",
+      "precise"
+    ]
+  },
+  {
+    "word": "meticulous",
+    "definition": "Showing great attention to detail; very careful and precise.",
+    "example_sentence": "Architects must be meticulous in their planning and execution to ensure the safety and integrity of structures.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "scrupulous",
+      "precise",
+      "thorough",
+      "fastidious"
+    ]
+  },
+  {
+    "word": "punctilious",
+    "definition": "Showing great attention to detail or correct behavior.",
+    "example_sentence": "A judge must be punctilious in applying legal procedures to ensure justice is served fairly.",
+    "topic": "crime",
+    "band_level": 7.5,
+    "synonyms": [
+      "scrupulous",
+      "meticulous",
+      "conscientious",
+      "precise"
+    ]
+  },
+  {
+    "word": "fastidious",
+    "definition": "Very attentive to and concerned about accuracy and detail; difficult to please.",
+    "example_sentence": "The chef was fastidious about the quality of ingredients, insisting on only the freshest produce.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "meticulous",
+      "scrupulous",
+      "finicky",
+      "exacting"
+    ]
+  },
+  {
+    "word": "inexorable",
+    "definition": "Impossible to stop or prevent; (of a person) impossible to persuade by entreaty or request.",
+    "example_sentence": "The inexorable march of technological progress continues to reshape human society.",
+    "topic": "technology",
+    "band_level": 8,
+    "synonyms": [
+      "relentless",
+      "unstoppable",
+      "unavoidable",
+      "unyielding"
+    ]
+  },
+  {
+    "word": "indelible",
+    "definition": "Not able to be forgotten or removed.",
+    "example_sentence": "The experience of living abroad left an indelible impression on her understanding of global cultures.",
+    "topic": "culture",
+    "band_level": 7.5,
+    "synonyms": [
+      "permanent",
+      "lasting",
+      "enduring",
+      "unforgettable"
+    ]
+  },
+  {
+    "word": "ineffable",
+    "definition": "Too great or extreme to be expressed or described in words.",
+    "example_sentence": "The beauty of the aurora borealis is often described as ineffable, beyond the power of language to fully capture.",
+    "topic": "general",
+    "band_level": 8,
+    "synonyms": [
+      "indescribable",
+      "inexpressible",
+      "sublime",
+      "transcendental"
+    ]
+  },
+  {
+    "word": "incontrovertible",
+    "definition": "Not able to be denied or disputed.",
+    "example_sentence": "The forensic evidence presented in court was incontrovertible, leaving no doubt about the defendant's guilt.",
+    "topic": "crime",
+    "band_level": 8,
+    "synonyms": [
+      "undeniable",
+      "indisputable",
+      "unassailable",
+      "irrefutable"
+    ]
+  },
+  {
+    "word": "unequivocal",
+    "definition": "Leaving no doubt; unambiguous.",
+    "example_sentence": "The public's disapproval of the new policy was unequivocal, expressed through widespread protests.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "unambiguous",
+      "clear",
+      "explicit",
+      "definite"
+    ]
+  },
+  {
+    "word": "categorically",
+    "definition": "In a way that is unambiguously explicit and direct.",
+    "example_sentence": "The minister categorically denied any involvement in the scandal, stating his innocence clearly.",
+    "topic": "government",
+    "band_level": 7,
+    "synonyms": [
+      "absolutely",
+      "explicitly",
+      "unequivocally",
+      "directly"
+    ]
+  },
+  {
+    "word": "propensity",
+    "definition": "An inclination or natural tendency to behave in a particular way.",
+    "example_sentence": "Some studies suggest that humans have an innate propensity for altruism and cooperation.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "tendency",
+      "inclination",
+      "predisposition",
+      "proclivity"
+    ]
+  },
+  {
+    "word": "predilection",
+    "definition": "A preference or special liking for something; a bias in favor of something.",
+    "example_sentence": "Many students show a predilection for visual learning methods over purely auditory ones.",
+    "topic": "education",
+    "band_level": 7.5,
+    "synonyms": [
+      "preference",
+      "liking",
+      "fondness",
+      "partiality"
+    ]
+  },
+  {
+    "word": "proclivity",
+    "definition": "A tendency to choose or do something regularly; an inclination or predisposition toward a particular thing.",
+    "example_sentence": "There is a proclivity among younger generations to embrace digital forms of communication.",
+    "topic": "technology",
+    "band_level": 7.5,
+    "synonyms": [
+      "tendency",
+      "inclination",
+      "propensity",
+      "leaning"
+    ]
+  },
+  {
+    "word": "penchant",
+    "definition": "A strong or habitual liking for something or tendency to do something.",
+    "example_sentence": "He has a strong penchant for classical music and attends concerts whenever possible.",
+    "topic": "culture",
+    "band_level": 7.5,
+    "synonyms": [
+      "fondness",
+      "liking",
+      "preference",
+      "inclination"
+    ]
+  },
+  {
+    "word": "aversion",
+    "definition": "A strong dislike or disinclination.",
+    "example_sentence": "Many people have a strong aversion to public speaking, finding it stressful and anxiety-inducing.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "dislike",
+      "distaste",
+      "abhorrence",
+      "antipathy"
+    ]
+  },
+  {
+    "word": "antipathy",
+    "definition": "A deep-seated feeling of dislike; aversion.",
+    "example_sentence": "The historical rivalry between the two nations led to a deep antipathy that persisted for centuries.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "hostility",
+      "animosity",
+      "aversion",
+      "dislike"
+    ]
+  },
+  {
+    "word": "apathy",
+    "definition": "Lack of interest, enthusiasm, or concern.",
+    "example_sentence": "Widespread public apathy towards local elections can lead to low voter turnout.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "indifference",
+      "disinterest",
+      "unconcern",
+      "detachment"
+    ]
+  },
+  {
+    "word": "ambivalence",
+    "definition": "The state of having mixed feelings or contradictory ideas about something or someone.",
+    "example_sentence": "Many individuals feel ambivalence towards the rapid advancement of artificial intelligence, seeing both benefits and risks.",
+    "topic": "technology",
+    "band_level": 7.5,
+    "synonyms": [
+      "uncertainty",
+      "conflict",
+      "hesitation",
+      "indecision"
+    ]
+  },
+  {
+    "word": "disparity",
+    "definition": "A great difference.",
+    "example_sentence": "Significant economic disparity often exists between urban and rural areas within a country.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "inequality",
+      "divergence",
+      "imbalance",
+      "gap"
+    ]
+  },
+  {
+    "word": "discrepancy",
+    "definition": "A lack of compatibility or similarity between two or more facts.",
+    "example_sentence": "Auditors found a noticeable discrepancy between the reported figures and the actual financial records.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "inconsistency",
+      "difference",
+      "divergence",
+      "mismatch"
+    ]
+  },
+  {
+    "word": "incongruity",
+    "definition": "The state of being incongruous or out of keeping.",
+    "example_sentence": "The incongruity of modern skyscrapers standing next to ancient temples created a striking visual contrast.",
+    "topic": "culture",
+    "band_level": 7.5,
+    "synonyms": [
+      "inconsistency",
+      "discrepancy",
+      "mismatch",
+      "oddity"
+    ]
+  },
+  {
+    "word": "anomaly",
+    "definition": "Something that deviates from what is standard, normal, or expected.",
+    "example_sentence": "The unusually high rainfall last summer was an anomaly, departing from typical weather patterns for the region.",
+    "topic": "environment",
+    "band_level": 7,
+    "synonyms": [
+      "abnormality",
+      "irregularity",
+      "deviation",
+      "outlier"
+    ]
+  },
+  {
+    "word": "aberration",
+    "definition": "A departure from what is normal, usual, or expected, typically one that is unwelcome.",
+    "example_sentence": "The temporary economic downturn was seen as an aberration rather than a sign of a long-term trend.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "deviation",
+      "anomaly",
+      "irregularity",
+      "peculiarity"
+    ]
+  },
+  {
+    "word": "vicissitude",
+    "definition": "A change of circumstances or fortune, typically one that is unwelcome or unpleasant.",
+    "example_sentence": "The book explores the vicissitudes of life experienced by immigrants adapting to a new culture.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "change",
+      "fluctuation",
+      "alteration",
+      "reversal"
+    ]
+  },
+  {
+    "word": "exigency",
+    "definition": "An urgent need or demand.",
+    "example_sentence": "The government had to respond swiftly to the exigencies of the sudden humanitarian crisis.",
+    "topic": "government",
+    "band_level": 8,
+    "synonyms": [
+      "urgency",
+      "necessity",
+      "demand",
+      "crisis"
+    ]
+  },
+  {
+    "word": "contingency",
+    "definition": "A future event or circumstance which is possible but cannot be predicted with certainty.",
+    "example_sentence": "Businesses often develop contingency plans to prepare for unforeseen economic downturns or natural disasters.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "possibility",
+      "eventuality",
+      "unforeseen event",
+      "emergency"
+    ]
+  },
+  {
+    "word": "ramification",
+    "definition": "A complex or unwelcome consequence of an action or event.",
+    "example_sentence": "The long-term ramifications of climate change are still being extensively studied by scientists globally.",
+    "topic": "environment",
+    "band_level": 7.5,
+    "synonyms": [
+      "consequence",
+      "aftermath",
+      "outcome",
+      "implication"
+    ]
+  },
+  {
+    "word": "corollary",
+    "definition": "A proposition that follows as a natural consequence or effect of another.",
+    "example_sentence": "A natural corollary of increased access to online information is the need for enhanced digital literacy skills.",
+    "topic": "education",
+    "band_level": 8,
+    "synonyms": [
+      "consequence",
+      "result",
+      "outcome",
+      "effect"
+    ]
+  },
+  {
+    "word": "prerequisite",
+    "definition": "A thing that is required as a prior condition for something else to happen or exist.",
+    "example_sentence": "Critical thinking is often considered a fundamental prerequisite for academic success at university level.",
+    "topic": "education",
+    "band_level": 7,
+    "synonyms": [
+      "requirement",
+      "precondition",
+      "necessity",
+      "essential"
+    ]
+  },
+  {
+    "word": "precursor",
+    "definition": "A person or thing that comes before another of the same kind; a forerunner.",
+    "example_sentence": "Early desktop computers were precursors to the powerful portable devices we use today.",
+    "topic": "technology",
+    "band_level": 7.5,
+    "synonyms": [
+      "forerunner",
+      "predecessor",
+      "antecedent",
+      "herald"
+    ]
+  },
+  {
+    "word": "catalyst",
+    "definition": "A person or thing that precipitates an event or change.",
+    "example_sentence": "The invention of the internet acted as a significant catalyst for global communication and information sharing.",
+    "topic": "technology",
+    "band_level": 7,
+    "synonyms": [
+      "impetus",
+      "stimulus",
+      "trigger",
+      "spur"
+    ]
+  },
+  {
+    "word": "impetus",
+    "definition": "The force or energy that causes something to happen or be done.",
+    "example_sentence": "The government's new funding initiatives aim to provide an impetus for innovation in renewable energy technologies.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "stimulus",
+      "momentum",
+      "drive",
+      "motivation"
+    ]
+  },
+  {
+    "word": "instigate",
+    "definition": "To bring about or initiate an action or event, often a negative one.",
+    "example_sentence": "Social media platforms have been criticized for potentially instigating conflicts by spreading misinformation.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "provoke",
+      "incite",
+      "initiate",
+      "trigger"
+    ]
+  },
+  {
+    "word": "engender",
+    "definition": "To cause or give rise to a feeling, situation, or condition.",
+    "example_sentence": "A lack of transparency in public administration can often engender distrust among citizens.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "produce",
+      "generate",
+      "create",
+      "foster"
+    ]
+  },
+  {
+    "word": "precipitate",
+    "definition": "To cause an event or situation, typically an undesirable one, to happen suddenly, unexpectedly, or prematurely.",
+    "example_sentence": "The sudden economic downturn could precipitate widespread job losses across several sectors.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "trigger",
+      "hasten",
+      "provoke",
+      "accelerate"
+    ]
+  },
+  {
+    "word": "culminate",
+    "definition": "To reach a climax or point of highest development.",
+    "example_sentence": "Years of research and development culminated in the successful launch of the new spacecraft.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "conclude",
+      "climax",
+      "peak",
+      "finish"
+    ]
+  },
+  {
+    "word": "coalesce",
+    "definition": "To come together and form one mass or whole.",
+    "example_sentence": "Various activist groups from different backgrounds began to coalesce around the common goal of environmental protection.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "merge",
+      "unite",
+      "combine",
+      "fuse"
+    ]
+  },
+  {
+    "word": "converge",
+    "definition": "To tend to meet at a point or come together.",
+    "example_sentence": "Experts from diverse fields will converge at the upcoming conference to discuss global climate change.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "meet",
+      "join",
+      "unite",
+      "come together"
+    ]
+  },
+  {
+    "word": "diverge",
+    "definition": "To separate from another route and go in a different direction, or to differ in opinion or development.",
+    "example_sentence": "While initially similar, the economic policies of the two nations began to diverge significantly over time.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "separate",
+      "deviate",
+      "differ",
+      "branch off"
+    ]
+  },
+  {
+    "word": "permeate",
+    "definition": "To spread throughout (something); pervade.",
+    "example_sentence": "The scent of freshly baked bread permeated the entire house.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "pervade",
+      "penetrate",
+      "spread",
+      "infuse"
+    ]
+  },
+  {
+    "word": "pervade",
+    "definition": "To spread throughout and be perceived in every part of.",
+    "example_sentence": "A sense of optimism seemed to pervade the city after the successful hosting of the international event.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "permeate",
+      "saturate",
+      "diffuse",
+      "imbue"
+    ]
+  },
+  {
+    "word": "undermine",
+    "definition": "To lessen the effectiveness, power, or ability of, especially gradually or insidiously.",
+    "example_sentence": "Constant criticism can seriously undermine a student's confidence and motivation to learn.",
+    "topic": "education",
+    "band_level": 7,
+    "synonyms": [
+      "weaken",
+      "impair",
+      "sabotage",
+      "erode"
+    ]
+  },
+  {
+    "word": "underpin",
+    "definition": "To support, justify, or form the basis for (an idea, theory, or system).",
+    "example_sentence": "The principle of equality underpins many democratic legal systems worldwide.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "support",
+      "bolster",
+      "uphold",
+      "reinforce"
+    ]
+  },
+  {
+    "word": "underscore",
+    "definition": "To emphasize the importance of something.",
+    "example_sentence": "The recent natural disaster served to underscore the urgent need for robust infrastructure development.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "emphasize",
+      "highlight",
+      "stress",
+      "accentuate"
+    ]
+  },
+  {
+    "word": "epitomize",
+    "definition": "To be a perfect example of.",
+    "example_sentence": "The ancient Greek architecture of the Parthenon continues to epitomize classical beauty and proportion.",
+    "topic": "culture",
+    "band_level": 7.5,
+    "synonyms": [
+      "embody",
+      "typify",
+      "exemplify",
+      "represent"
+    ]
+  },
+  {
+    "word": "exemplify",
+    "definition": "To be a typical example of; illustrate by giving an example.",
+    "example_sentence": "The company's commitment to ethical sourcing exemplifies its dedication to corporate social responsibility.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "illustrate",
+      "represent",
+      "embody",
+      "demonstrate"
+    ]
+  },
+  {
+    "word": "encapsulate",
+    "definition": "To express the essential features of (something) in a concise way.",
+    "example_sentence": "The artist managed to encapsulate the entire mood of the era in a single painting.",
+    "topic": "culture",
+    "band_level": 7.5,
+    "synonyms": [
+      "summarize",
+      "condense",
+      "express",
+      "embody"
+    ]
+  },
+  {
+    "word": "delineate",
+    "definition": "To describe or portray something precisely.",
+    "example_sentence": "The architect was asked to delineate the exact specifications for the new building's energy-efficient features.",
+    "topic": "general",
+    "band_level": 8,
+    "synonyms": [
+      "describe",
+      "define",
+      "outline",
+      "portray"
+    ]
+  },
+  {
+    "word": "elucidate",
+    "definition": "To make (something) clear; explain.",
+    "example_sentence": "The professor's role was to elucidate complex theories in a way that was accessible to all students.",
+    "topic": "education",
+    "band_level": 8,
+    "synonyms": [
+      "explain",
+      "clarify",
+      "illuminat",
+      "explicate"
+    ]
+  },
+  {
+    "word": "articulate",
+    "definition": "To express (an idea or feeling) fluently and coherently.",
+    "example_sentence": "Effective leaders must be able to articulate their vision clearly to inspire their teams.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "express",
+      "enunciate",
+      "voice",
+      "communicate"
+    ]
+  },
+  {
+    "word": "connote",
+    "definition": "To imply or suggest (an idea or feeling) in addition to the literal or primary meaning.",
+    "example_sentence": "The word \"home\" often connotes warmth and security, beyond just a physical dwelling.",
+    "topic": "culture",
+    "band_level": 7.5,
+    "synonyms": [
+      "imply",
+      "suggest",
+      "hint",
+      "evoke"
+    ]
+  },
+  {
+    "word": "denote",
+    "definition": "To be a sign of; indicate, or to stand as a name or symbol for.",
+    "example_sentence": "A red octagon at an intersection denotes a stop sign, requiring drivers to halt.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "indicate",
+      "signify",
+      "represent",
+      "mean"
+    ]
+  },
+  {
+    "word": "juxtapose",
+    "definition": "To place or deal with close together for contrasting effect.",
+    "example_sentence": "The exhibition sought to juxtapose ancient artifacts with modern art installations to highlight cultural continuity.",
+    "topic": "culture",
+    "band_level": 8,
+    "synonyms": [
+      "contrast",
+      "place side-by-side",
+      "compare",
+      "set against"
+    ]
+  },
+  {
+    "word": "paradox",
+    "definition": "A seemingly absurd or contradictory statement or proposition which when investigated may prove to be well founded or true.",
+    "example_sentence": "It is a paradox that highly developed nations often have both the best healthcare and some of the highest rates of preventable diseases.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "contradiction",
+      "enigma",
+      "anomaly",
+      "irony"
+    ]
+  },
+  {
+    "word": "conundrum",
+    "definition": "A confusing and difficult problem or question.",
+    "example_sentence": "Solving the energy crisis presents a significant conundrum for scientists and policymakers alike.",
+    "topic": "general",
+    "band_level": 8,
+    "synonyms": [
+      "puzzle",
+      "dilemma",
+      "enigma",
+      "riddle"
+    ]
+  },
+  {
+    "word": "quandary",
+    "definition": "A state of perplexity or uncertainty over what to do in a difficult situation.",
+    "example_sentence": "The government found itself in a quandary over whether to prioritize economic growth or environmental protection.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "dilemma",
+      "predicament",
+      "difficulty",
+      "plight"
+    ]
+  },
+  {
+    "word": "stalemate",
+    "definition": "A situation in which further action or progress by opposing or competing parties seems impossible.",
+    "example_sentence": "Negotiations between the two countries reached a stalemate, preventing any resolution to the trade dispute.",
+    "topic": "government",
+    "band_level": 7,
+    "synonyms": [
+      "deadlock",
+      "impasse",
+      "standoff",
+      "gridlock"
+    ]
+  },
+  {
+    "word": "stopgap measure",
+    "definition": "A temporary way of dealing with a problem or satisfying a need.",
+    "example_sentence": "Providing temporary shelters was only a stopgap measure; a long-term housing solution was desperately needed after the disaster.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "temporary solution",
+      "provisional arrangement",
+      "makeshift",
+      "interim fix"
+    ]
+  },
+  {
+    "word": "panacea",
+    "definition": "A solution or remedy for all difficulties or diseases.",
+    "example_sentence": "While technology offers many solutions, it is not a panacea for all of society's problems.",
+    "topic": "general",
+    "band_level": 8,
+    "synonyms": [
+      "cure-all",
+      "universal remedy",
+      "elixir",
+      "magic bullet"
+    ]
+  },
+  {
+    "word": "palliative",
+    "definition": "Relieving pain or alleviating a problem without dealing with the underlying cause.",
+    "example_sentence": "Giving financial aid is a necessary palliative for those in immediate poverty, but it doesn't address systemic inequalities.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "soothing",
+      "comforting",
+      "temporary relief",
+      "alleviative"
+    ]
+  },
+  {
+    "word": "tenuous",
+    "definition": "Very weak or slight; insubstantial.",
+    "example_sentence": "The connection between the suspect and the crime was tenuous, based on circumstantial evidence alone.",
+    "topic": "crime",
+    "band_level": 7.5,
+    "synonyms": [
+      "flimsy",
+      "fragile",
+      "weak",
+      "slender"
+    ]
+  },
+  {
+    "word": "untenable",
+    "definition": "(Especially of a position or view) not able to be maintained or defended against attack or objection.",
+    "example_sentence": "The argument that economic growth should always take precedence over environmental protection is becoming increasingly untenable.",
+    "topic": "environment",
+    "band_level": 8,
+    "synonyms": [
+      "indefensible",
+      "unsustainable",
+      "flawed",
+      "insupportable"
+    ]
+  },
+  {
+    "word": "plausible",
+    "definition": "(Of an argument or statement) seeming reasonable or probable.",
+    "example_sentence": "The scientist presented a plausible hypothesis to explain the observed phenomena, which warranted further investigation.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "credible",
+      "believable",
+      "likely",
+      "reasonable"
+    ]
+  },
+  {
+    "word": "implausible",
+    "definition": "(Of an argument or statement) not seeming reasonable or probable; failing to convince.",
+    "example_sentence": "The explanation for the sudden disappearance of funds seemed highly implausible to the auditors.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "unbelievable",
+      "improbable",
+      "unlikely",
+      "unconvincing"
+    ]
+  },
+  {
+    "word": "conspicuous",
+    "definition": "Standing out so as to be clearly visible; attracting notice or attention.",
+    "example_sentence": "The new skyscraper was a conspicuous addition to the city's skyline, visible from miles away.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "noticeable",
+      "prominent",
+      "obvious",
+      "striking"
+    ]
+  },
+  {
+    "word": "inconspicuous",
+    "definition": "Not clearly visible or attracting attention; unobtrusive.",
+    "example_sentence": "The new security cameras were designed to be inconspicuous, blending in with the building's architecture.",
+    "topic": "technology",
+    "band_level": 7.5,
+    "synonyms": [
+      "unnoticeable",
+      "subtle",
+      "hidden",
+      "discreet"
+    ]
+  },
+  {
+    "word": "innocuous",
+    "definition": "Not harmful or offensive.",
+    "example_sentence": "The chemical was deemed innocuous and safe for use in food packaging after extensive testing.",
+    "topic": "health",
+    "band_level": 8,
+    "synonyms": [
+      "harmless",
+      "benign",
+      "safe",
+      "inoffensive"
+    ]
+  },
+  {
+    "word": "insidious",
+    "definition": "Proceeding in a gradual, subtle way, but with harmful effects.",
+    "example_sentence": "The insidious spread of misinformation on social media poses a significant threat to democratic processes.",
+    "topic": "society",
+    "band_level": 8.5,
+    "synonyms": [
+      "subtle",
+      "stealthy",
+      "treacherous",
+      "cunning"
+    ]
+  },
+  {
+    "word": "pernicious",
+    "definition": "Having a harmful effect, especially in a gradual or subtle way.",
+    "example_sentence": "The pernicious effects of air pollution on respiratory health are a growing concern in urban areas.",
+    "topic": "health",
+    "band_level": 8.5,
+    "synonyms": [
+      "harmful",
+      "detrimental",
+      "damaging",
+      "destructive"
+    ]
+  },
+  {
+    "word": "detrimental",
+    "definition": "Tending to cause harm.",
+    "example_sentence": "Excessive screen time can be detrimental to children's eye health and social development.",
+    "topic": "health",
+    "band_level": 7,
+    "synonyms": [
+      "harmful",
+      "damaging",
+      "adverse",
+      "disadvantageous"
+    ]
+  },
+  {
+    "word": "deleterious",
+    "definition": "Causing harm or damage.",
+    "example_sentence": "The long-term deleterious impact of deforestation on biodiversity is a critical ecological issue.",
+    "topic": "environment",
+    "band_level": 8,
+    "synonyms": [
+      "harmful",
+      "damaging",
+      "detrimental",
+      "adverse"
+    ]
+  },
+  {
+    "word": "salutary",
+    "definition": "(Especially with reference to something unwelcome or unpleasant) producing good effects; beneficial.",
+    "example_sentence": "The recent economic recession, though painful, had the salutary effect of prompting governments to rethink fiscal policies.",
+    "topic": "economy",
+    "band_level": 8.5,
+    "synonyms": [
+      "beneficial",
+      "advantageous",
+      "healthful",
+      "wholesome"
+    ]
+  },
+  {
+    "word": "salient",
+    "definition": "Most noticeable or important.",
+    "example_sentence": "One of the salient features of the new smartphone is its extended battery life.",
+    "topic": "technology",
+    "band_level": 7.5,
+    "synonyms": [
+      "prominent",
+      "noticeable",
+      "important",
+      "principal"
+    ]
+  },
+  {
+    "word": "germane",
+    "definition": "Relevant to a subject under consideration.",
+    "example_sentence": "When discussing climate change, the topic of renewable energy sources is highly germane.",
+    "topic": "environment",
+    "band_level": 8,
+    "synonyms": [
+      "relevant",
+      "pertinent",
+      "applicable",
+      "apposite"
+    ]
+  },
+  {
+    "word": "extraneous",
+    "definition": "Irrelevant or unrelated to the subject being dealt with.",
+    "example_sentence": "During the presentation, the speaker introduced several extraneous details that distracted from the main argument.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "irrelevant",
+      "unrelated",
+      "superfluous",
+      "nonessential"
+    ]
+  },
+  {
+    "word": "superfluous",
+    "definition": "Unnecessary, especially through being more than enough.",
+    "example_sentence": "The report included much superfluous information that could have been condensed for clarity.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "redundant",
+      "unnecessary",
+      "excessive",
+      "surplus"
+    ]
+  },
+  {
+    "word": "redundant",
+    "definition": "Not or no longer needed or useful; superfluous.",
+    "example_sentence": "Many manual tasks have become redundant due to automation, leading to increased efficiency but also job displacement.",
+    "topic": "technology",
+    "band_level": 7,
+    "synonyms": [
+      "superfluous",
+      "unnecessary",
+      "obsolete",
+      "repetitive"
+    ]
+  },
+  {
+    "word": "gratuitous",
+    "definition": "Done without good reason; uncalled for.",
+    "example_sentence": "The film was criticized for its gratuitous violence, which added little to the plot.",
+    "topic": "culture",
+    "band_level": 8,
+    "synonyms": [
+      "unjustified",
+      "uncalled-for",
+      "unwarranted",
+      " needless"
+    ]
+  },
+  {
+    "word": "arbitrary",
+    "definition": "Based on random choice or personal whim, rather than any reason or system.",
+    "example_sentence": "The decision to close the library was arbitrary, as no public consultation had taken place.",
+    "topic": "government",
+    "band_level": 7,
+    "synonyms": [
+      "random",
+      "capricious",
+      "whimsical",
+      "discretionary"
+    ]
+  },
+  {
+    "word": "capricious",
+    "definition": "Given to sudden and unaccountable changes of mood or behavior.",
+    "example_sentence": "The capricious nature of stock markets makes long-term financial forecasting particularly challenging.",
+    "topic": "economy",
+    "band_level": 8,
+    "synonyms": [
+      "unpredictable",
+      "whimsical",
+      "fickle",
+      "erratic"
+    ]
+  },
+  {
+    "word": "erratic",
+    "definition": "Not regular or consistent in pattern or movement; unpredictable.",
+    "example_sentence": "The company's sales figures have been erratic this quarter, making it difficult to forecast future revenue accurately.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "unpredictable",
+      "inconsistent",
+      "irregular",
+      "wavering"
+    ]
+  },
+  {
+    "word": "volatile",
+    "definition": "Liable to change rapidly and unpredictably, especially for the worse.",
+    "example_sentence": "The global political climate has become increasingly volatile, posing challenges for international relations.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "unstable",
+      "unpredictable",
+      "turbulent",
+      "fluctuating"
+    ]
+  },
+  {
+    "word": "tumultuous",
+    "definition": "Making a loud, confused noise; characterized by disorder or confusion.",
+    "example_sentence": "The nation experienced a tumultuous period of political upheaval after the revolution, leading to widespread social unrest.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "turbulent",
+      "chaotic",
+      "disorderly",
+      "agitated"
+    ]
+  },
+  {
+    "word": "precarious",
+    "definition": "Not securely held or in position; dangerously likely to fall or collapse.",
+    "example_sentence": "Many workers find themselves in a precarious financial situation due to the lack of stable employment and rising living costs.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "unstable",
+      "uncertain",
+      "risky",
+      "hazardous"
+    ]
+  },
+  {
+    "word": "fraught",
+    "definition": "Causing or characterized by anxiety or stress; filled with something undesirable.",
+    "example_sentence": "The negotiations between the two rival factions were fraught with tension and disagreements, delaying any resolution.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "tense",
+      "anxious",
+      "stressful",
+      "challenging"
+    ]
+  },
+  {
+    "word": "onerous",
+    "definition": "Involving an amount of effort, difficulty, or inconvenience that is burdensome.",
+    "example_sentence": "The new regulations placed an onerous burden on small businesses, increasing their operational costs significantly.",
+    "topic": "economy",
+    "band_level": 8,
+    "synonyms": [
+      "burdensome",
+      "arduous",
+      "difficult",
+      "demanding"
+    ]
+  },
+  {
+    "word": "laborious",
+    "definition": "Requiring considerable effort and time.",
+    "example_sentence": "Conducting the extensive historical research for the dissertation was a long and laborious process.",
+    "topic": "education",
+    "band_level": 7,
+    "synonyms": [
+      "arduous",
+      "difficult",
+      "strenuous",
+      "demanding"
+    ]
+  },
+  {
+    "word": "cumbersome",
+    "definition": "Large or heavy and therefore difficult to carry or handle; inefficient or complicated.",
+    "example_sentence": "The old bureaucratic system was cumbersome and often hindered progress rather than facilitating it efficiently.",
+    "topic": "government",
+    "band_level": 7,
+    "synonyms": [
+      "unwieldy",
+      "awkward",
+      "inefficient",
+      "complex"
+    ]
+  },
+  {
+    "word": "rudimentary",
+    "definition": "Involving or limited to basic principles; of a primitive kind.",
+    "example_sentence": "The technology used in early mobile phones was quite rudimentary compared to today's advanced smartphones.",
+    "topic": "technology",
+    "band_level": 7,
+    "synonyms": [
+      "basic",
+      "primitive",
+      "elementary",
+      "fundamental"
+    ]
+  },
+  {
+    "word": "nascent",
+    "definition": "(Especially of a process or organization) just coming into existence and beginning to display signs of future potential.",
+    "example_sentence": "The nascent industry of sustainable energy is showing great promise for future economic growth and environmental benefits.",
+    "topic": "economy",
+    "band_level": 8,
+    "synonyms": [
+      "emerging",
+      "budding",
+      "developing",
+      "incipient"
+    ]
+  },
+  {
+    "word": "incipient",
+    "definition": "In an initial stage; beginning to happen or develop.",
+    "example_sentence": "The doctor identified an incipient problem with the patient's liver, advising immediate lifestyle changes to prevent further deterioration.",
+    "topic": "health",
+    "band_level": 8,
+    "synonyms": [
+      "nascent",
+      "emerging",
+      "developing",
+      "formative"
+    ]
+  },
+  {
+    "word": "embryonic",
+    "definition": "In an early stage of development; undeveloped.",
+    "example_sentence": "The idea for the new start-up is still in its embryonic stage, requiring significant further planning and investment before launch.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "nascent",
+      "incipient",
+      "rudimentary",
+      "undeveloped"
+    ]
+  },
+  {
+    "word": "fledgling",
+    "definition": "(Of a person or organization) inexperienced or undeveloped.",
+    "example_sentence": "The fledgling company struggled to compete with established market leaders in its first year of operation due to limited resources.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "nascent",
+      "emerging",
+      "inexperienced",
+      "developing"
+    ]
+  },
+  {
+    "word": "burgeoning",
+    "definition": "Beginning to grow or increase rapidly; flourishing.",
+    "example_sentence": "The burgeoning population in urban areas is putting immense pressure on public infrastructure and housing resources.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "expanding",
+      "growing",
+      "proliferating",
+      "flourishing"
+    ]
+  },
+  {
+    "word": "proliferate",
+    "definition": "Increase rapidly in number; multiply.",
+    "example_sentence": "Misinformation can proliferate rapidly through social media channels, making it difficult to distinguish fact from fiction.",
+    "topic": "technology",
+    "band_level": 7.5,
+    "synonyms": [
+      "multiply",
+      "spread",
+      "burgeon",
+      "increase"
+    ]
+  },
+  {
+    "word": "diminish",
+    "definition": "Make or become less.",
+    "example_sentence": "The intense competition in the market caused the company's profits to steadily diminish over time.",
+    "topic": "economy",
+    "band_level": 6.5,
+    "synonyms": [
+      "decrease",
+      "lessen",
+      "reduce",
+      "decline"
+    ]
+  },
+  {
+    "word": "dwindle",
+    "definition": "Diminish gradually in size, amount, or strength.",
+    "example_sentence": "The charity's funds began to dwindle after a period of reduced public donations, affecting its outreach programs.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "decrease",
+      "shrink",
+      "lessen",
+      "fade"
+    ]
+  },
+  {
+    "word": "wane",
+    "definition": "(Of a state or feeling) decrease in vigour or extent; become weaker.",
+    "example_sentence": "Public interest in the controversial policy began to wane as new issues emerged and captured media attention.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "fade",
+      "decline",
+      "diminish",
+      "lessen"
+    ]
+  },
+  {
+    "word": "wax",
+    "definition": "(Of a state or quality) become larger or stronger; increase.",
+    "example_sentence": "The artist's popularity continued to wax throughout the year, culminating in a successful international exhibition.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "grow",
+      "increase",
+      "enlarge",
+      "expand"
+    ]
+  },
+  {
+    "word": "languish",
+    "definition": "(Of a person or thing) suffer from being forced to remain in an unpleasant or difficult situation.",
+    "example_sentence": "Without adequate funding, many cultural institutions risk languishing and losing their ability to contribute to society.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "suffer",
+      "decline",
+      "decay",
+      "deteriorate"
+    ]
+  },
+  {
+    "word": "flourish",
+    "definition": "(Of a person, animal, or other living organism) grow or develop in a healthy or vigorous way, especially as the result of a particularly favorable environment.",
+    "example_sentence": "Despite economic challenges, the local arts scene continues to flourish, attracting both residents and tourists.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "thrive",
+      "prosper",
+      "bloom",
+      "burgeon"
+    ]
+  },
+  {
+    "word": "subsist",
+    "definition": "Maintain or support oneself, especially at a minimal level.",
+    "example_sentence": "Many communities in remote areas subsist on subsistence farming, relying solely on what they grow for survival.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "survive",
+      "exist",
+      "live",
+      "sustain oneself"
+    ]
+  },
+  {
+    "word": "sustain",
+    "definition": "Strengthen or support physically or mentally; undergo or suffer.",
+    "example_sentence": "Governments must implement policies that sustain economic growth without harming the environment.",
+    "topic": "government",
+    "band_level": 6.5,
+    "synonyms": [
+      "maintain",
+      "support",
+      "uphold",
+      "endure"
+    ]
+  },
+  {
+    "word": "perpetuate",
+    "definition": "Make (something undesirable) continue indefinitely.",
+    "example_sentence": "The cycle of poverty can be perpetuated across generations if there are no interventions to break it.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "maintain",
+      "preserve",
+      "prolong",
+      "continue"
+    ]
+  },
+  {
+    "word": "prolong",
+    "definition": "Extend the duration of.",
+    "example_sentence": "The doctors attempted to prolong the patient's life, but his condition continued to deteriorate rapidly.",
+    "topic": "health",
+    "band_level": 6.5,
+    "synonyms": [
+      "extend",
+      "lengthen",
+      "protract",
+      "delay"
+    ]
+  },
+  {
+    "word": "curtail",
+    "definition": "Reduce in extent or quantity; impose a restriction on.",
+    "example_sentence": "The government decided to curtail public spending in an effort to reduce the national debt and balance the budget.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "reduce",
+      "restrict",
+      "limit",
+      "shorten"
+    ]
+  },
+  {
+    "word": "truncate",
+    "definition": "Shorten something by cutting off the top or end.",
+    "example_sentence": "The broadcast was truncated due to technical difficulties, disappointing many viewers who missed the conclusion.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "shorten",
+      "cut",
+      "abridge",
+      "condense"
+    ]
+  },
+  {
+    "word": "circumvent",
+    "definition": "Find a way around (an obstacle).",
+    "example_sentence": "Some companies try to circumvent environmental regulations by exploiting legal loopholes, which raises ethical concerns.",
+    "topic": "environment",
+    "band_level": 8,
+    "synonyms": [
+      "bypass",
+      "avoid",
+      "evade",
+      "sidestep"
+    ]
+  },
+  {
+    "word": "obviate",
+    "definition": "Remove a need or difficulty; avoid or prevent.",
+    "example_sentence": "Implementing a robust public transport system could obviate the need for many people to own private cars in urban areas.",
+    "topic": "general",
+    "band_level": 8,
+    "synonyms": [
+      "prevent",
+      "preclude",
+      "eliminate",
+      "avert"
+    ]
+  },
+  {
+    "word": "preclude",
+    "definition": "Prevent from happening; make impossible.",
+    "example_sentence": "Lack of access to education can preclude individuals from achieving their full potential and contributing to society.",
+    "topic": "education",
+    "band_level": 8,
+    "synonyms": [
+      "prevent",
+      "hinder",
+      "impede",
+      "rule out"
+    ]
+  },
+  {
+    "word": "forestall",
+    "definition": "Prevent or obstruct (an anticipated event or action) by taking action ahead of time.",
+    "example_sentence": "The government took proactive measures to forestall a potential economic crisis by introducing new financial policies.",
+    "topic": "government",
+    "band_level": 8,
+    "synonyms": [
+      "prevent",
+      "avert",
+      "ward off",
+      "pre-empt"
+    ]
+  },
+  {
+    "word": "mitigate risk",
+    "definition": "Make a risk less severe, serious, or painful.",
+    "example_sentence": "Companies must implement comprehensive strategies to mitigate risk associated with cyberattacks and data breaches.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "reduce risk",
+      "lessen risk",
+      "alleviate danger",
+      "minimize threat"
+    ]
+  },
+  {
+    "word": "compound the problem",
+    "definition": "Make a problem or difficult situation worse.",
+    "example_sentence": "Lack of funding for public services will only compound the problem of social inequality in disadvantaged communities.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "worsen the issue",
+      "exacerbate the situation",
+      "intensify the difficulty",
+      "aggravate the challenge"
+    ]
+  },
+  {
+    "word": "exacerbate tensions",
+    "definition": "Make a difficult situation or problem much worse, especially tensions.",
+    "example_sentence": "Inflammatory rhetoric from political leaders can exacerbate tensions between different social groups, leading to conflict.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "worsen conflicts",
+      "intensify friction",
+      "heighten animosity",
+      "inflame disputes"
+    ]
+  },
+  {
+    "word": "entrench inequality",
+    "definition": "Establish inequality so firmly that it is difficult to change.",
+    "example_sentence": "Policies that favor the wealthy can entrench inequality, leading to long-term social division and limited opportunities.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "solidify disparity",
+      "embed injustice",
+      "deepen imbalance",
+      "cement inequity"
+    ]
+  },
+  {
+    "word": "perpetuate stereotypes",
+    "definition": "Make negative oversimplified ideas about a group of people continue indefinitely.",
+    "example_sentence": "Media portrayals often inadvertently perpetuate stereotypes, reinforcing harmful biases in society.",
+    "topic": "culture",
+    "band_level": 7.5,
+    "synonyms": [
+      "reinforce clichés",
+      "maintain generalizations",
+      "uphold prejudices",
+      "sustain fixed ideas"
+    ]
+  },
+  {
+    "word": "galvanize",
+    "definition": "Shock or excite (someone) into taking action.",
+    "example_sentence": "The recent environmental report galvanized public opinion, leading to widespread calls for policy change.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "inspire",
+      "stimulate",
+      "animate",
+      "rouse"
+    ]
+  },
+  {
+    "word": "mobilize",
+    "definition": "(Of people) organize and encourage a group of people to act in a particular way.",
+    "example_sentence": "Social media platforms can be powerful tools to mobilize citizens for political protests or social causes quickly.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "organize",
+      "activate",
+      "rally",
+      "deploy"
+    ]
+  },
+  {
+    "word": "disenfranchise",
+    "definition": "Deprive (someone) of the right to vote.",
+    "example_sentence": "Historically, many groups have been disenfranchised through discriminatory laws and practices, limiting their political voice.",
+    "topic": "government",
+    "band_level": 8,
+    "synonyms": [
+      "deprive of rights",
+      "marginalize",
+      "exclude",
+      "silence"
+    ]
+  },
+  {
+    "word": "marginalize",
+    "definition": "Treat (a person, group, or concept) as insignificant or peripheral.",
+    "example_sentence": "Society must work to ensure that no group is marginalized due to their background, beliefs, or socioeconomic status.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "sideline",
+      "ostracize",
+      "exclude",
+      "disadvantage"
+    ]
+  },
+  {
+    "word": "stigmatize",
+    "definition": "Describe or regard as worthy of disgrace or disapproval.",
+    "example_sentence": "Mental health issues have often been stigmatized, preventing many from seeking necessary help and support.",
+    "topic": "health",
+    "band_level": 7.5,
+    "synonyms": [
+      "brand",
+      "label",
+      "shame",
+      "disgrace"
+    ]
+  },
+  {
+    "word": "ostracize",
+    "definition": "Exclude (someone) from a society or group.",
+    "example_sentence": "Individuals who hold unconventional views may sometimes be ostracized by their communities for not conforming.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "exclude",
+      "shun",
+      "banish",
+      "marginalize"
+    ]
+  },
+  {
+    "word": "vilify",
+    "definition": "Speak or write about in an abusively disparaging manner.",
+    "example_sentence": "Public figures are often vilified in the media, sometimes without sufficient evidence or balanced reporting.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "defame",
+      "disparage",
+      "denigrate",
+      "malign"
+    ]
+  },
+  {
+    "word": "exonerate",
+    "definition": "Absolve (someone) from blame for a fault or wrongdoing, especially after due consideration of the case.",
+    "example_sentence": "New evidence emerged that ultimately exonerated the wrongly accused defendant, leading to his release.",
+    "topic": "crime",
+    "band_level": 8,
+    "synonyms": [
+      "absolve",
+      "clear",
+      "acquit",
+      "vindicate"
+    ]
+  },
+  {
+    "word": "absolve",
+    "definition": "Declare (someone) free from guilt, obligation, or punishment.",
+    "example_sentence": "The jury's verdict served to absolve the suspect of all charges, clearing his name.",
+    "topic": "crime",
+    "band_level": 7.5,
+    "synonyms": [
+      "exonerate",
+      "forgive",
+      "acquit",
+      "clear"
+    ]
+  },
+  {
+    "word": "condone",
+    "definition": "Accept and allow (behavior that is considered morally wrong or offensive) to continue.",
+    "example_sentence": "Society cannot condone acts of violence, regardless of the perpetrator's motives or circumstances.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "approve",
+      "permit",
+      "overlook",
+      "excuse"
+    ]
+  },
+  {
+    "word": "sanction",
+    "definition": "Give official permission or approval for (an action); (noun) a threatened penalty for disobeying a law or rule.",
+    "example_sentence": "The international body decided to sanction the country for its violation of human rights, imposing economic restrictions.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "authorize",
+      "approve",
+      "permit",
+      "endorse"
+    ]
+  },
+  {
+    "word": "reprimand",
+    "definition": "Rebuke (someone), especially officially.",
+    "example_sentence": "The employee received a formal reprimand for consistently failing to meet deadlines, leading to disciplinary action.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "rebuke",
+      "scold",
+      "admonish",
+      "censure"
+    ]
+  },
+  {
+    "word": "admonish",
+    "definition": "Warn or reprimand someone firmly.",
+    "example_sentence": "The teacher had to admonish the students for their disruptive behavior during the lecture, reminding them of classroom rules.",
+    "topic": "education",
+    "band_level": 7.5,
+    "synonyms": [
+      "reprimand",
+      "scold",
+      "caution",
+      "rebuke"
+    ]
+  },
+  {
+    "word": "castigate",
+    "definition": "Reprimand (someone) severely.",
+    "example_sentence": "The critics castigated the film director for his insensitive portrayal of historical events, sparking widespread debate.",
+    "topic": "culture",
+    "band_level": 8,
+    "synonyms": [
+      "reprimand",
+      "rebuke",
+      "scold",
+      "criticize severely"
+    ]
+  },
+  {
+    "word": "lambaste",
+    "definition": "To criticize someone or something severely.",
+    "example_sentence": "The media heavily lambasted the government's new policy, citing its potential negative impact on the economy.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "criticize",
+      "censure",
+      "castigate",
+      "berate"
+    ]
+  },
+  {
+    "word": "denounce",
+    "definition": "To publicly declare something or someone to be wrong or evil.",
+    "example_sentence": "Human rights organizations globally denounced the atrocities committed against civilians in the conflict zone.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "condemn",
+      "criticize",
+      "censure",
+      "decry"
+    ]
+  },
+  {
+    "word": "decry",
+    "definition": "To publicly express strong disapproval of something.",
+    "example_sentence": "Many critics decry the increasing commercialization of public holidays, arguing it erodes cultural traditions.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "condemn",
+      "denounce",
+      "criticize",
+      "disparage"
+    ]
+  },
+  {
+    "word": "extol",
+    "definition": "To praise enthusiastically.",
+    "example_sentence": "The CEO used the conference to extol the virtues of remote work, highlighting its benefits for employee well-being and productivity.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "praise",
+      "laud",
+      "acclaim",
+      "commend"
+    ]
+  },
+  {
+    "word": "laud",
+    "definition": "To praise a person or their achievements highly, especially in a public context.",
+    "example_sentence": "The scientist was lauded for her groundbreaking research in renewable energy, which promised significant environmental benefits.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "praise",
+      "extol",
+      "acclaim",
+      "commend"
+    ]
+  },
+  {
+    "word": "commend",
+    "definition": "To praise formally or officially.",
+    "example_sentence": "The principal commended the students for their outstanding academic performance and dedication to their studies.",
+    "topic": "education",
+    "band_level": 6.5,
+    "synonyms": [
+      "praise",
+      "approve",
+      "applaud",
+      "recognize"
+    ]
+  },
+  {
+    "word": "disparage",
+    "definition": "To regard or represent as being of little worth.",
+    "example_sentence": "It is unwise to disparage traditional customs, as they often hold deep cultural significance for a community.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "belittle",
+      "denigrate",
+      "deprecate",
+      "decry"
+    ]
+  },
+  {
+    "word": "denigrate",
+    "definition": "To criticize unfairly; to defame.",
+    "example_sentence": "Spreading misinformation to denigrate a competitor's product is unethical and can damage market trust.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "belittle",
+      "disparage",
+      "defame",
+      "malign"
+    ]
+  },
+  {
+    "word": "disparaging remark",
+    "definition": "A comment that expresses the opinion that something or someone is of little worth.",
+    "example_sentence": "His disparaging remarks about the new employee's qualifications were unprofessional and created a hostile work environment.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "derogatory comment",
+      "belittling comment",
+      "critical comment",
+      "negative remark"
+    ]
+  },
+  {
+    "word": "tacit approval",
+    "definition": "Approval that is implied or inferred without being directly stated.",
+    "example_sentence": "The government's failure to condemn the protests could be interpreted as tacit approval of the public's grievances.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "implied consent",
+      "unstated agreement",
+      "silent acceptance",
+      "implicit approval"
+    ]
+  },
+  {
+    "word": "implicit bias",
+    "definition": "An unconscious attitude or stereotype that affects our understanding, actions, and decisions.",
+    "example_sentence": "Recognizing and addressing implicit bias is crucial for fostering a truly equitable and inclusive workplace.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "unconscious prejudice",
+      "hidden bias",
+      "underlying prejudice",
+      "unintentional discrimination"
+    ]
+  },
+  {
+    "word": "explicit consent",
+    "definition": "Consent that is clearly and unambiguously expressed, either verbally or in writing.",
+    "example_sentence": "Websites are now required to obtain explicit consent from users before collecting their personal data, in compliance with new privacy laws.",
+    "topic": "technology",
+    "band_level": 7.5,
+    "synonyms": [
+      "clear agreement",
+      "direct permission",
+      "stated consent",
+      "unambiguous approval"
+    ]
+  },
+  {
+    "word": "overt discrimination",
+    "definition": "Discrimination that is open, observable, and easily recognized.",
+    "example_sentence": "While overt discrimination has decreased in many societies, more subtle forms of prejudice often persist.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "blatant discrimination",
+      "obvious prejudice",
+      "clear bias",
+      "manifest inequality"
+    ]
+  },
+  {
+    "word": "covert operation",
+    "definition": "A secret military or intelligence operation designed to conceal the identity of the sponsor and the existence of the operation.",
+    "example_sentence": "The intelligence agency conducted a covert operation to gather information on the terrorist cell's activities.",
+    "topic": "government",
+    "band_level": 7,
+    "synonyms": [
+      "secret mission",
+      "clandestine operation",
+      "undercover activity",
+      "hidden endeavor"
+    ]
+  },
+  {
+    "word": "surreptitious",
+    "definition": "Kept secret, especially because it would not be approved of.",
+    "example_sentence": "The student made a surreptitious attempt to consult his notes during the exam, hoping the invigilator wouldn't notice.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "secret",
+      "stealthy",
+      "furtive",
+      "clandestine"
+    ]
+  },
+  {
+    "word": "clandestine",
+    "definition": "Kept secret or done secretively, especially because illicit.",
+    "example_sentence": "The organization held a series of clandestine meetings to plan their protest, away from public and government scrutiny.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "secret",
+      "surreptitious",
+      "covert",
+      "illicit"
+    ]
+  },
+  {
+    "word": "furtive",
+    "definition": "Attempting to avoid notice or attention, typically because of guilt or a belief that discovery would lead to trouble; secretive.",
+    "example_sentence": "He cast a furtive glance at his watch, hoping to leave the tedious meeting early without drawing attention.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "stealthy",
+      "secretive",
+      "surreptitious",
+      "clandestine"
+    ]
+  },
+  {
+    "word": "duplicitous",
+    "definition": "Deceitful in character or action, acting in two different ways concerning the same matter.",
+    "example_sentence": "The politician was accused of being duplicitous after making promises to both sides of the debate that contradicted each other.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "deceitful",
+      "dishonest",
+      "treacherous",
+      "hypocritical"
+    ]
+  },
+  {
+    "word": "disingenuous",
+    "definition": "Not candid or sincere, typically by feigning ignorance or innocence.",
+    "example_sentence": "It would be disingenuous to suggest that the new policy is purely for public benefit, given its clear financial advantages for certain corporations.",
+    "topic": "general",
+    "band_level": 8,
+    "synonyms": [
+      "insincere",
+      "dishonest",
+      "artful",
+      "devious"
+    ]
+  },
+  {
+    "word": "candid",
+    "definition": "Truthful and straightforward; frank.",
+    "example_sentence": "The manager gave a candid assessment of the team's performance, highlighting both strengths and areas for improvement.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "frank",
+      "honest",
+      "direct",
+      "straightforward"
+    ]
+  },
+  {
+    "word": "forthright",
+    "definition": "Direct and outspoken; straightforward and honest.",
+    "example_sentence": "Her forthright manner, though sometimes perceived as blunt, was appreciated by those who valued honesty.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "direct",
+      "frank",
+      "straightforward",
+      "honest"
+    ]
+  },
+  {
+    "word": "unabashed",
+    "definition": "Not embarrassed, disconcerted, or ashamed.",
+    "example_sentence": "She was unabashed in her criticism of the company's environmental policies, despite facing opposition from management.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "unashamed",
+      "bold",
+      "brazen",
+      "unapologetic"
+    ]
+  },
+  {
+    "word": "unassuming",
+    "definition": "Not ostentatious or pretentious; modest.",
+    "example_sentence": "Despite his groundbreaking achievements, the professor remained an unassuming figure, always crediting his team for their success.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "modest",
+      "humble",
+      "unpretentious",
+      "reserved"
+    ]
+  },
+  {
+    "word": "unpretentious",
+    "definition": "Not attempting to impress others with an appearance of greater importance, talent, or culture than is actually possessed.",
+    "example_sentence": "The restaurant, though small and unpretentious, was renowned for its authentic local cuisine and warm atmosphere.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "modest",
+      "unassuming",
+      "simple",
+      "humble"
+    ]
+  },
+  {
+    "word": "ostentatious",
+    "definition": "Characterized by vulgar or pretentious display; designed to impress or attract notice.",
+    "example_sentence": "Some critics argue that the new public building's design is too ostentatious and doesn't blend well with the historical surroundings.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "showy",
+      "flamboyant",
+      "flashy",
+      "gaudy"
+    ]
+  },
+  {
+    "word": "flamboyant",
+    "definition": "(Of a person or their behavior) tending to attract attention because of their exuberance, confidence, and stylishness.",
+    "example_sentence": "His flamboyant style of dress and energetic speeches made him a memorable public figure.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "showy",
+      "extravagant",
+      "theatrical",
+      "flashy"
+    ]
+  },
+  {
+    "word": "austere",
+    "definition": "Strict in manner, attitude, or appearance; having no comforts or luxuries.",
+    "example_sentence": "The monastery was known for its austere lifestyle, with monks dedicating themselves to simple living and meditation.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "severe",
+      "strict",
+      "simple",
+      "spartan"
+    ]
+  },
+  {
+    "word": "frugal",
+    "definition": "Sparing or economical with regard to money or food.",
+    "example_sentence": "By being frugal with their resources, the small startup managed to survive its initial lean years without external investment.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "thrifty",
+      "economical",
+      "sparing",
+      "prudent"
+    ]
+  },
+  {
+    "word": "prudent",
+    "definition": "Acting with or showing care and thought for the future.",
+    "example_sentence": "Investing in education is a prudent decision that yields long-term benefits for both individuals and society.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "wise",
+      "sensible",
+      "cautious",
+      "discreet"
+    ]
+  },
+  {
+    "word": "imprudent",
+    "definition": "Not showing care for the consequences of an action; rash.",
+    "example_sentence": "Making major financial decisions without proper research can be an imprudent move that leads to significant losses.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "unwise",
+      "rash",
+      "reckless",
+      "injudicious"
+    ]
+  },
+  {
+    "word": "judicious",
+    "definition": "Having, showing, or done with good judgment or sense.",
+    "example_sentence": "A judicious allocation of resources is essential for effective project management and achieving desired outcomes.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "wise",
+      "sensible",
+      "prudent",
+      "sagacious"
+    ]
+  },
+  {
+    "word": "injudicious",
+    "definition": "Showing poor judgment; unwise.",
+    "example_sentence": "It would be injudicious to ignore the early warning signs of climate change and delay action.",
+    "topic": "environment",
+    "band_level": 7.5,
+    "synonyms": [
+      "unwise",
+      "imprudent",
+      "ill-advised",
+      "foolish"
+    ]
+  },
+  {
+    "word": "discretion",
+    "definition": "The quality of behaving or speaking in such a way as to avoid causing offence or revealing private information.",
+    "example_sentence": "Journalists must exercise discretion when reporting on sensitive topics to protect the privacy of individuals involved.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "prudence",
+      "circumspection",
+      "sensitivity",
+      "tact"
+    ]
+  },
+  {
+    "word": "circumspect",
+    "definition": "Wary and unwilling to take risks.",
+    "example_sentence": "In a rapidly changing market, investors should remain circumspect and thoroughly evaluate potential risks before committing capital.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "cautious",
+      "wary",
+      "prudent",
+      "discreet"
+    ]
+  },
+  {
+    "word": "vigilant",
+    "definition": "Keeping careful watch for possible danger or difficulties.",
+    "example_sentence": "Cybersecurity experts must remain vigilant against new threats and constantly update defense systems.",
+    "topic": "technology",
+    "band_level": 7,
+    "synonyms": [
+      "watchful",
+      "alert",
+      "attentive",
+      "cautious"
+    ]
+  },
+  {
+    "word": "complacent",
+    "definition": "Showing smug or uncritical satisfaction with oneself or one's achievements.",
+    "example_sentence": "A complacent attitude towards public health measures can lead to a resurgence of preventable diseases.",
+    "topic": "health",
+    "band_level": 7.5,
+    "synonyms": [
+      "smug",
+      "self-satisfied",
+      "unconcerned",
+      "lackadaisical"
+    ]
+  },
+  {
+    "word": "apathetic",
+    "definition": "Showing or feeling no interest, enthusiasm, or concern.",
+    "example_sentence": "Voter turnout can decrease significantly if citizens become apathetic towards the political process.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "indifferent",
+      "unconcerned",
+      "uninterested",
+      "lethargic"
+    ]
+  },
+  {
+    "word": "indifferent",
+    "definition": "Having no particular interest or sympathy; unconcerned.",
+    "example_sentence": "Many people remain indifferent to the plight of endangered species, unaware of the broader ecological implications.",
+    "topic": "environment",
+    "band_level": 6.5,
+    "synonyms": [
+      "apathetic",
+      "unconcerned",
+      "uninterested",
+      "detached"
+    ]
+  },
+  {
+    "word": "partisan",
+    "definition": "A strong supporter of a party, cause, or person; prejudiced in favor of a particular cause.",
+    "example_sentence": "The news channel was criticized for its partisan reporting, which often favored one political party over others.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "biased",
+      "prejudiced",
+      "factional",
+      "sectarian"
+    ]
+  },
+  {
+    "word": "bipartisan",
+    "definition": "Of or involving the agreement or cooperation of two political parties that usually oppose each other's policies.",
+    "example_sentence": "A bipartisan effort is often required to pass significant legislation that addresses complex national issues.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "cross-party",
+      "cooperative",
+      "consensual",
+      "united"
+    ]
+  },
+  {
+    "word": "polarizing",
+    "definition": "Dividing into two sharply contrasting groups or sets of opinions or beliefs.",
+    "example_sentence": "Social media algorithms can contribute to a polarizing effect, reinforcing existing beliefs and creating echo chambers.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "divisive",
+      "fractionalizing",
+      "separating",
+      "conflicting"
+    ]
+  },
+  {
+    "word": "divisive",
+    "definition": "Tending to cause disagreement or hostility between people.",
+    "example_sentence": "The government's new education policy proved to be highly divisive, leading to widespread protests from teachers and parents.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "polarizing",
+      "disruptive",
+      "discordant",
+      "factious"
+    ]
+  },
+  {
+    "word": "contentious",
+    "definition": "Causing or likely to cause an argument; controversial.",
+    "example_sentence": "The issue of increasing taxes on luxury goods remains a contentious topic in parliamentary debates.",
+    "topic": "government",
+    "band_level": 7,
+    "synonyms": [
+      "controversial",
+      "disputable",
+      "debatable",
+      "argumentative"
+    ]
+  },
+  {
+    "word": "unanimity",
+    "definition": "Agreement by all people involved; consensus.",
+    "example_sentence": "Achieving complete unanimity among all member states on global climate policy has proven to be a significant challenge.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "consensus",
+      "accord",
+      "agreement",
+      "concord"
+    ]
+  },
+  {
+    "word": "dissent",
+    "definition": "The expression or holding of opinions at variance with those previously, commonly, or officially held.",
+    "example_sentence": "While the committee ultimately voted in favor of the proposal, there were several strong voices of dissent regarding its long-term viability.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "disagreement",
+      "opposition",
+      "objection",
+      "protest"
+    ]
+  },
+  {
+    "word": "acrimonious",
+    "definition": "(Typically of speech or a debate) angry and bitter.",
+    "example_sentence": "The divorce proceedings became increasingly acrimonious, with both parties making harsh accusations against each other.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "bitter",
+      "rancorous",
+      "hostile",
+      "caustic"
+    ]
+  },
+  {
+    "word": "amicable",
+    "definition": "(Of relations between people) characterized by friendliness and absence of discord.",
+    "example_sentence": "Despite their professional disagreements, the two rival companies maintained an amicable relationship, often collaborating on industry standards.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "friendly",
+      "good-natured",
+      "polite",
+      "cordial"
+    ]
+  },
+  {
+    "word": "conciliatory",
+    "definition": "Intended or likely to placate or pacify.",
+    "example_sentence": "The company's conciliatory gesture, offering refunds to all affected customers, helped to calm public anger.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "pacifying",
+      "appeasing",
+      "placatory",
+      "mollifying"
+    ]
+  },
+  {
+    "word": "placatory",
+    "definition": "Intended to make someone less angry or hostile; conciliatory.",
+    "example_sentence": "The government issued a placatory statement after the protests, promising to review the controversial legislation.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "appeasing",
+      "conciliatory",
+      "propitiatory",
+      "mollifying"
+    ]
+  },
+  {
+    "word": "adversarial",
+    "definition": "Involving or characterized by conflict or opposition.",
+    "example_sentence": "The legal system is often described as adversarial, with two opposing sides presenting their cases to a judge or jury.",
+    "topic": "crime",
+    "band_level": 7.5,
+    "synonyms": [
+      "opposing",
+      "hostile",
+      "antagonistic",
+      "confrontational"
+    ]
+  },
+  {
+    "word": "antagonistic",
+    "definition": "Showing or feeling active opposition or hostility toward someone or something.",
+    "example_sentence": "The two political parties maintained an antagonistic relationship, hindering progress on crucial reforms.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "hostile",
+      "adversarial",
+      "opposing",
+      "confrontational"
+    ]
+  },
+  {
+    "word": "belligerent",
+    "definition": "Hostile and aggressive, ready to fight.",
+    "example_sentence": "His belligerent stance in the debate alienated many potential allies, making compromise difficult.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "aggressive",
+      "hostile",
+      "confrontational",
+      "warlike"
+    ]
+  },
+  {
+    "word": "truculent",
+    "definition": "Eager or quick to argue or fight; aggressively defiant.",
+    "example_sentence": "The truculent tone of the official statement suggested a complete unwillingness to negotiate.",
+    "topic": "society",
+    "band_level": 8,
+    "synonyms": [
+      "defiant",
+      "aggressive",
+      "confrontational",
+      "pugnacious"
+    ]
+  },
+  {
+    "word": "compliant",
+    "definition": "Disposed to agree with others or obey rules, especially to an excessive degree; submissive.",
+    "example_sentence": "Companies must be compliant with environmental regulations to avoid hefty fines and reputational damage.",
+    "topic": "government",
+    "band_level": 6.5,
+    "synonyms": [
+      "obedient",
+      "submissive",
+      "amenable",
+      "acquiescent"
+    ]
+  },
+  {
+    "word": "recalcitrant",
+    "definition": "Having an obstinately uncooperative attitude toward authority or discipline.",
+    "example_sentence": "The recalcitrant students refused to participate in the new educational program, challenging its implementation.",
+    "topic": "education",
+    "band_level": 7.5,
+    "synonyms": [
+      "defiant",
+      "disobedient",
+      "unruly",
+      "rebellious"
+    ]
+  },
+  {
+    "word": "obstinate",
+    "definition": "Stubbornly refusing to change one's opinion or chosen course of action, despite attempts to persuade one to do so.",
+    "example_sentence": "Despite overwhelming evidence, he remained obstinate in his belief, unwilling to consider alternative perspectives.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "stubborn",
+      "unyielding",
+      "tenacious",
+      "persistent"
+    ]
+  },
+  {
+    "word": "intransigent",
+    "definition": "Unwilling or refusing to change one's views or to agree about something.",
+    "example_sentence": "The union's intransigent demands led to a prolonged strike, causing significant disruption to the industry.",
+    "topic": "economy",
+    "band_level": 8,
+    "synonyms": [
+      "uncompromising",
+      "unyielding",
+      "inflexible",
+      "stubborn"
+    ]
+  },
+  {
+    "word": "adamant",
+    "definition": "Refusing to be persuaded or to change one's mind.",
+    "example_sentence": "The government remained adamant in its decision to implement the new policy, despite public opposition.",
+    "topic": "government",
+    "band_level": 7,
+    "synonyms": [
+      "resolute",
+      "unwavering",
+      "determined",
+      "firm"
+    ]
+  },
+  {
+    "word": "steadfast",
+    "definition": "Resolutely or dutifully firm and unwavering.",
+    "example_sentence": "Her steadfast commitment to environmental protection inspired many others to join the cause.",
+    "topic": "environment",
+    "band_level": 7,
+    "synonyms": [
+      "loyal",
+      "devoted",
+      "unwavering",
+      "resolute"
+    ]
+  },
+  {
+    "word": "resolute",
+    "definition": "Admirably purposeful, determined, and unwavering.",
+    "example_sentence": "The international community showed a resolute determination to address climate change at the summit.",
+    "topic": "environment",
+    "band_level": 7,
+    "synonyms": [
+      "determined",
+      "unwavering",
+      "steadfast",
+      "firm"
+    ]
+  },
+  {
+    "word": "vacillate",
+    "definition": "Alternate or waver between different opinions or actions; be indecisive.",
+    "example_sentence": "The committee continued to vacillate between the two proposed solutions, delaying a final decision.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "waver",
+      "hesitate",
+      "fluctuate",
+      "dither"
+    ]
+  },
+  {
+    "word": "equivocate",
+    "definition": "Use ambiguous language so as to conceal the truth or avoid committing oneself.",
+    "example_sentence": "When questioned about the scandal, the politician chose to equivocate, providing vague and unhelpful responses.",
+    "topic": "government",
+    "band_level": 8,
+    "synonyms": [
+      "prevaricate",
+      "waffle",
+      "hedge",
+      "evade"
+    ]
+  },
+  {
+    "word": "prevaricate",
+    "definition": "Speak or act in an evasive way.",
+    "example_sentence": "Rather than directly answer the difficult question, the witness began to prevaricate, changing the subject repeatedly.",
+    "topic": "crime",
+    "band_level": 8,
+    "synonyms": [
+      "equivocate",
+      "evade",
+      "dodge",
+      "waffle"
+    ]
+  },
+  {
+    "word": "digress",
+    "definition": "Leave the main subject temporarily in speech or writing.",
+    "example_sentence": "During his lecture, the professor often digressed into interesting but unrelated historical anecdotes.",
+    "topic": "education",
+    "band_level": 7,
+    "synonyms": [
+      "deviate",
+      "stray",
+      "wander",
+      "sidetrack"
+    ]
+  },
+  {
+    "word": "tangential",
+    "definition": "Barely touching a matter; diverging from a previous course or line; peripheral.",
+    "example_sentence": "While the speaker's points were engaging, they were often tangential to the core topic of the conference.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "peripheral",
+      "irrelevant",
+      "digressive",
+      "incidental"
+    ]
+  },
+  {
+    "word": "peripheral",
+    "definition": "Relating to or situated on the edge or periphery of something; of secondary or minor importance.",
+    "example_sentence": "While cybersecurity is crucial, some aspects of network administration are considered peripheral to its main function.",
+    "topic": "technology",
+    "band_level": 7,
+    "synonyms": [
+      "secondary",
+      "minor",
+      "marginal",
+      "external"
+    ]
+  },
+  {
+    "word": "ancillary",
+    "definition": "Providing necessary support to the primary activities or operation of an organization, system, etc.",
+    "example_sentence": "The provision of adequate childcare is an ancillary service that significantly supports parental employment rates.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "supplementary",
+      "subsidiary",
+      "additional",
+      "subordinate"
+    ]
+  },
+  {
+    "word": "integral",
+    "definition": "Necessary to make a whole complete; fundamental or essential.",
+    "example_sentence": "Critical thinking skills are an integral part of a modern education, preparing students for complex challenges.",
+    "topic": "education",
+    "band_level": 6.5,
+    "synonyms": [
+      "essential",
+      "fundamental",
+      "indispensable",
+      "crucial"
+    ]
+  },
+  {
+    "word": "indispensable",
+    "definition": "Absolutely necessary.",
+    "example_sentence": "Access to clean water is an indispensable human right, crucial for public health and development.",
+    "topic": "health",
+    "band_level": 7,
+    "synonyms": [
+      "essential",
+      "crucial",
+      "vital",
+      "necessary"
+    ]
+  },
+  {
+    "word": "dispensable",
+    "definition": "Able to be replaced or done without; not essential.",
+    "example_sentence": "In times of economic hardship, certain luxury goods are often considered dispensable by consumers.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "non-essential",
+      "superfluous",
+      "replaceable",
+      "unimportant"
+    ]
+  },
+  {
+    "word": "expendable",
+    "definition": "Of little significance when compared to an overall purpose, and therefore able to be abandoned or sacrificed.",
+    "example_sentence": "In the rapidly evolving tech industry, some older technologies quickly become expendable as newer innovations emerge.",
+    "topic": "technology",
+    "band_level": 7.5,
+    "synonyms": [
+      "replaceable",
+      "disposable",
+      "dispensable",
+      "sacrificeable"
+    ]
+  },
+  {
+    "word": "requisite",
+    "definition": "Made necessary by particular circumstances or regulations.",
+    "example_sentence": "Achieving a certain IELTS score is a requisite for international students seeking admission to many universities.",
+    "topic": "education",
+    "band_level": 7,
+    "synonyms": [
+      "necessary",
+      "essential",
+      "mandatory",
+      "prerequisite"
+    ]
+  },
+  {
+    "word": "sine qua non",
+    "definition": "An essential condition; a thing that is absolutely necessary.",
+    "example_sentence": "Effective communication is the sine qua non of successful teamwork in any professional environment.",
+    "topic": "general",
+    "band_level": 8,
+    "synonyms": [
+      "prerequisite",
+      "essential",
+      "necessity",
+      "imperative"
+    ]
+  },
+  {
+    "word": "overarching",
+    "definition": "Comprehensive or all-embracing.",
+    "example_sentence": "The overarching goal of the environmental summit was to establish a global framework for sustainable development.",
+    "topic": "environment",
+    "band_level": 7.5,
+    "synonyms": [
+      "comprehensive",
+      "encompassing",
+      "all-embracing",
+      "dominant"
+    ]
+  },
+  {
+    "word": "pervasive",
+    "definition": "(Especially of an unwelcome influence or physical effect) spreading widely throughout an area or a group of people.",
+    "example_sentence": "The pervasive influence of social media on young people's self-esteem is a growing concern for psychologists.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "widespread",
+      "prevalent",
+      "omnipresent",
+      "extensive"
+    ]
+  },
+  {
+    "word": "endemic",
+    "definition": "(Of a disease or condition) regularly found among particular people or in a certain area.",
+    "example_sentence": "Corruption is often described as an endemic problem in countries lacking robust governmental oversight.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "native",
+      "indigenous",
+      "regional",
+      "inherent"
+    ]
+  },
+  {
+    "word": "rampant",
+    "definition": "(Especially of something unwelcome or unpleasant) flourishing or spreading unchecked.",
+    "example_sentence": "The rampant spread of misinformation online poses a significant threat to public discourse and democratic processes.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "unchecked",
+      "uncontrolled",
+      "widespread",
+      "proliferating"
+    ]
+  },
+  {
+    "word": "epidemic proportions",
+    "definition": "Referring to a situation where a problem, trend, or disease is spreading rapidly and widely, affecting a large number of people.",
+    "example_sentence": "The issue of obesity has reached epidemic proportions in many developed nations, straining public health systems.",
+    "topic": "health",
+    "band_level": 7.5,
+    "synonyms": [
+      "widespread",
+      "rampant",
+      "widespread outbreak",
+      "crisis level"
+    ]
+  },
+  {
+    "word": "mounting evidence",
+    "definition": "Increasing evidence that supports a particular point or conclusion.",
+    "example_sentence": "Mounting evidence suggests a strong correlation between excessive screen time and sleep disturbances in adolescents.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "growing evidence",
+      "accumulating proof",
+      "increasing data",
+      "rising indications"
+    ]
+  },
+  {
+    "word": "compelling evidence",
+    "definition": "Evidence that is forceful and persuasive, making a strong case.",
+    "example_sentence": "The research presented compelling evidence that renewable energy sources are economically viable in the long term.",
+    "topic": "technology",
+    "band_level": 7.5,
+    "synonyms": [
+      "strong evidence",
+      "conclusive proof",
+      "persuasive data",
+      "convincing argument"
+    ]
+  },
+  {
+    "word": "anecdotal evidence",
+    "definition": "Evidence based on personal accounts or stories rather than on facts or research.",
+    "example_sentence": "While anecdotal evidence can be illustrative, it is generally not sufficient to support a scientific claim without systematic study.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "personal accounts",
+      "hearsay",
+      "unscientific reports",
+      "informal stories"
+    ]
+  },
+  {
+    "word": "inconclusive",
+    "definition": "Not leading to a firm conclusion or result; not definitive.",
+    "example_sentence": "The initial studies on the new drug were inconclusive, requiring further extensive trials to determine its efficacy.",
+    "topic": "health",
+    "band_level": 7,
+    "synonyms": [
+      "indecisive",
+      "unproven",
+      "unresolved",
+      "open-ended"
+    ]
+  },
+  {
+    "word": "unsubstantiated",
+    "definition": "Not supported or proven by evidence.",
+    "example_sentence": "The journalist refused to publish the claims because they were entirely unsubstantiated and lacked credible sources.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "unproven",
+      "unverified",
+      "baseless",
+      "unfounded"
+    ]
+  },
+  {
+    "word": "verifiable",
+    "definition": "Able to be checked or demonstrated to be true, accurate, or justified.",
+    "example_sentence": "For academic research, all sources of information must be verifiable to ensure the integrity of the findings.",
+    "topic": "education",
+    "band_level": 7,
+    "synonyms": [
+      "confirmable",
+      "provable",
+      "demonstrable",
+      "authenticable"
+    ]
+  },
+  {
+    "word": "credible source",
+    "definition": "A source that is trustworthy and reliable, often from an expert or official body.",
+    "example_sentence": "When writing an academic essay, it is essential to cite information from a credible source to maintain validity.",
+    "topic": "education",
+    "band_level": 6.5,
+    "synonyms": [
+      "reliable source",
+      "trustworthy authority",
+      "authoritative reference",
+      "reputable origin"
+    ]
+  },
+  {
+    "word": "dubious claim",
+    "definition": "A statement or assertion that is questionable or suspect, often lacking strong evidence.",
+    "example_sentence": "The company's advertising made dubious claims about the product's effectiveness, leading to consumer complaints.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "questionable claim",
+      "doubtful assertion",
+      "suspect statement",
+      "unreliable declaration"
+    ]
+  },
+  {
+    "word": "spurious argument",
+    "definition": "An argument that is not what it purports to be; false or fake.",
+    "example_sentence": "The politician was criticized for presenting a spurious argument based on misinterpretations of statistical data.",
+    "topic": "government",
+    "band_level": 8,
+    "synonyms": [
+      "false argument",
+      "specious reasoning",
+      "fallacious claim",
+      "deceptive assertion"
+    ]
+  },
+  {
+    "word": "fallacious reasoning",
+    "definition": "Reasoning that is based on a mistaken belief or unsound argument.",
+    "example_sentence": "Relying on a small sample size to draw broad conclusions often leads to fallacious reasoning in research.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "flawed logic",
+      "unsound argument",
+      "erroneous thinking",
+      "deceptive inference"
+    ]
+  },
+  {
+    "word": "specious",
+    "definition": "Superficially plausible, but actually wrong.",
+    "example_sentence": "The committee quickly dismissed the specious arguments presented by the opposition, finding them logically unsound.",
+    "topic": "general",
+    "band_level": 8,
+    "synonyms": [
+      "misleading",
+      "deceptive",
+      "false",
+      "fallacious"
+    ]
+  },
+  {
+    "word": "cogent argument",
+    "definition": "An argument that is clear, logical, and convincing.",
+    "example_sentence": "The lawyer presented a cogent argument that swayed the jury in favor of his client.",
+    "topic": "crime",
+    "band_level": 7.5,
+    "synonyms": [
+      "convincing argument",
+      "persuasive rationale",
+      "strong case",
+      "logical reasoning"
+    ]
+  },
+  {
+    "word": "coherent",
+    "definition": "(Of an argument, theory, or policy) logical and consistent; forming a united, consistent whole.",
+    "example_sentence": "For an essay to achieve a high band score, it must present a coherent and well-structured argument throughout.",
+    "topic": "education",
+    "band_level": 6.5,
+    "synonyms": [
+      "logical",
+      "consistent",
+      "clear",
+      "organized"
+    ]
+  },
+  {
+    "word": "incoherent",
+    "definition": "(Of spoken or written language) expressed in an incomprehensible or confusing way; lacking clarity or sense.",
+    "example_sentence": "The witness's testimony was so incoherent that the jury struggled to understand the sequence of events.",
+    "topic": "crime",
+    "band_level": 7,
+    "synonyms": [
+      "muddled",
+      "disjointed",
+      "confused",
+      "illogical"
+    ]
+  },
+  {
+    "word": "convoluted",
+    "definition": "(Especially of an argument, story, or sentence) extremely complex and difficult to follow.",
+    "example_sentence": "The legal document contained convoluted phrasing that made it challenging for laypersons to understand its implications.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "complex",
+      "intricate",
+      "complicated",
+      "labyrinthine"
+    ]
+  },
+  {
+    "word": "esoteric jargon",
+    "definition": "Specialized vocabulary or expressions used by a particular profession or group that are difficult for others to understand.",
+    "example_sentence": "The technical report was filled with esoteric jargon, making it inaccessible to readers outside the scientific community.",
+    "topic": "general",
+    "band_level": 8,
+    "synonyms": [
+      "specialized terminology",
+      "technical language",
+      "obscure vocabulary",
+      "professional argot"
+    ]
+  },
+  {
+    "word": "euphemism",
+    "definition": "A mild or indirect word or expression substituted for one considered to be too harsh or blunt when referring to something unpleasant or embarrassing.",
+    "example_sentence": "\"Passed away\" is a common euphemism used instead of \"died\" to soften the impact of the news.",
+    "topic": "culture",
+    "band_level": 7,
+    "synonyms": [
+      "polite term",
+      "softened phrase",
+      "indirect expression",
+      "mild substitute"
+    ]
+  },
+  {
+    "word": "hyperbole",
+    "definition": "Exaggerated statements or claims not meant to be taken literally.",
+    "example_sentence": "Advertising often employs hyperbole, describing everyday products with extravagant and unrealistic promises.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "exaggeration",
+      "overstatement",
+      " embellishment",
+      "magnification"
+    ]
+  },
+  {
+    "word": "understatement",
+    "definition": "The presentation of something as being smaller, worse, or less important than it actually is.",
+    "example_sentence": "To say that global warming is a \"minor inconvenience\" would be a gross understatement of its potential impact.",
+    "topic": "environment",
+    "band_level": 7.5,
+    "synonyms": [
+      "downplay",
+      "restraint",
+      "meiosis",
+      "subtle statement"
+    ]
+  },
+  {
+    "word": "oxymoron",
+    "definition": "A figure of speech in which apparently contradictory terms appear in conjunction.",
+    "example_sentence": "The phrase \"jumbo shrimp\" is a classic oxymoron, combining two words with opposite meanings.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "paradox",
+      "contradiction",
+      "conflicting terms",
+      "incongruity"
+    ]
+  },
+  {
+    "word": "paradoxical",
+    "definition": "Seemingly absurd or self-contradictory but in fact true.",
+    "example_sentence": "It is paradoxical that while technology promises to connect us, it can sometimes lead to increased feelings of isolation.",
+    "topic": "technology",
+    "band_level": 7,
+    "synonyms": [
+      "contradictory",
+      "ironic",
+      "inconsistent",
+      "puzzling"
+    ]
+  },
+  {
+    "word": "counterintuitive",
+    "definition": "Contrary to intuition or to common-sense expectation (but often true in practice).",
+    "example_sentence": "The solution to the complex problem was counterintuitive, requiring a complete shift in traditional thinking.",
+    "topic": "general",
+    "band_level": 7.5,
+    "synonyms": [
+      "illogical",
+      "unexpected",
+      "contrary to common sense",
+      "surprising"
+    ]
+  },
+  {
+    "word": "counterproductive",
+    "definition": "Having the opposite effect to what was intended, making a situation worse rather than better.",
+    "example_sentence": "Imposing excessively strict regulations on small businesses can be counterproductive, stifling innovation rather than promoting growth.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "detrimental",
+      "ineffective",
+      "self-defeating",
+      "adverse"
+    ]
+  },
+  {
+    "word": "self-defeating",
+    "definition": "Causing one to fail or work against one's own interests, often unintentionally.",
+    "example_sentence": "Constantly criticizing one's own efforts can be a self-defeating habit, preventing personal development and confidence.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "counterproductive",
+      "self-sabotaging",
+      "unhelpful",
+      "detrimental"
+    ]
+  },
+  {
+    "word": "self-perpetuating",
+    "definition": "Continuing or causing itself to continue indefinitely without external intervention.",
+    "example_sentence": "A lack of educational opportunities can create a self-perpetuating cycle of poverty across generations.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "self-sustaining",
+      "ongoing",
+      "continuous",
+      "endless"
+    ]
+  },
+  {
+    "word": "vicious cycle",
+    "definition": "A sequence of reciprocal cause and effect in which two or more elements intensify and aggravate each other, leading to a worsening situation.",
+    "example_sentence": "For many individuals, lack of exercise leads to poor health, which in turn reduces energy for exercise, creating a vicious cycle.",
+    "topic": "health",
+    "band_level": 7,
+    "synonyms": [
+      "downward spiral",
+      "negative feedback loop",
+      "destructive pattern"
+    ]
+  },
+  {
+    "word": "virtuous cycle",
+    "definition": "A sequence of reciprocal cause and effect in which two or more elements continuously enhance each other, leading to an improving situation.",
+    "example_sentence": "Investing in early childhood education often initiates a virtuous cycle, leading to better academic performance and future career prospects.",
+    "topic": "education",
+    "band_level": 7,
+    "synonyms": [
+      "upward spiral",
+      "positive feedback loop",
+      "beneficial pattern"
+    ]
+  },
+  {
+    "word": "zero-sum game",
+    "definition": "A situation in which whatever is gained by one side is lost by the other, resulting in no net change.",
+    "example_sentence": "Some political scientists argue that international relations can often devolve into a zero-sum game, where one nation's gain is another's loss.",
+    "topic": "government",
+    "band_level": 7.5,
+    "synonyms": [
+      "win-lose situation",
+      "competitive scenario",
+      "fixed pie"
+    ]
+  },
+  {
+    "word": "diminishing returns",
+    "definition": "The point at which an increased input of resources yields a proportionally smaller increase in output or benefit.",
+    "example_sentence": "Beyond a certain point, studying for extremely long hours can lead to diminishing returns, as fatigue reduces comprehension and retention.",
+    "topic": "education",
+    "band_level": 7.5,
+    "synonyms": [
+      "reduced efficiency",
+      "decreasing effectiveness",
+      "declining marginal utility"
+    ]
+  },
+  {
+    "word": "opportunity cost",
+    "definition": "The value of the next best alternative that must be forgone when making a choice.",
+    "example_sentence": "The opportunity cost of pursuing higher education might be several years of potential income and work experience.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "trade-off",
+      "sacrificed alternative",
+      "implicit cost"
+    ]
+  },
+  {
+    "word": "trade-off",
+    "definition": "A situation in which one must choose between two things, resulting in the partial or complete loss of one in exchange for the other.",
+    "example_sentence": "There is often a significant trade-off between the speed of project completion and the quality of the final product.",
+    "topic": "general",
+    "band_level": 7,
+    "synonyms": [
+      "compromise",
+      "balancing act",
+      "exchange",
+      "give-and-take"
+    ]
+  },
+  {
+    "word": "watershed moment",
+    "definition": "A turning point or a critical moment that marks a significant change or division.",
+    "example_sentence": "The invention of the internet was a watershed moment in human history, fundamentally changing communication and information access.",
+    "topic": "technology",
+    "band_level": 7.5,
+    "synonyms": [
+      "turning point",
+      "critical juncture",
+      "decisive moment",
+      "epochal event"
+    ]
+  },
+  {
+    "word": "tipping point",
+    "definition": "The point at which a series of small changes or incidents becomes significant enough to cause a larger, more important change.",
+    "example_sentence": "Many scientists fear that global warming is approaching a tipping point, after which environmental damage will be irreversible.",
+    "topic": "environment",
+    "band_level": 7.5,
+    "synonyms": [
+      "critical threshold",
+      "point of no return",
+      "crucial moment"
+    ]
+  },
+  {
+    "word": "crux of the matter",
+    "definition": "The most important or fundamental part of an issue or problem.",
+    "example_sentence": "The crux of the matter in addressing climate change is finding a balance between economic growth and environmental protection.",
+    "topic": "environment",
+    "band_level": 7,
+    "synonyms": [
+      "core issue",
+      "essential point",
+      "fundamental aspect",
+      "heart of the problem"
+    ]
+  },
+  {
+    "word": "crux of the issue",
+    "definition": "The central and most significant point of a problem or discussion.",
+    "example_sentence": "When discussing educational reform, the crux of the issue often lies in resource allocation and teacher training.",
+    "topic": "education",
+    "band_level": 7,
+    "synonyms": [
+      "central point",
+      "core problem",
+      "key aspect",
+      "essential question"
+    ]
+  },
+  {
+    "word": "epicenter of",
+    "definition": "The central or most intense point of an activity, event, or phenomenon.",
+    "example_sentence": "Silicon Valley has long been considered the epicenter of technological innovation and startup culture.",
+    "topic": "technology",
+    "band_level": 7,
+    "synonyms": [
+      "hub",
+      "nucleus",
+      "focal point",
+      "core"
+    ]
+  },
+  {
+    "word": "harbinger of",
+    "definition": "A person or thing that announces or signals the approach of another.",
+    "example_sentence": "Rising sea levels are seen by many as a harbinger of more severe climate change impacts to come.",
+    "topic": "environment",
+    "band_level": 7.5,
+    "synonyms": [
+      "precursor",
+      "omen",
+      "signal",
+      "indicator"
+    ]
+  },
+  {
+    "word": "precursor to",
+    "definition": "A person or thing that comes before another of the same kind; a forerunner.",
+    "example_sentence": "The development of the printing press was a crucial precursor to the widespread dissemination of knowledge and literacy.",
+    "topic": "technology",
+    "band_level": 7,
+    "synonyms": [
+      "forerunner",
+      "antecedent",
+      "predecessor",
+      "early form"
+    ]
+  },
+  {
+    "word": "antecedent",
+    "definition": "A thing or event that existed before or logically precedes another.",
+    "example_sentence": "The economic policies of the previous administration were a direct antecedent to the current fiscal challenges.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "forerunner",
+      "precursor",
+      "precedent",
+      "prior event"
+    ]
+  },
+  {
+    "word": "byproduct",
+    "definition": "A secondary or incidental product or result of a manufacturing process or other action.",
+    "example_sentence": "Increased urbanization often has the unintended byproduct of greater traffic congestion and air pollution.",
+    "topic": "environment",
+    "band_level": 7,
+    "synonyms": [
+      "secondary product",
+      "side effect",
+      "consequence",
+      "repercussion"
+    ]
+  },
+  {
+    "word": "offshoot",
+    "definition": "Something that has developed from something else.",
+    "example_sentence": "Many modern dance styles are considered offshoots of classical ballet, adapting its techniques with new expressions.",
+    "topic": "culture",
+    "band_level": 7,
+    "synonyms": [
+      "branch",
+      "derivative",
+      "spin-off",
+      "outgrowth"
+    ]
+  },
+  {
+    "word": "ramifications of",
+    "definition": "The far-reaching and often unwelcome consequences of an action or event.",
+    "example_sentence": "The long-term ramifications of widespread social media use on mental health are still being studied.",
+    "topic": "society",
+    "band_level": 7.5,
+    "synonyms": [
+      "consequences",
+      "implications",
+      "repercussions",
+      "effects"
+    ]
+  },
+  {
+    "word": "far-reaching consequences",
+    "definition": "Significant and extensive effects that will be felt over a long period.",
+    "example_sentence": "The invention of artificial intelligence is likely to have far-reaching consequences across nearly every industry and aspect of human life.",
+    "topic": "technology",
+    "band_level": 7.5,
+    "synonyms": [
+      "widespread impact",
+      "profound effects",
+      "extensive repercussions",
+      "long-term implications"
+    ]
+  },
+  {
+    "word": "unintended consequences",
+    "definition": "Outcomes of a purposeful action that were not intended or foreseen.",
+    "example_sentence": "While aiming to boost local businesses, the new tax incentives had the unintended consequence of attracting large corporations instead.",
+    "topic": "economy",
+    "band_level": 7.5,
+    "synonyms": [
+      "unforeseen effects",
+      "unexpected outcomes",
+      "collateral damage",
+      "repercussions"
+    ]
+  },
+  {
+    "word": "knock-on effect",
+    "definition": "A secondary, indirect, or cumulative effect that occurs as a result of a primary action or event.",
+    "example_sentence": "A rise in global oil prices can have a knock-on effect on the cost of transportation, manufacturing, and consumer goods.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "ripple effect",
+      "chain reaction",
+      "secondary impact",
+      "domino effect"
+    ]
+  },
+  {
+    "word": "domino effect",
+    "definition": "A cumulative effect produced when one event initiates a series of similar events.",
+    "example_sentence": "The collapse of a major bank can trigger a domino effect, leading to a wider financial crisis.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "chain reaction",
+      "ripple effect",
+      "knock-on effect",
+      "cascade"
+    ]
+  },
+  {
+    "word": "snowball effect",
+    "definition": "A situation in which something increases in size or importance at a progressively faster rate.",
+    "example_sentence": "A small misunderstanding can quickly escalate, creating a snowball effect of resentment and conflict within a team.",
+    "topic": "society",
+    "band_level": 7,
+    "synonyms": [
+      "accelerating effect",
+      "compounding effect",
+      "growing impact"
+    ]
+  },
+  {
+    "word": "ripple effect",
+    "definition": "The spreading results of an event or action, affecting an ever-widening area.",
+    "example_sentence": "The closure of a single large factory can have a significant ripple effect on the local economy, impacting employment and supporting businesses.",
+    "topic": "economy",
+    "band_level": 7,
+    "synonyms": [
+      "chain reaction",
+      "knock-on effect",
+      "widespread impact",
+      "cascading effect"
+    ]
+  }
+]

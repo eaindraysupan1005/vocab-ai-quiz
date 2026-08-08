@@ -1,8 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { buildMockQuestions } from "@/lib/mock-quiz";
 import QuizPlayer from "@/components/QuizPlayer";
-import AppNav from "@/components/AppNav";
-import { signOut } from "../actions";
+import AppShell from "@/components/AppShell";
 
 export default async function QuizPage() {
   const supabase = await createClient();
@@ -28,25 +27,9 @@ export default async function QuizPage() {
   const questions = buildMockQuestions(words);
 
   return (
-    <div className="flex flex-1 flex-col items-center gap-6 bg-background px-4 py-10">
-      <div className="flex w-full max-w-2xl items-center justify-between">
-        <AppNav />
-        <div className="flex items-center gap-3">
-          <span className="text-sm text-text/70">{user?.email}</span>
-          <form action={signOut}>
-            <button
-              type="submit"
-              className="rounded-full border border-text/10 px-4 py-2 text-sm font-medium transition-colors hover:bg-text/5"
-            >
-              Sign out
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div className="w-full max-w-2xl">
-        <h1 className="text-xl font-semibold text-text">Daily quiz</h1>
-        <p className="mt-1 rounded bg-secondary/20 px-3 py-2 text-sm text-text">
+    <AppShell title="Daily quiz" email={user?.email}>
+      <div className="w-full max-w-3xl">
+        <p className="rounded-lg bg-secondary/20 px-4 py-2.5 text-sm text-text shadow-sm">
           Preview only — questions use real words but aren&apos;t AI-generated or graded yet
           (that&apos;s roadmap step 7). Grading here is just local mock logic.
         </p>
@@ -59,6 +42,6 @@ export default async function QuizPage() {
           Not enough words in the bank yet to build a preview quiz.
         </p>
       )}
-    </div>
+    </AppShell>
   );
 }
