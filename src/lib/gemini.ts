@@ -54,6 +54,11 @@ Judge whether the sentence uses the word correctly — right meaning, and reason
 and context for the word's part of speech. Minor grammar slips are fine as long as the word
 is used with the correct meaning.
 
+Also supply an improved version of the learner's sentence when it would help — a wrong or
+awkward sentence, or one that would read better at IELTS band 8. Keep it close to what the
+learner was trying to say, still using "${word}". If the sentence is already good, return an
+empty string for "suggestion".
+
 Return ONLY a JSON object with exactly these fields, nothing else:
-{"is_correct": true or false, "feedback": "one short encouraging sentence explaining why, max 25 words"}`;
+{"is_correct": true or false, "feedback": "one short encouraging sentence explaining why, max 25 words", "suggestion": "improved sentence, or empty string"}`;
 }

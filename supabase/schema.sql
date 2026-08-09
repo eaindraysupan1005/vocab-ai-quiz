@@ -99,8 +99,12 @@ create table if not exists quiz_answers (
   user_answer text,
   is_correct boolean,
   ai_feedback text,
+  ai_suggestion text,
   created_at timestamptz not null default now()
 );
+
+-- Added after the table shipped, so existing databases need this too.
+alter table quiz_answers add column if not exists ai_suggestion text;
 
 create index if not exists quiz_answers_quiz_idx
   on quiz_answers (quiz_id);

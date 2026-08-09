@@ -92,6 +92,7 @@ export interface Database {
           user_answer: string | null;
           is_correct: boolean | null;
           ai_feedback: string | null;
+          ai_suggestion: string | null;
           created_at: string;
         };
         Insert: {
@@ -103,6 +104,7 @@ export interface Database {
           user_answer?: string | null;
           is_correct?: boolean | null;
           ai_feedback?: string | null;
+          ai_suggestion?: string | null;
           created_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["quiz_answers"]["Insert"]>;

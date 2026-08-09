@@ -60,13 +60,17 @@ build next, in order.
       rotate through the same three MCQ styles as the daily quiz. Answers persist to a single
       `quizzes` row per week (`quiz_date` = that Monday, see
       [`weekStartIso`](src/lib/quiz-dates.ts)) and feed the review schedule; the quiz is resumable
-      across sittings even as the week's learned set grows.
-      *Still outstanding from the plan:* AI grading returns correct/incorrect + a brief reason but
-      no suggested improved sentence.
+      across sittings even as the week's learned set grows. AI grading returns correct/incorrect,
+      a brief reason, **and a suggested improved sentence** when the learner's could be better —
+      shown under the feedback and stored in `quiz_answers.ai_suggestion`. A sentence that's
+      already good gets no suggestion.
 - [x] **Topic quiz** (not a numbered roadmap step) — a **Topic quiz** tab lists topic cards; picking
       one opens a 10-question MCQ practice quiz on that topic (`/quiz?tab=topic&topic=…`).
       **Demo only**: nothing is written to `quiz_answers` and the review schedule is untouched
       (`QuizPlayer persist={false}`).
+- [x] **Band level test** (not a numbered roadmap step) — a **Band level test** tab
+      ([`BandLevelQuiz`](src/components/BandLevelQuiz.tsx)) offers a quick self-test spanning
+      several band levels. **Demo only**: nothing is saved and the review schedule is untouched.
 - [x] **9. Spaced repetition scheduling** — [`spaced-repetition.ts`](src/lib/spaced-repetition.ts)
       runs a **1 → 3 → 7 → 14 → 30 day** interval ladder. Checking a word off on Daily Words puts
       it on the bottom rung (`firstReviewState`, back tomorrow — which is what puts it in range of

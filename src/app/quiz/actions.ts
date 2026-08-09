@@ -113,9 +113,17 @@ export async function gradeSentenceAnswer(
   if (wordError) throw wordError;
 
   const prompt = buildSentenceGradingPrompt(word.word, word.definition, sentence);
-  const result = (await callGeminiJSON(prompt)) as { is_correct?: unknown; feedback?: unknown };
+  const result = (await callGeminiJSON(prompt)) as {
+    is_correct?: unknown;
+    feedback?: unknown;
+    suggestion?: unknown;
+  };
   const isCorrect = Boolean(result.is_correct);
   const feedback = typeof result.feedback === "string" ? result.feedback : "";
+  // Gemini returns "" when the learner's sentence needs no rewrite; it also
+  // sometimes echoes the sentence back verbatim, which is equally unhelpful.
+  const rawSuggestion = typeof result.suggestion === "string" ? result.suggestion.trim() : "";
+  const suggestion = rawSuggestion === sentence.trim() ? "" : rawSuggestion;
 
   const quizId = await getOrCreateQuiz(supabase, user.id, kind);
 
@@ -127,11 +135,12 @@ export async function gradeSentenceAnswer(
     user_answer: sentence,
     is_correct: isCorrect,
     ai_feedback: feedback,
+    ai_suggestion: suggestion || null,
   });
   if (error) throw error;
 
   await applyReviewOutcome(supabase, user.id, wordId, isCorrect);
   revalidatePath("/quiz");
 
-  return { isCorrect, feedback };
+  return { isCorrect, feedback, suggestion };
 }

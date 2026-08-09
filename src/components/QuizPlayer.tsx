@@ -19,7 +19,7 @@ export type Question =
     }
   | { id: string; type: "sentence"; wordId: string; word: string; prompt: string };
 
-type SentenceResult = { isCorrect: boolean; feedback: string };
+type SentenceResult = { isCorrect: boolean; feedback: string; suggestion?: string };
 
 export default function QuizPlayer({
   questions,
@@ -179,19 +179,30 @@ export default function QuizPlayer({
           (grading ? (
             <p className="mt-4 text-sm text-text/60">Grading your sentence with AI…</p>
           ) : (
-            <p
-              className={`mt-4 text-sm font-medium ${
-                isCorrect
-                  ? "text-green-700 dark:text-green-400"
-                  : "text-red-700 dark:text-red-400"
-              }`}
-            >
-              {q.type === "sentence"
-                ? sentenceResult?.feedback
-                : isCorrect
-                  ? "Correct!"
-                  : `Not quite — the correct answer was "${q.options[q.correctIndex]}".`}
-            </p>
+            <>
+              <p
+                className={`mt-4 text-sm font-medium ${
+                  isCorrect
+                    ? "text-green-700 dark:text-green-400"
+                    : "text-red-700 dark:text-red-400"
+                }`}
+              >
+                {q.type === "sentence"
+                  ? sentenceResult?.feedback
+                  : isCorrect
+                    ? "Correct!"
+                    : `Not quite — the correct answer was "${q.options[q.correctIndex]}".`}
+              </p>
+
+              {q.type === "sentence" && sentenceResult?.suggestion && (
+                <div className="mt-3 rounded-lg border border-text/10 bg-text/[0.03] px-4 py-3">
+                  <p className="text-xs font-medium uppercase tracking-wide text-text/50">
+                    Suggested sentence
+                  </p>
+                  <p className="mt-1 text-sm text-text/80">{sentenceResult.suggestion}</p>
+                </div>
+              )}
+            </>
           ))}
 
         {!submitted ? (
