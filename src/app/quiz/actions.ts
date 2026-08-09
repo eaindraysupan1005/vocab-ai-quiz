@@ -6,18 +6,20 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database } from "@/lib/supabase/database.types";
 import { callGeminiJSON, buildSentenceGradingPrompt } from "@/lib/gemini";
 import { nextReviewState } from "@/lib/spaced-repetition";
+import { quizDateFor, type QuizKind } from "@/lib/quiz-dates";
 
-function todayIso() {
-  return new Date().toISOString().slice(0, 10);
-}
-
-// One quizzes row per user per day. Requires the unique index added in
-// supabase/schema.sql (user_id, quiz_date, type) for the upsert to work.
-async function getOrCreateTodaysQuiz(supabase: SupabaseClient<Database>, userId: string) {
+// One quizzes row per user per day (daily) or per week (weekly). Requires the
+// unique index in supabase/schema.sql (user_id, quiz_date, type) for the
+// upsert to work.
+async function getOrCreateQuiz(
+  supabase: SupabaseClient<Database>,
+  userId: string,
+  kind: QuizKind,
+) {
   const { data, error } = await supabase
     .from("quizzes")
     .upsert(
-      { user_id: userId, type: "daily", quiz_date: todayIso() },
+      { user_id: userId, type: kind, quiz_date: quizDateFor(kind) },
       { onConflict: "user_id,quiz_date,type" },
     )
     .select("id")
@@ -40,7 +42,11 @@ async function applyReviewOutcome(
     .eq("word_id", wordId)
     .maybeSingle();
 
-  const { status, next_review_date } = nextReviewState(correct, existing?.times_correct ?? 0);
+  const { status, next_review_date } = nextReviewState(
+    correct,
+    existing?.times_correct ?? 0,
+    existing?.times_wrong ?? 0,
+  );
 
   const { error } = await supabase.from("user_words").upsert(
     {
@@ -64,6 +70,7 @@ export async function recordObjectiveAnswer(
   questionType: "mcq" | "fill_blank",
   userAnswer: string,
   isCorrect: boolean,
+  kind: QuizKind = "daily",
 ) {
   const supabase = await createClient();
   const {
@@ -71,7 +78,7 @@ export async function recordObjectiveAnswer(
   } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
-  const quizId = await getOrCreateTodaysQuiz(supabase, user.id);
+  const quizId = await getOrCreateQuiz(supabase, user.id, kind);
 
   const { error } = await supabase.from("quiz_answers").insert({
     quiz_id: quizId,
@@ -87,7 +94,11 @@ export async function recordObjectiveAnswer(
   revalidatePath("/quiz");
 }
 
-export async function gradeSentenceAnswer(wordId: string, sentence: string) {
+export async function gradeSentenceAnswer(
+  wordId: string,
+  sentence: string,
+  kind: QuizKind = "weekly",
+) {
   const supabase = await createClient();
   const {
     data: { user },
@@ -106,7 +117,7 @@ export async function gradeSentenceAnswer(wordId: string, sentence: string) {
   const isCorrect = Boolean(result.is_correct);
   const feedback = typeof result.feedback === "string" ? result.feedback : "";
 
-  const quizId = await getOrCreateTodaysQuiz(supabase, user.id);
+  const quizId = await getOrCreateQuiz(supabase, user.id, kind);
 
   const { error } = await supabase.from("quiz_answers").insert({
     quiz_id: quizId,

@@ -150,6 +150,81 @@ function rankCandidates(
     .map((entry) => entry.w);
 }
 
+// Builds one multiple-choice question for `target` in the requested style,
+// falling back to another style when the word can't support it (no example
+// sentence to blank, or a definition that gives the answer away).
+function buildObjectiveQuestion(
+  target: Word,
+  pool: DistractorWord[],
+  rng: () => number,
+  preferredKind: QuestionKind,
+): Question {
+  const candidates = rankCandidates(target, pool, rng);
+
+  let kind = preferredKind;
+  const blanked = target.example_sentence
+    ? blankOutWord(target.example_sentence, target.word)
+    : null;
+  // Some definitions restate the word they define ("Intellectual: relating
+  // to the intellect…"), which would give a meaning question away — the
+  // correct option would be the only one naming the word in the prompt.
+  const definitionLeaks = mentionsWord(target.definition, target.word);
+
+  if (kind === "fill_blank" && !blanked) {
+    // No usable example sentence to blank out.
+    kind = definitionLeaks ? "word" : "meaning";
+  } else if (kind === "meaning" && definitionLeaks) {
+    kind = blanked ? "fill_blank" : "word";
+  }
+
+  if (kind === "meaning") {
+    const distractors = candidates
+      .filter((w) => w.definition !== target.definition)
+      .slice(0, 3)
+      .map((w) => w.definition);
+    const options = seededShuffle([target.definition, ...distractors], rng);
+    return {
+      id: `meaning-${target.id}`,
+      type: "mcq",
+      wordId: target.id,
+      word: target.word,
+      prompt: `Which definition matches "${target.word}"?`,
+      options,
+      correctIndex: options.indexOf(target.definition),
+    };
+  }
+
+  const distractors = candidates.slice(0, 3).map((w) => w.word);
+  const options = seededShuffle([target.word, ...distractors], rng);
+
+  if (kind === "word") {
+    // Only one definition is on screen here, so masking a self-referential
+    // definition hides the answer without singling the option out.
+    const definition = definitionLeaks
+      ? maskWord(target.definition, target.word)
+      : target.definition;
+    return {
+      id: `word-${target.id}`,
+      type: "mcq",
+      wordId: target.id,
+      word: target.word,
+      prompt: `Which word means "${definition}"?`,
+      options,
+      correctIndex: options.indexOf(target.word),
+    };
+  }
+
+  return {
+    id: `fill-${target.id}`,
+    type: "fill_blank",
+    wordId: target.id,
+    word: target.word,
+    prompt: blanked!,
+    options,
+    correctIndex: options.indexOf(target.word),
+  };
+}
+
 // The daily quiz: `count` words drawn from the user's pinned batch for the
 // day, every question multiple choice in one of three styles —
 //   meaning     word → pick its definition
@@ -162,80 +237,79 @@ export function buildDailyQuizQuestions(
   distractorPool: DistractorWord[],
   seed: string,
   count = DAILY_QUIZ_LENGTH,
+  // Words the quiz has already tested at some point. The batch is 20 words and
+  // the quiz asks 10, so without this the same words could keep winning the
+  // draw while others were never tested — and an untested word never advances
+  // its review interval, so it returns to the batch day after day. Still a
+  // random 10 of the 20; already-tested words just go to the back of the queue.
+  alreadyTested: Set<string> = new Set(),
 ): Question[] {
   const rng = mulberry32(hashString(seed));
 
   // Sort first: Supabase `.in()` results come back in arbitrary order, and the
   // seeded shuffle is only reproducible if its input order is too.
   const ordered = [...batch].sort((a, b) => a.id.localeCompare(b.id));
-  const targets = seededShuffle(ordered, rng).slice(0, count);
+  const targets = seededShuffle(ordered, rng)
+    .sort((a, b) => Number(alreadyTested.has(a.id)) - Number(alreadyTested.has(b.id)))
+    .slice(0, count);
   const pool = [...distractorPool].sort((a, b) => a.id.localeCompare(b.id));
 
+  return targets.map((target, i) =>
+    buildObjectiveQuestion(target, pool, rng, KIND_CYCLE[i % KIND_CYCLE.length]),
+  );
+}
+
+// A word the user learned during the past week, with its miss count so the
+// weekly quiz can lean on the ones that gave trouble.
+export type WeeklyWord = Word & { timesWrong: number };
+
+// The weekly quiz covers half of everything learned in the past 7 days —
+// learn 100 words, sit 50 questions. Rounded up so an odd count never drops a
+// question.
+export function weeklyQuestionCount(learnedCount: number): number {
+  return Math.ceil(learnedCount / 2);
+}
+
+// One in four questions is sentence production; the rest rotate through the
+// same three multiple-choice styles as the daily quiz.
+const WEEKLY_KIND_CYCLE: (QuestionKind | "sentence")[] = [
+  "meaning",
+  "word",
+  "fill_blank",
+  "sentence",
+];
+
+// The weekly review quiz. Unlike the daily quiz this mixes in AI-graded
+// sentence production, and it picks its words worst-first: anything the user
+// has previously got wrong is chosen before anything they have always got
+// right, with the seeded shuffle breaking ties.
+export function buildWeeklyQuizQuestions(
+  learned: WeeklyWord[],
+  distractorPool: DistractorWord[],
+  seed: string,
+): Question[] {
+  const rng = mulberry32(hashString(seed));
+  const pool = [...distractorPool].sort((a, b) => a.id.localeCompare(b.id));
+
+  const ordered = [...learned].sort((a, b) => a.id.localeCompare(b.id));
+  const targets = seededShuffle(ordered, rng)
+    .sort((a, b) => b.timesWrong - a.timesWrong)
+    .slice(0, weeklyQuestionCount(learned.length));
+
   return targets.map((target, i) => {
-    const candidates = rankCandidates(target, pool, rng);
+    const kind = WEEKLY_KIND_CYCLE[i % WEEKLY_KIND_CYCLE.length];
 
-    let kind = KIND_CYCLE[i % KIND_CYCLE.length];
-    const blanked = target.example_sentence
-      ? blankOutWord(target.example_sentence, target.word)
-      : null;
-    // Some definitions restate the word they define ("Intellectual: relating
-    // to the intellect…"), which would give a meaning question away — the
-    // correct option would be the only one naming the word in the prompt.
-    const definitionLeaks = mentionsWord(target.definition, target.word);
-
-    if (kind === "fill_blank" && !blanked) {
-      // No usable example sentence to blank out.
-      kind = definitionLeaks ? "word" : "meaning";
-    } else if (kind === "meaning" && definitionLeaks) {
-      kind = blanked ? "fill_blank" : "word";
-    }
-
-    if (kind === "meaning") {
-      const distractors = candidates
-        .filter((w) => w.definition !== target.definition)
-        .slice(0, 3)
-        .map((w) => w.definition);
-      const options = seededShuffle([target.definition, ...distractors], rng);
+    if (kind === "sentence") {
       return {
-        id: `meaning-${target.id}`,
-        type: "mcq",
+        id: `sentence-${target.id}`,
+        type: "sentence",
         wordId: target.id,
         word: target.word,
-        prompt: `Which definition matches "${target.word}"?`,
-        options,
-        correctIndex: options.indexOf(target.definition),
+        prompt: `Use "${target.word}" in a sentence that shows you understand its meaning.`,
       };
     }
 
-    const distractors = candidates.slice(0, 3).map((w) => w.word);
-    const options = seededShuffle([target.word, ...distractors], rng);
-
-    if (kind === "word") {
-      // Only one definition is on screen here, so masking a self-referential
-      // definition hides the answer without singling the option out.
-      const definition = definitionLeaks
-        ? maskWord(target.definition, target.word)
-        : target.definition;
-      return {
-        id: `word-${target.id}`,
-        type: "mcq",
-        wordId: target.id,
-        word: target.word,
-        prompt: `Which word means "${definition}"?`,
-        options,
-        correctIndex: options.indexOf(target.word),
-      };
-    }
-
-    return {
-      id: `fill-${target.id}`,
-      type: "fill_blank",
-      wordId: target.id,
-      word: target.word,
-      prompt: blanked!,
-      options,
-      correctIndex: options.indexOf(target.word),
-    };
+    return buildObjectiveQuestion(target, pool, rng, kind);
   });
 }
 

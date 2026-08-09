@@ -11,6 +11,10 @@
   --primary: #91d530;
   --secondary: #8ae7c2;
   --accent: #5fdfd3;
+  /* Chart fills need to sit on the surface at 3:1 and inside the lightness
+     band, which --primary doesn't (1.73:1 on this background). This is the
+     nearest step of the same hue that passes. */
+  --chart-bar: #5c9410;
 }
 
 :root[data-theme="dark"] {
@@ -19,6 +23,7 @@
   --primary: #8bcf2a;
   --secondary: #187751;
   --accent: #20a295;
+  --chart-bar: #65a30d;
 }
 
 @theme inline {
@@ -27,6 +32,7 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
+  --color-chart-bar: var(--chart-bar);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

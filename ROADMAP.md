@@ -52,20 +52,40 @@ build next, in order.
       it moves to step 8. [`gradeSentenceAnswer`](src/app/quiz/actions.ts) and
       [`buildSentenceGradingPrompt`](src/lib/gemini.ts) are written and working but currently
       unused.
-- [ ] **8. Weekly review quiz** — larger quiz across the week, weighted toward previously-wrong
-      words. This is where **AI-graded sentence production** lands: "use this word in a sentence",
-      graded by Gemini for meaning/grammar/register. The grading call already exists
-      (`gradeSentenceAnswer` + `buildSentenceGradingPrompt`) and just needs a quiz to live in; the
-      plan also asks for a suggested improved sentence, which the current prompt doesn't return.
-- [ ] **9. Spaced repetition scheduling** — mostly done: real interval math in
-      [`nextReviewState`](src/lib/spaced-repetition.ts) (correct → 3 days × streak, capped at 30;
-      wrong → back tomorrow and dropped to "learning"), applied on every quiz answer, and
-      [`getDailyBatch`](src/lib/daily-batch.ts) pulls due words off `next_review_date`. Remaining:
-      [`toggleWordLearned`](src/app/word-actions.ts) still hardcodes "review tomorrow" when a word
-      is checked off on the Daily Words page, and only 10 of the 20 batch words get quizzed, so the
-      other 10 never advance past that first interval.
-- [ ] **10. Progress dashboard** — words learned this week vs. goal, 7-day accuracy trend, explicit
-      weak-word list. No gamification.
+- [x] **8. Weekly review quiz** — the **Weekly review** tab covers everything learned in the past
+      7 days, at **half the word count** (learn 100 → 50 questions, rounded up) via
+      [`buildWeeklyQuizQuestions`](src/lib/quiz-generation.ts). Words the user has previously got
+      wrong are picked first. Every fourth question is **AI-graded sentence production** — Gemini
+      judges the sentence through [`gradeSentenceAnswer`](src/app/quiz/actions.ts) — and the rest
+      rotate through the same three MCQ styles as the daily quiz. Answers persist to a single
+      `quizzes` row per week (`quiz_date` = that Monday, see
+      [`weekStartIso`](src/lib/quiz-dates.ts)) and feed the review schedule; the quiz is resumable
+      across sittings even as the week's learned set grows.
+      *Still outstanding from the plan:* AI grading returns correct/incorrect + a brief reason but
+      no suggested improved sentence.
+- [x] **Topic quiz** (not a numbered roadmap step) — a **Topic quiz** tab lists topic cards; picking
+      one opens a 10-question MCQ practice quiz on that topic (`/quiz?tab=topic&topic=…`).
+      **Demo only**: nothing is written to `quiz_answers` and the review schedule is untouched
+      (`QuizPlayer persist={false}`).
+- [x] **9. Spaced repetition scheduling** — [`spaced-repetition.ts`](src/lib/spaced-repetition.ts)
+      runs a **1 → 3 → 7 → 14 → 30 day** interval ladder. Checking a word off on Daily Words puts
+      it on the bottom rung (`firstReviewState`, back tomorrow — which is what puts it in range of
+      the next day's quiz); each correct quiz answer climbs a rung, a miss drops the word to
+      "learning" and back to tomorrow. [`getDailyBatch`](src/lib/daily-batch.ts) feeds due words
+      into the batch off `next_review_date`.
+      Two earlier gaps are closed: `toggleWordLearned` no longer hardcodes "review tomorrow" (and
+      no longer touches `last_reviewed_at`, since checking a word off is learning it, not recalling
+      it), and the daily quiz now sends already-tested batch words to the back of the draw, so the
+      10 of 20 it skips on one day are the 10 it asks on the next instead of stalling on the first
+      interval forever.
+      *Known simplification:* there's no `review_streak` column, so the rung is derived from
+      `times_correct - times_wrong` rather than a true consecutive-correct streak.
+- [x] **10. Progress dashboard** — [`/progress`](src/app/progress/page.tsx): words learned this
+      week against a full-week goal (7 × `BATCH_SIZE`), total learned, and accuracy over the last
+      7 days. The accuracy trend is a per-day bar chart rather than a lifetime average, and days
+      with no answers render blank rather than as 0%. Below it, the explicit weak-word list —
+      every word missed at least once, most-missed first, with its right/wrong tally. No badges,
+      no streaks, no XP.
 
 ## Tech stack
 Next.js (frontend + API routes) · PostgreSQL via Supabase · Supabase Auth · Google Gemini API ·
