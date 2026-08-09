@@ -45,6 +45,7 @@ export interface Database {
           last_reviewed_at: string | null;
           learned_at: string | null;
           created_at: string;
+          batch_date: string | null;
         };
         Insert: {
           id?: string;
@@ -58,6 +59,7 @@ export interface Database {
           last_reviewed_at?: string | null;
           learned_at?: string | null;
           created_at?: string;
+          batch_date?: string | null;
         };
         Update: Partial<Database["public"]["Tables"]["user_words"]["Insert"]>;
         Relationships: [];

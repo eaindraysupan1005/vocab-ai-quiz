@@ -12,7 +12,7 @@ export default async function LearnPage() {
   const words = user ? await getDailyBatch(supabase, user.id) : [];
 
   return (
-    <AppShell title="Today's words" email={user?.email}>
+    <AppShell title="Daily Words" email={user?.email}>
       {words.length > 0 ? (
         <DailyBatch words={words} />
       ) : (

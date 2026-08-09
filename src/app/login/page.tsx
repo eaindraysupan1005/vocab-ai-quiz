@@ -1,5 +1,7 @@
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import PasswordInput from "@/components/PasswordInput";
+import SubmitButton from "@/components/SubmitButton";
 import { login } from "./actions";
 
 export default async function LoginPage({
@@ -45,20 +47,13 @@ export default async function LoginPage({
             </label>
             <label className="flex flex-col gap-1 text-sm text-text/70">
               Password
-              <input
-                type="password"
-                name="password"
-                required
-                autoComplete="current-password"
-                className="rounded border border-text/10 bg-background px-3 py-2 text-text outline-none focus:border-primary"
-              />
+              <PasswordInput name="password" required autoComplete="current-password" />
             </label>
-            <button
-              type="submit"
+            <SubmitButton
+              label="Log in"
+              pendingLabel="Logging in…"
               className="mt-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-[#0f1704] transition-opacity hover:opacity-90"
-            >
-              Log in
-            </button>
+            />
           </form>
 
           <p className="mt-6 text-sm text-text/70">

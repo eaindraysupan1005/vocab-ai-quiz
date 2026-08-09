@@ -45,11 +45,18 @@ create table if not exists user_words (
   last_reviewed_at timestamptz,
   learned_at timestamptz,
   created_at timestamptz not null default now(),
+  -- The calendar day this word was assigned into the user's daily learn
+  -- batch. Pins batch membership so it stays fixed for the whole day
+  -- regardless of check/uncheck state, independent of next_review_date.
+  batch_date date,
   unique (user_id, word_id)
 );
 
 create index if not exists user_words_due_idx
   on user_words (user_id, next_review_date);
+
+create index if not exists user_words_batch_idx
+  on user_words (user_id, batch_date);
 
 alter table user_words enable row level security;
 
@@ -68,6 +75,10 @@ create table if not exists quizzes (
   quiz_date date not null,
   created_at timestamptz not null default now()
 );
+
+-- Lets the daily quiz upsert on (user, date, type) instead of creating a
+-- duplicate quizzes row every time a question is answered.
+create unique index if not exists quizzes_user_date_type_key on quizzes (user_id, quiz_date, type);
 
 alter table quizzes enable row level security;
 

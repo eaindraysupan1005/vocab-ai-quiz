@@ -44,14 +44,21 @@ export async function toggleWordLearned(wordId: string, learned: boolean) {
 
     if (error) throw error;
   } else {
+    // Reset to "not learned" without deleting the row — deleting it would
+    // drop it out of today's pinned batch (batch_date) and let it get
+    // reshuffled as a "new" word on the next visit.
     const { error } = await supabase
       .from("user_words")
-      .delete()
+      .update({
+        status: "new",
+        learned_at: null,
+        next_review_date: null,
+      })
       .eq("user_id", user.id)
       .eq("word_id", wordId);
 
     if (error) throw error;
   }
 
-  revalidatePath("/");
+  revalidatePath("/learn");
 }

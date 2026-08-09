@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -31,32 +32,25 @@ export default async function LandingPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
+  if (user) {
+    redirect("/learn");
+  }
+
   return (
     <div className="flex flex-1 flex-col bg-background text-text">
       <header className="flex w-full items-center justify-between px-6 py-5">
         <span className="text-lg font-semibold">Vocably</span>
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          {user ? (
-            <Link
-              href="/learn"
-              className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-[#0f1704]"
-            >
-              Go to your words
-            </Link>
-          ) : (
-            <>
-              <Link href="/login" className="text-sm font-medium hover:underline">
-                Log in
-              </Link>
-              <Link
-                href="/signup"
-                className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-[#0f1704]"
-              >
-                Sign up
-              </Link>
-            </>
-          )}
+          <Link href="/login" className="text-sm font-medium hover:underline">
+            Log in
+          </Link>
+          <Link
+            href="/signup"
+            className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-[#0f1704]"
+          >
+            Sign up
+          </Link>
         </div>
       </header>
 
@@ -71,19 +65,17 @@ export default async function LandingPage() {
         </p>
         <div className="mt-8 flex gap-3">
           <Link
-            href={user ? "/learn" : "/signup"}
+            href="/signup"
             className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-[#0f1704]"
           >
-            {user ? "Go to your words" : "Get started"}
+            Get started
           </Link>
-          {!user && (
-            <Link
-              href="/login"
-              className="rounded-full border border-text/10 px-6 py-3 text-sm font-medium hover:bg-text/5"
-            >
-              Log in
-            </Link>
-          )}
+          <Link
+            href="/login"
+            className="rounded-full border border-text/10 px-6 py-3 text-sm font-medium hover:bg-text/5"
+          >
+            Log in
+          </Link>
         </div>
 
         <div className="mt-20 grid w-full max-w-4xl gap-6 text-left sm:grid-cols-2">

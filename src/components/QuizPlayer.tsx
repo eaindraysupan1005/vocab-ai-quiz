@@ -1,42 +1,101 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { recordObjectiveAnswer } from "@/app/quiz/actions";
 
-export type Question =
-  | { id: string; type: "mcq"; word: string; prompt: string; options: string[]; correctIndex: number }
-  | { id: string; type: "fill_blank"; word: string; prompt: string; answer: string }
-  | { id: string; type: "sentence"; word: string; prompt: string };
-
-type AnswerState = {
-  submitted: boolean;
-  selectedIndex?: number;
-  text?: string;
+// Every daily-quiz question is multiple choice. `type` only distinguishes how
+// the question is framed (and how the answer is recorded in quiz_answers):
+// "mcq" for meaning/word questions, "fill_blank" for a blanked sentence.
+export type Question = {
+  id: string;
+  type: "mcq" | "fill_blank";
+  wordId: string;
+  word: string;
+  prompt: string;
+  options: string[];
+  correctIndex: number;
 };
 
-function McqQuestion({
-  q,
-  state,
-  onChange,
-  onSubmit,
+export default function QuizPlayer({
+  questions,
+  startIndex = 0,
+  initialCorrect = 0,
 }: {
-  q: Extract<Question, { type: "mcq" }>;
-  state: AnswerState;
-  onChange: (selectedIndex: number) => void;
-  onSubmit: () => void;
+  questions: Question[];
+  startIndex?: number;
+  initialCorrect?: number;
 }) {
-  const isCorrect = state.selectedIndex === q.correctIndex;
+  const [index, setIndex] = useState(startIndex);
+  const [selected, setSelected] = useState<number | null>(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [correctCount, setCorrectCount] = useState(initialCorrect);
+  const [finished, setFinished] = useState(startIndex >= questions.length);
+  const [, startTransition] = useTransition();
+
+  if (questions.length === 0) return null;
+
+  if (finished) {
+    return (
+      <div className="w-full max-w-3xl rounded-xl border border-primary/30 bg-primary/[0.06] p-6 text-center shadow-sm">
+        <p className="text-lg font-semibold text-text">Today&apos;s quiz is done!</p>
+        <p className="mt-1 text-text/70">
+          You scored {correctCount} of {questions.length}. Come back tomorrow for more.
+        </p>
+      </div>
+    );
+  }
+
+  const q = questions[index];
+  const isLast = index === questions.length - 1;
+  const isCorrect = selected === q.correctIndex;
+  const progress = Math.round((index / questions.length) * 100);
+
+  function handleSubmit() {
+    const correct = selected === q.correctIndex;
+    const answerText = q.options[selected ?? -1] ?? "";
+    setSubmitted(true);
+    if (correct) setCorrectCount((c) => c + 1);
+    startTransition(() => {
+      recordObjectiveAnswer(q.wordId, q.type, answerText, correct).catch(() => {});
+    });
+  }
+
+  function handleNext() {
+    setSelected(null);
+    setSubmitted(false);
+    if (isLast) setFinished(true);
+    else setIndex((i) => i + 1);
+  }
 
   return (
-    <div className="flex flex-col gap-4">
-      <p className="text-text">{q.prompt}</p>
-      <div className="flex flex-col gap-2">
-        {q.options.map((option, i) => {
-          const selected = state.selectedIndex === i;
-          return (
+    <div className="flex w-full max-w-3xl flex-col gap-4">
+      <div className="flex items-center gap-3">
+        <div className="h-2 flex-1 overflow-hidden rounded-full bg-secondary/25">
+          <div
+            className="h-full rounded-full bg-primary transition-all"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+        <span className="shrink-0 text-xs font-medium text-text/60">
+          Question {index + 1} of {questions.length}
+        </span>
+      </div>
+
+      <div className="rounded-xl border border-text/10 bg-background p-5 shadow-sm">
+        {q.type === "fill_blank" && (
+          <p className="mb-2 text-xs font-medium uppercase tracking-wide text-text/50">
+            Choose the word that fits the blank
+          </p>
+        )}
+
+        <p className="text-text">{q.prompt}</p>
+
+        <div className="mt-4 flex flex-col gap-2">
+          {q.options.map((option, i) => (
             <label
               key={i}
               className={`flex cursor-pointer items-center gap-3 rounded-lg border px-4 py-3 text-sm transition-colors ${
-                selected
+                selected === i
                   ? "border-primary/40 bg-primary/10 text-text"
                   : "border-text/10 text-text/80 hover:bg-text/5"
               }`}
@@ -44,184 +103,49 @@ function McqQuestion({
               <input
                 type="radio"
                 name={q.id}
-                checked={selected}
-                disabled={state.submitted}
-                onChange={() => onChange(i)}
+                checked={selected === i}
+                disabled={submitted}
+                onChange={() => setSelected(i)}
                 style={{ accentColor: "var(--primary)" }}
               />
               {option}
             </label>
-          );
-        })}
-      </div>
-      {!state.submitted ? (
-        <button
-          type="button"
-          onClick={onSubmit}
-          disabled={state.selectedIndex === undefined}
-          className="self-start rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-[#0f1704] shadow-sm transition-opacity hover:opacity-90 disabled:opacity-40"
-        >
-          Submit
-        </button>
-      ) : (
-        <p
-          className={
-            isCorrect
-              ? "text-sm font-medium text-green-700 dark:text-green-400"
-              : "text-sm font-medium text-red-700 dark:text-red-400"
-          }
-        >
-          {isCorrect
-            ? "Correct!"
-            : `Not quite — the correct answer was "${q.options[q.correctIndex]}".`}
-        </p>
-      )}
-    </div>
-  );
-}
+          ))}
+        </div>
 
-function FillBlankQuestion({
-  q,
-  state,
-  onChange,
-  onSubmit,
-}: {
-  q: Extract<Question, { type: "fill_blank" }>;
-  state: AnswerState;
-  onChange: (text: string) => void;
-  onSubmit: () => void;
-}) {
-  const isCorrect = (state.text ?? "").trim().toLowerCase() === q.answer.toLowerCase();
-
-  return (
-    <div className="flex flex-col gap-4">
-      <p className="text-text">{q.prompt}</p>
-      <input
-        type="text"
-        value={state.text ?? ""}
-        disabled={state.submitted}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder="Type the missing word"
-        className="rounded-lg border border-text/10 bg-background px-4 py-2.5 text-sm text-text outline-none focus:border-primary"
-      />
-      {!state.submitted ? (
-        <button
-          type="button"
-          onClick={onSubmit}
-          disabled={!state.text}
-          className="self-start rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-[#0f1704] shadow-sm transition-opacity hover:opacity-90 disabled:opacity-40"
-        >
-          Submit
-        </button>
-      ) : (
-        <p
-          className={
-            isCorrect
-              ? "text-sm font-medium text-green-700 dark:text-green-400"
-              : "text-sm font-medium text-red-700 dark:text-red-400"
-          }
-        >
-          {isCorrect ? "Correct!" : `Not quite — the correct answer was "${q.answer}".`}
-        </p>
-      )}
-    </div>
-  );
-}
-
-function SentenceQuestion({
-  q,
-  state,
-  onChange,
-  onSubmit,
-}: {
-  q: Extract<Question, { type: "sentence" }>;
-  state: AnswerState;
-  onChange: (text: string) => void;
-  onSubmit: () => void;
-}) {
-  return (
-    <div className="flex flex-col gap-4">
-      <p className="text-text">{q.prompt}</p>
-      <textarea
-        value={state.text ?? ""}
-        disabled={state.submitted}
-        onChange={(e) => onChange(e.target.value)}
-        rows={3}
-        placeholder="Write your sentence here"
-        className="rounded-lg border border-text/10 bg-background px-4 py-2.5 text-sm text-text outline-none focus:border-primary"
-      />
-      {!state.submitted ? (
-        <button
-          type="button"
-          onClick={onSubmit}
-          disabled={!state.text}
-          className="self-start rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-[#0f1704] shadow-sm transition-opacity hover:opacity-90 disabled:opacity-40"
-        >
-          Submit
-        </button>
-      ) : (
-        <p className="text-sm font-medium text-accent">
-          Nice attempt — AI grading isn&apos;t wired up yet, so this is just a preview of the
-          layout.
-        </p>
-      )}
-    </div>
-  );
-}
-
-export default function QuizPlayer({ questions }: { questions: Question[] }) {
-  const [answers, setAnswers] = useState<Record<string, AnswerState>>({});
-
-  function getState(id: string): AnswerState {
-    return answers[id] ?? { submitted: false };
-  }
-
-  function update(id: string, patch: Partial<AnswerState>) {
-    setAnswers((prev) => ({ ...prev, [id]: { ...getState(id), ...patch } }));
-  }
-
-  return (
-    <div className="flex w-full max-w-3xl flex-col gap-5">
-      {questions.map((q, i) => {
-        const state = getState(q.id);
-        return (
-          <div
-            key={q.id}
-            className="rounded-xl border border-text/10 bg-background p-5 shadow-sm transition-shadow hover:shadow-md"
+        {submitted && (
+          <p
+            className={`mt-4 text-sm font-medium ${
+              isCorrect
+                ? "text-green-700 dark:text-green-400"
+                : "text-red-700 dark:text-red-400"
+            }`}
           >
-            <div className="mb-3 flex items-center gap-2">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-semibold text-primary">
-                {i + 1}
-              </span>
-              <p className="text-xs font-medium uppercase tracking-wide text-text/50">{q.word}</p>
-            </div>
-            {q.type === "mcq" && (
-              <McqQuestion
-                q={q}
-                state={state}
-                onChange={(selectedIndex) => update(q.id, { selectedIndex })}
-                onSubmit={() => update(q.id, { submitted: true })}
-              />
-            )}
-            {q.type === "fill_blank" && (
-              <FillBlankQuestion
-                q={q}
-                state={state}
-                onChange={(text) => update(q.id, { text })}
-                onSubmit={() => update(q.id, { submitted: true })}
-              />
-            )}
-            {q.type === "sentence" && (
-              <SentenceQuestion
-                q={q}
-                state={state}
-                onChange={(text) => update(q.id, { text })}
-                onSubmit={() => update(q.id, { submitted: true })}
-              />
-            )}
-          </div>
-        );
-      })}
+            {isCorrect
+              ? "Correct!"
+              : `Not quite — the correct answer was "${q.options[q.correctIndex]}".`}
+          </p>
+        )}
+
+        {!submitted ? (
+          <button
+            type="button"
+            onClick={handleSubmit}
+            disabled={selected === null}
+            className="mt-5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-[#0f1704] shadow-sm transition-opacity hover:opacity-90 disabled:opacity-40"
+          >
+            Submit
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={handleNext}
+            className="mt-5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-[#0f1704] shadow-sm transition-opacity hover:opacity-90"
+          >
+            {isLast ? "Finish" : "Next"}
+          </button>
+        )}
+      </div>
     </div>
   );
 }
