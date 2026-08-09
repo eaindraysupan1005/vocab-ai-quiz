@@ -8,7 +8,7 @@ import {
   weeklyQuestionCount,
 } from "@/lib/quiz-generation";
 import { todayIso, weekStartIso } from "@/lib/quiz-dates";
-import QuizPlayer from "@/components/QuizPlayer";
+import QuizPlayer, { type AnswerLog } from "@/components/QuizPlayer";
 import BandLevelQuiz from "@/components/BandLevelQuiz";
 import QuizTabs, { type QuizTab } from "@/components/QuizTabs";
 import TopicCards, { countTopics } from "@/components/TopicCards";
@@ -38,15 +38,24 @@ function fetchDistractorPool(supabase: Supabase) {
 // them asked twice.
 function resumeState<T extends { wordId: string }>(
   questions: T[],
-  answers: { word_id: string; is_correct: boolean | null }[],
+  answers: StoredAnswer[],
 ) {
   const asked = new Set(questions.map((q) => q.wordId));
   const answeredIds = new Set<string>();
+  // What the user actually picked, so the completed card can replay the quiz
+  // question by question instead of just showing a score.
+  const initialAnswers: AnswerLog = {};
   let correctCount = 0;
   for (const answer of answers) {
     if (!asked.has(answer.word_id)) continue;
     answeredIds.add(answer.word_id);
     if (answer.is_correct) correctCount++;
+    initialAnswers[answer.word_id] = {
+      userAnswer: answer.user_answer ?? "",
+      isCorrect: Boolean(answer.is_correct),
+      feedback: answer.ai_feedback ?? undefined,
+      suggestion: answer.ai_suggestion ?? undefined,
+    };
   }
 
   const answered = questions.filter((q) => answeredIds.has(q.wordId));
@@ -56,14 +65,23 @@ function resumeState<T extends { wordId: string }>(
     questions: [...answered, ...remaining],
     startIndex: answered.length,
     correctCount,
+    initialAnswers,
   };
 }
+
+type StoredAnswer = {
+  word_id: string;
+  is_correct: boolean | null;
+  user_answer: string | null;
+  ai_feedback: string | null;
+  ai_suggestion: string | null;
+};
 
 async function fetchAnswers(supabase: Supabase, quizId: string | undefined) {
   if (!quizId) return [];
   const { data } = await supabase
     .from("quiz_answers")
-    .select("word_id, is_correct")
+    .select("word_id, is_correct, user_answer, ai_feedback, ai_suggestion")
     .eq("quiz_id", quizId);
   return data ?? [];
 }
@@ -90,7 +108,9 @@ async function loadDailyQuiz(supabase: Supabase, userId: string) {
   ]);
 
   const batchIds = (batchRows ?? []).map((r) => r.word_id);
-  if (batchIds.length === 0) return { questions: [], startIndex: 0, correctCount: 0 };
+  if (batchIds.length === 0) {
+    return { questions: [], startIndex: 0, correctCount: 0, initialAnswers: {} as AnswerLog };
+  }
 
   const [{ data: batchWords }, { data: pool }] = await Promise.all([
     supabase.from("words").select("*").in("id", batchIds),
@@ -98,9 +118,14 @@ async function loadDailyQuiz(supabase: Supabase, userId: string) {
   ]);
 
   // `last_reviewed_at` is only ever set by answering a quiz question, so it
-  // marks the batch words the quiz has already tested.
+  // marks the batch words the quiz has already tested. Words tested *today*
+  // are excluded: demoting them mid-quiz would swap them out of the draw for
+  // fresh ones on every reload, so the day's 10 would never stay put and the
+  // quiz could never read as complete. They get demoted from tomorrow on.
   const alreadyTested = new Set(
-    (batchRows ?? []).filter((r) => r.last_reviewed_at != null).map((r) => r.word_id),
+    (batchRows ?? [])
+      .filter((r) => r.last_reviewed_at != null && !r.last_reviewed_at.startsWith(today))
+      .map((r) => r.word_id),
   );
 
   const questions = buildDailyQuizQuestions(
@@ -140,7 +165,13 @@ async function loadWeeklyQuiz(supabase: Supabase, userId: string) {
 
   const rows = learnedRows ?? [];
   if (rows.length === 0) {
-    return { questions: [], startIndex: 0, correctCount: 0, learnedCount: 0 };
+    return {
+      questions: [],
+      startIndex: 0,
+      correctCount: 0,
+      learnedCount: 0,
+      initialAnswers: {} as AnswerLog,
+    };
   }
 
   const [{ data: words }, { data: pool }] = await Promise.all([
@@ -273,6 +304,7 @@ export default async function QuizPage({
               questions={daily.questions}
               startIndex={daily.startIndex}
               initialCorrect={daily.correctCount}
+              initialAnswers={daily.initialAnswers}
               quizKind="daily"
               onFinishNote="Come back tomorrow for more."
             />
@@ -301,6 +333,7 @@ export default async function QuizPage({
               questions={weekly.questions}
               startIndex={weekly.startIndex}
               initialCorrect={weekly.correctCount}
+              initialAnswers={weekly.initialAnswers}
               quizKind="weekly"
               onFinishNote="Your answers have updated the review schedule."
             />
