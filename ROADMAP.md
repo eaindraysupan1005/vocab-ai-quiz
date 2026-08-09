@@ -34,16 +34,36 @@ build next, in order.
       learning app moved to `/learn`. Added a light/dark theme
       ([`globals.css`](src/app/globals.css) tokens + [`ThemeToggle`](src/components/ThemeToggle.tsx),
       persisted, defaults to system preference) and redesigned `/login`/`/signup` to match.
-- [ ] **7. AI daily quiz** — generate next-day quiz from previously learned words; MCQ/fill-in for
-      new words, AI-graded sentence production for repeat words.
-      **UI mock done**: [`src/app/quiz/page.tsx`](src/app/quiz/page.tsx) +
-      [`QuizPlayer`](src/components/QuizPlayer.tsx) render the MCQ/fill-blank/sentence-production
-      layouts with real words but locally-mocked questions/grading (no Gemini, no persistence) —
-      still needs the real generation + AI grading + `quizzes`/`quiz_answers` writes.
+- [x] **Topics browser** (not a numbered roadmap step, general UI work) —
+      [`/topics`](src/app/topics/page.tsx) lists the word bank by theme as cards with word counts;
+      [`/topics/[topic]`](src/app/topics/[topic]/page.tsx) shows every word in a topic
+      (definition, band, synonyms, example). Sidebar nav is now Daily Words / Quiz / Topics, with
+      the old "Learn" label renamed to **Daily Words** (route is still `/learn`).
+- [x] **7. Daily quiz** — [`src/app/quiz/page.tsx`](src/app/quiz/page.tsx) +
+      [`QuizPlayer`](src/components/QuizPlayer.tsx), unlocked once the day's batch is checked off.
+      10 questions on 10 words drawn from that day's pinned batch, **all multiple choice** in three
+      styles (word→definition, definition→word, fill-the-blank in the example sentence), one
+      question per screen with Submit → feedback → Next. Built in code by
+      [`buildDailyQuizQuestions`](src/lib/quiz-generation.ts) from stored definitions/examples with
+      distractors sampled from the word bank — **no Gemini at quiz time**; the picks are seeded on
+      (user, date) so the quiz is stable across reloads and resumes where you left off. Answers
+      persist to `quizzes`/`quiz_answers` and feed the review schedule.
+      *Deviation from the plan:* AI-graded sentence production was dropped from the daily quiz —
+      it moves to step 8. [`gradeSentenceAnswer`](src/app/quiz/actions.ts) and
+      [`buildSentenceGradingPrompt`](src/lib/gemini.ts) are written and working but currently
+      unused.
 - [ ] **8. Weekly review quiz** — larger quiz across the week, weighted toward previously-wrong
-      words.
-- [ ] **9. Spaced repetition scheduling** — track correct/wrong per word, adjust next review date,
-      feed "due" words into the daily batch.
+      words. This is where **AI-graded sentence production** lands: "use this word in a sentence",
+      graded by Gemini for meaning/grammar/register. The grading call already exists
+      (`gradeSentenceAnswer` + `buildSentenceGradingPrompt`) and just needs a quiz to live in; the
+      plan also asks for a suggested improved sentence, which the current prompt doesn't return.
+- [ ] **9. Spaced repetition scheduling** — mostly done: real interval math in
+      [`nextReviewState`](src/lib/spaced-repetition.ts) (correct → 3 days × streak, capped at 30;
+      wrong → back tomorrow and dropped to "learning"), applied on every quiz answer, and
+      [`getDailyBatch`](src/lib/daily-batch.ts) pulls due words off `next_review_date`. Remaining:
+      [`toggleWordLearned`](src/app/word-actions.ts) still hardcodes "review tomorrow" when a word
+      is checked off on the Daily Words page, and only 10 of the 20 batch words get quizzed, so the
+      other 10 never advance past that first interval.
 - [ ] **10. Progress dashboard** — words learned this week vs. goal, 7-day accuracy trend, explicit
       weak-word list. No gamification.
 

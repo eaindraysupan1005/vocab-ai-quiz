@@ -42,7 +42,14 @@ async function loadDailyQuiz(
 
   const [{ data: batchWords }, { data: distractorPool }] = await Promise.all([
     supabase.from("words").select("*").in("id", batchIds),
-    supabase.from("words").select("*").order("id", { ascending: true }).limit(500),
+    // The whole bank, minus the columns distractors never use — options are
+    // picked by topic/band/part-of-speech proximity, so narrowing the pool
+    // first would leave too few good matches to choose from.
+    supabase
+      .from("words")
+      .select("id, word, definition, band_level, topic, synonyms")
+      .order("id", { ascending: true })
+      .limit(5000),
   ]);
 
   const questions = buildDailyQuizQuestions(

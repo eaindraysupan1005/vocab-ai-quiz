@@ -66,14 +66,16 @@ export default async function TopicWordsPage({
                 )}
               </div>
 
-              <p className="text-sm text-text/80">{word.definition}</p>
+              <p className="text-sm text-primary">{word.definition}</p>
 
               {word.synonyms.length > 0 && (
-                <p className="text-xs text-text/60">Synonyms: {word.synonyms.join(", ")}</p>
+                <p className="text-xs text-blue-900 dark:text-blue-300">
+                  Synonyms: {word.synonyms.join(", ")}
+                </p>
               )}
 
               {word.example_sentence && (
-                <p className="mt-auto rounded-lg bg-secondary/10 px-3 py-2 text-sm italic text-text/60">
+                <p className="mt-auto text-sm italic text-text">
                   &ldquo;{word.example_sentence}&rdquo;
                 </p>
               )}

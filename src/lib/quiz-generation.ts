@@ -72,6 +72,84 @@ type QuestionKind = "meaning" | "word" | "fill_blank";
 // Rotated over the picked words so a quiz mixes all three styles evenly.
 const KIND_CYCLE: QuestionKind[] = ["meaning", "word", "fill_blank"];
 
+// Distractors only need these columns, so the quiz page can fetch the whole
+// bank as options without pulling example sentences it will never show.
+export type DistractorWord = Pick<
+  Word,
+  "id" | "word" | "definition" | "band_level" | "topic" | "synonyms"
+>;
+
+function normalizeWord(word: string): string {
+  return word.trim().toLowerCase().replace(/^to\s+/, "");
+}
+
+// The word bank has no part-of-speech column, but the entries carry two usable
+// hints: verbs are written "To cope", and adverbs end in -ly. Matching on this
+// keeps a fill-in-the-blank from offering options that can't grammatically fit
+// the gap ("bar chart" against "Deliberate").
+function posHint(word: string): "verb" | "adverb" | "other" {
+  const w = word.trim().toLowerCase();
+  if (w.startsWith("to ")) return "verb";
+  if (w.endsWith("ly")) return "adverb";
+  return "other";
+}
+
+// The bank mixes single words with phrases ("bar chart", "bring about
+// significant changes"). Offering a phrase against a single-word target is an
+// instant tell in a fill-in-the-blank, so like is matched with like.
+function isPhrase(word: string): boolean {
+  return normalizeWord(word).includes(" ");
+}
+
+// A synonym of the target can't be a distractor: it would be a second
+// defensibly-correct option, so the question stops having one answer. Words
+// that merely *share* a synonym are close enough to carry the same risk.
+function isTooCloseToTarget(target: Word, candidate: DistractorWord): boolean {
+  const targetWord = normalizeWord(target.word);
+  const candidateWord = normalizeWord(candidate.word);
+  if (targetWord === candidateWord) return true;
+
+  const targetSynonyms = new Set(target.synonyms.map(normalizeWord));
+  const candidateSynonyms = candidate.synonyms.map(normalizeWord);
+  if (targetSynonyms.has(candidateWord)) return true;
+  if (candidateSynonyms.includes(targetWord)) return true;
+  return candidateSynonyms.some((s) => targetSynonyms.has(s));
+}
+
+// Orders the pool by how plausible each word is as a wrong answer for this
+// target — same topic and a nearby band level make an option that has to be
+// ruled out on meaning rather than on obviously belonging to another register.
+// The seeded shuffle up front is what breaks ties, and `sort` is stable, so
+// equally-good candidates still vary between words and days.
+function rankCandidates(
+  target: Word,
+  pool: DistractorWord[],
+  rng: () => number,
+): DistractorWord[] {
+  const targetPos = posHint(target.word);
+
+  return seededShuffle(
+    pool.filter((w) => w.id !== target.id && !isTooCloseToTarget(target, w)),
+    rng,
+  )
+    .map((w) => {
+      let score = 0;
+      if (target.topic && w.topic === target.topic) score += 2;
+      if (
+        target.band_level != null &&
+        w.band_level != null &&
+        Math.abs(w.band_level - target.band_level) <= 0.5
+      ) {
+        score += 2;
+      }
+      if (posHint(w.word) === targetPos) score += 1;
+      if (isPhrase(w.word) === isPhrase(target.word)) score += 1;
+      return { w, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .map((entry) => entry.w);
+}
+
 // The daily quiz: `count` words drawn from the user's pinned batch for the
 // day, every question multiple choice in one of three styles —
 //   meaning     word → pick its definition
@@ -81,7 +159,7 @@ const KIND_CYCLE: QuestionKind[] = ["meaning", "word", "fill_blank"];
 // a broad sample of the word bank. `seed` pins the whole thing for the day.
 export function buildDailyQuizQuestions(
   batch: Word[],
-  distractorPool: Word[],
+  distractorPool: DistractorWord[],
   seed: string,
   count = DAILY_QUIZ_LENGTH,
 ): Question[] {
@@ -94,10 +172,7 @@ export function buildDailyQuizQuestions(
   const pool = [...distractorPool].sort((a, b) => a.id.localeCompare(b.id));
 
   return targets.map((target, i) => {
-    const candidates = seededShuffle(
-      pool.filter((w) => w.id !== target.id && w.word !== target.word),
-      rng,
-    );
+    const candidates = rankCandidates(target, pool, rng);
 
     let kind = KIND_CYCLE[i % KIND_CYCLE.length];
     const blanked = target.example_sentence
