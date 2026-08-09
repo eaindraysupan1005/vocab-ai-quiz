@@ -5,7 +5,10 @@ import {
   buildDailyQuizQuestions,
   buildWeeklyQuizQuestions,
   buildBandLevelQuestions,
+  buildTopicQuizQuestions,
   weeklyQuestionCount,
+  topicQuestionCount,
+  topicSentenceCount,
 } from "@/lib/quiz-generation";
 import { todayIso, weekStartIso } from "@/lib/quiz-dates";
 import QuizPlayer, { type AnswerLog } from "@/components/QuizPlayer";
@@ -201,15 +204,16 @@ async function loadWeeklyQuiz(supabase: Supabase, userId: string) {
   return { ...resumeState(questions, answers), learnedCount: learned.length };
 }
 
-// Demo practice quiz for a single topic: 10 multiple-choice questions drawn
-// from that topic's words, not saved and not affecting the review schedule.
+// Practice quiz for a single topic: three quarters of the topic's words, mixing
+// multiple choice with AI-graded sentence production. Graded but not saved, and
+// it doesn't affect the review schedule.
 async function loadTopicQuiz(supabase: Supabase, topic: string) {
   const [{ data: topicWords }, { data: pool }] = await Promise.all([
     supabase.from("words").select("*").eq("topic", topic).limit(2000),
     fetchDistractorPool(supabase),
   ]);
 
-  return buildDailyQuizQuestions(topicWords ?? [], pool ?? [], `topic:${topic}`, 10);
+  return buildTopicQuizQuestions(topicWords ?? [], pool ?? [], `topic:${topic}`);
 }
 
 function Blurb({ children }: { children: React.ReactNode }) {
@@ -350,8 +354,10 @@ export default async function QuizPage({
         (topic ? (
           <>
             <Blurb>
-              Practice quiz on <span className="font-medium capitalize">{topic}</span> — a demo, so
-              it isn&apos;t saved and doesn&apos;t affect your review schedule.
+              Practice quiz on <span className="font-medium capitalize">{topic}</span> —{" "}
+              {topicQuestions.length} questions covering 75% of the topic&apos;s words, of which{" "}
+              {topicSentenceCount(topicQuestions.length)} ask you to write a sentence, graded by AI.
+              It isn&apos;t saved and doesn&apos;t affect your review schedule.
             </Blurb>
 
             <div className="w-full max-w-3xl">
@@ -383,8 +389,9 @@ export default async function QuizPage({
         ) : (
           <>
             <Blurb>
-              Pick a topic to practise the words in it. These are demo quizzes — nothing is saved
-              and your review schedule is untouched.
+              Pick a topic to practise the words in it. Each quiz covers 75% of that topic&apos;s
+              words, with about three in ten asking you to write a sentence for AI grading. Nothing
+              is saved and your review schedule is untouched.
             </Blurb>
 
             <div className="w-full max-w-5xl">
@@ -394,7 +401,7 @@ export default async function QuizPage({
                 <TopicCards
                   topics={topics}
                   hrefPrefix="/quiz?tab=topic&topic="
-                  countLabel={(count) => `${count} words · 10 questions`}
+                  countLabel={(count) => `${count} words · ${topicQuestionCount(count)} questions`}
                 />
               )}
             </div>

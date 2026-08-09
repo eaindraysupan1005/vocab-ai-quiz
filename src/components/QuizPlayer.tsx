@@ -195,15 +195,11 @@ export default function QuizPlayer({
   async function handleSubmit() {
     if (q.type === "sentence") {
       setSubmitted(true);
-      if (!persist) {
-        // Nothing to grade against without the AI call; practice mode never
-        // generates sentence questions, so this is just a safety net.
-        setSentenceResult({ isCorrect: false, feedback: "Sentence grading is off in practice mode." });
-        return;
-      }
       setGrading(true);
       try {
-        const result = await gradeSentenceAnswer(q.wordId, text, quizKind);
+        // Practice quizzes are still graded — `persist` only decides whether
+        // the answer is written down and counted toward the review schedule.
+        const result = await gradeSentenceAnswer(q.wordId, text, quizKind, persist);
         setSentenceResult(result);
         logAnswer(q.wordId, { ...result, userAnswer: text });
         if (result.isCorrect) setCorrectCount((c) => c + 1);

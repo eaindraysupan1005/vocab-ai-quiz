@@ -313,6 +313,67 @@ export function buildWeeklyQuizQuestions(
   });
 }
 
+// A topic quiz sweeps the topic rather than sampling it: three quarters of the
+// topic's words get asked, so working through one is a real pass over the set.
+export const TOPIC_COVERAGE = 0.75;
+// Of those questions, roughly three in ten ask the user to produce a sentence
+// (graded by Gemini); the rest are the daily quiz's multiple-choice styles.
+export const TOPIC_SENTENCE_SHARE = 0.3;
+
+export function topicQuestionCount(topicWordCount: number): number {
+  return Math.ceil(topicWordCount * TOPIC_COVERAGE);
+}
+
+export function topicSentenceCount(questionCount: number): number {
+  return Math.round(questionCount * TOPIC_SENTENCE_SHARE);
+}
+
+// The topic practice quiz. Same three multiple-choice styles as the daily
+// quiz, plus AI-graded sentence production for ~30% of the questions, over
+// `TOPIC_COVERAGE` of the topic's words. Seeded on the topic alone, so the
+// draw and ordering survive a reload mid-quiz.
+export function buildTopicQuizQuestions(
+  topicWords: Word[],
+  distractorPool: DistractorWord[],
+  seed: string,
+): Question[] {
+  const rng = mulberry32(hashString(seed));
+  const pool = [...distractorPool].sort((a, b) => a.id.localeCompare(b.id));
+
+  const ordered = [...topicWords].sort((a, b) => a.id.localeCompare(b.id));
+  const total = topicQuestionCount(ordered.length);
+  const targets = seededShuffle(ordered, rng).slice(0, total);
+  const sentences = topicSentenceCount(total);
+
+  // Counted separately from the question index so the multiple-choice styles
+  // still rotate evenly once the sentence questions are lifted out.
+  let objectiveIndex = 0;
+
+  return targets.map((target, i) => {
+    // Spaces the sentence questions evenly across the quiz (the same trick a
+    // line-drawing algorithm uses) instead of clumping them at one end.
+    const isSentence =
+      Math.floor((i * sentences) / total) < Math.floor(((i + 1) * sentences) / total);
+
+    if (isSentence) {
+      return {
+        id: `topic-sentence-${target.id}`,
+        type: "sentence",
+        wordId: target.id,
+        word: target.word,
+        prompt: `Use "${target.word}" in a sentence that shows you understand its meaning.`,
+      };
+    }
+
+    return buildObjectiveQuestion(
+      target,
+      pool,
+      rng,
+      KIND_CYCLE[objectiveIndex++ % KIND_CYCLE.length],
+    );
+  });
+}
+
 export type BandQuestion = {
   id: string;
   bandLevel: number | null;

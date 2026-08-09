@@ -98,6 +98,9 @@ export async function gradeSentenceAnswer(
   wordId: string,
   sentence: string,
   kind: QuizKind = "weekly",
+  // Practice quizzes (the topic tab) still want the AI grade and feedback, but
+  // nothing about them is saved and they leave the review schedule alone.
+  persist = true,
 ) {
   const supabase = await createClient();
   const {
@@ -124,6 +127,8 @@ export async function gradeSentenceAnswer(
   // sometimes echoes the sentence back verbatim, which is equally unhelpful.
   const rawSuggestion = typeof result.suggestion === "string" ? result.suggestion.trim() : "";
   const suggestion = rawSuggestion === sentence.trim() ? "" : rawSuggestion;
+
+  if (!persist) return { isCorrect, feedback, suggestion };
 
   const quizId = await getOrCreateQuiz(supabase, user.id, kind);
 
