@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { recordObjectiveAnswer, gradeSentenceAnswer } from "@/app/quiz/actions";
+import { MAX_SENTENCE_LENGTH } from "@/lib/quiz-limits";
 import type { QuizKind } from "@/lib/quiz-dates";
 
 // `type` says how the question is framed, and is also what gets written to
@@ -119,6 +120,7 @@ export default function QuizPlayer({
   initialCorrect = 0,
   initialAnswers,
   quizKind = "daily",
+  quizTopic,
   persist = true,
   onFinishNote,
 }: {
@@ -127,8 +129,12 @@ export default function QuizPlayer({
   initialCorrect?: number;
   initialAnswers?: AnswerLog;
   quizKind?: QuizKind;
-  // Practice quizzes (the topic demo) render the same way but write nothing
-  // to quiz_answers and don't touch the review schedule.
+  // Which topic a `quizKind="topic"` quiz belongs to — it's what identifies
+  // the quizzes row, since topic quizzes aren't tied to a date.
+  quizTopic?: string;
+  // Render and grade, but write nothing to quiz_answers. Note that a topic
+  // quiz does persist (so it can be resumed) while still leaving the review
+  // schedule alone — that's decided server-side, not here.
   persist?: boolean;
   onFinishNote?: string;
 }) {
@@ -199,7 +205,7 @@ export default function QuizPlayer({
       try {
         // Practice quizzes are still graded — `persist` only decides whether
         // the answer is written down and counted toward the review schedule.
-        const result = await gradeSentenceAnswer(q.wordId, text, quizKind, persist);
+        const result = await gradeSentenceAnswer(q.wordId, text, quizKind, persist, quizTopic);
         setSentenceResult(result);
         logAnswer(q.wordId, { ...result, userAnswer: text });
         if (result.isCorrect) setCorrectCount((c) => c + 1);
@@ -221,7 +227,9 @@ export default function QuizPlayer({
     if (correct) setCorrectCount((c) => c + 1);
     if (persist) {
       startTransition(() => {
-        recordObjectiveAnswer(q.wordId, q.type, answerText, correct, quizKind).catch(() => {});
+        recordObjectiveAnswer(q.wordId, q.type, answerText, correct, quizKind, quizTopic).catch(
+          () => {},
+        );
       });
     }
   }
@@ -269,6 +277,9 @@ export default function QuizPlayer({
             disabled={submitted}
             onChange={(e) => setText(e.target.value)}
             rows={3}
+            // The server enforces this too — this only saves the learner from
+            // typing past the limit and being turned away after submitting.
+            maxLength={MAX_SENTENCE_LENGTH}
             placeholder="Write your sentence here"
             className="mt-4 w-full rounded-lg border border-text/10 bg-background px-4 py-2.5 text-sm text-text outline-none focus:border-primary"
           />

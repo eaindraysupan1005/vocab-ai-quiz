@@ -17,7 +17,7 @@ export async function toggleWordLearned(wordId: string, learned: boolean) {
   if (learned) {
     const { data: existing } = await supabase
       .from("user_words")
-      .select("times_seen")
+      .select("times_seen, learned_at")
       .eq("user_id", user.id)
       .eq("word_id", wordId)
       .maybeSingle();
@@ -34,7 +34,15 @@ export async function toggleWordLearned(wordId: string, learned: boolean) {
         // off is learning it, not recalling it. Leaving it to quiz answers
         // alone is what lets the daily quiz tell which of the day's words it
         // has already tested.
-        learned_at: new Date().toISOString(),
+
+        // `learned_at` is stamped on the first check-off only. A word that
+        // dropped back to "learning" after a missed quiz answer is re-checked
+        // here, and restamping it made every relearn look like a brand-new
+        // word: it re-entered "Learned this week" on /progress and pulled
+        // months-old words into the weekly quiz's "learned in the past 7
+        // days". Unchecking clears the stamp, so undo-then-redo still dates
+        // from the redo.
+        learned_at: existing?.learned_at ?? new Date().toISOString(),
         next_review_date,
       },
       { onConflict: "user_id,word_id" },

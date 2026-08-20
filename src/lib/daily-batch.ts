@@ -1,5 +1,6 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database, WordStatus } from "@/lib/supabase/database.types";
+import { todayIso } from "@/lib/dates";
 
 export const BATCH_SIZE = 20;
 
@@ -9,10 +10,6 @@ export type BatchWord = Database["public"]["Tables"]["words"]["Row"] & {
 };
 
 type AssignedRow = { word_id: string; status: WordStatus; created_at: string };
-
-function todayIso() {
-  return new Date().toISOString().slice(0, 10);
-}
 
 async function hydrateBatch(
   supabase: SupabaseClient<Database>,
@@ -81,26 +78,15 @@ export async function getDailyBatch(
 
   let newWordIds: string[] = [];
   if (remaining > 0) {
-    const { data: seenRows, error: seenError } = await supabase
-      .from("user_words")
-      .select("word_id")
-      .eq("user_id", userId);
-    if (seenError) throw seenError;
-
-    const seenIds = (seenRows ?? []).map((row) => row.word_id);
-
-    let query = supabase
-      .from("words")
-      .select("id")
-      .order("band_level", { ascending: true })
-      .order("word", { ascending: true })
-      .limit(remaining);
-
-    if (seenIds.length > 0) {
-      query = query.not("id", "in", `(${seenIds.join(",")})`);
-    }
-
-    const { data: newWords, error: newError } = await query;
+    // Done in Postgres (see `unseen_words` in supabase/schema.sql) rather than
+    // by fetching every word the user has seen and excluding those ids here.
+    // That list went into the query string, so it outgrew PostgREST's URL
+    // limit at a few hundred learned words — and the fetch itself was capped
+    // at 1000 rows, so past that the user would start being re-shown words
+    // they had already learned.
+    const { data: newWords, error: newError } = await supabase.rpc("unseen_words", {
+      p_limit: remaining,
+    });
     if (newError) throw newError;
 
     newWordIds = (newWords ?? []).map((word) => word.id);
@@ -142,10 +128,17 @@ export async function getDailyBatch(
   return hydrateBatch(supabase, assigned, today);
 }
 
-// Whether the user has finished (checked off) every word in today's pinned
-// batch. Used to gate the daily quiz — you must finish learning today's
-// words before you can be quizzed on them. Returns false if today's batch
-// hasn't been assigned yet (i.e. the user hasn't visited Learn today).
+// Whether the user has checked off every word in today's pinned batch. Used
+// to gate the daily quiz — you must finish learning today's words before you
+// can be quizzed on them. Returns false if today's batch hasn't been assigned
+// yet (i.e. the user hasn't visited Learn today).
+//
+// "Checked off" is `status != 'new'`, not `status == 'learned'`. A word the
+// user gets wrong in the quiz drops to `'learning'` while still sitting in
+// today's batch, so requiring 'learned' re-locked the quiz on the first wrong
+// answer — unmounting the player mid-quiz and sending the learner back to
+// Daily Words. Only `'new'` means "never checked off", which is what the gate
+// is actually asking about.
 export async function isDailyBatchComplete(
   supabase: SupabaseClient<Database>,
   userId: string,
@@ -160,5 +153,5 @@ export async function isDailyBatchComplete(
   if (error) throw error;
 
   if (!data || data.length === 0) return false;
-  return data.every((row) => row.status === "learned");
+  return data.every((row) => row.status !== "new");
 }

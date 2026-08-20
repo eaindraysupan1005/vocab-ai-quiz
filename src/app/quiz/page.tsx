@@ -6,29 +6,28 @@ import {
   buildWeeklyQuizQuestions,
   buildBandLevelQuestions,
   buildTopicQuizQuestions,
+  planTopicQuiz,
+  aiMcqTargets,
   weeklyQuestionCount,
   topicQuestionCount,
-  topicSentenceCount,
+  topicAiCount,
+  TOPIC_MAX_QUESTIONS,
 } from "@/lib/quiz-generation";
+import { fetchDistractorPool } from "@/lib/distractor-pool";
+import { ensureAiQuestions } from "@/lib/ai-questions";
 import { todayIso, weekStartIso } from "@/lib/quiz-dates";
 import QuizPlayer, { type AnswerLog } from "@/components/QuizPlayer";
 import BandLevelQuiz from "@/components/BandLevelQuiz";
 import QuizTabs, { type QuizTab } from "@/components/QuizTabs";
-import TopicCards, { countTopics } from "@/components/TopicCards";
+import TopicCards from "@/components/TopicCards";
+import { fetchTopicCounts } from "@/lib/topics";
 import AppShell from "@/components/AppShell";
 
 type Supabase = Awaited<ReturnType<typeof createClient>>;
 
-// The whole bank, minus the columns distractors never use — options are picked
-// by topic/band/part-of-speech proximity, so narrowing the pool first would
-// leave too few good matches to choose from.
-function fetchDistractorPool(supabase: Supabase) {
-  return supabase
-    .from("words")
-    .select("id, word, definition, band_level, topic, synonyms")
-    .order("id", { ascending: true })
-    .limit(5000);
-}
+// PostgREST caps a response at 1000 rows regardless of `.limit()`, so a query
+// that has to see a whole topic asks for a page at a time.
+const PAGE_SIZE = 1000;
 
 // Where to resume a partly-finished quiz, and the score so far. Answers are
 // matched by word, which works because a word is asked at most once per quiz.
@@ -115,9 +114,9 @@ async function loadDailyQuiz(supabase: Supabase, userId: string) {
     return { questions: [], startIndex: 0, correctCount: 0, initialAnswers: {} as AnswerLog };
   }
 
-  const [{ data: batchWords }, { data: pool }] = await Promise.all([
+  const [{ data: batchWords }, pool] = await Promise.all([
     supabase.from("words").select("*").in("id", batchIds),
-    fetchDistractorPool(supabase),
+    fetchDistractorPool(),
   ]);
 
   // `last_reviewed_at` is only ever set by answering a quiz question, so it
@@ -133,7 +132,7 @@ async function loadDailyQuiz(supabase: Supabase, userId: string) {
 
   const questions = buildDailyQuizQuestions(
     batchWords ?? [],
-    pool ?? [],
+    pool,
     `${userId}:${today}`,
     undefined,
     alreadyTested,
@@ -177,7 +176,7 @@ async function loadWeeklyQuiz(supabase: Supabase, userId: string) {
     };
   }
 
-  const [{ data: words }, { data: pool }] = await Promise.all([
+  const [{ data: words }, pool] = await Promise.all([
     supabase
       .from("words")
       .select("*")
@@ -185,7 +184,7 @@ async function loadWeeklyQuiz(supabase: Supabase, userId: string) {
         "id",
         rows.map((r) => r.word_id),
       ),
-    fetchDistractorPool(supabase),
+    fetchDistractorPool(),
   ]);
 
   const missesByWord = new Map(rows.map((r) => [r.word_id, r.times_wrong]));
@@ -196,7 +195,7 @@ async function loadWeeklyQuiz(supabase: Supabase, userId: string) {
 
   const questions = buildWeeklyQuizQuestions(
     learned,
-    pool ?? [],
+    pool,
     `${userId}:weekly:${weekStart}`,
   );
   const answers = await fetchAnswers(supabase, quiz?.id);
@@ -204,16 +203,33 @@ async function loadWeeklyQuiz(supabase: Supabase, userId: string) {
   return { ...resumeState(questions, answers), learnedCount: learned.length };
 }
 
-// Practice quiz for a single topic: three quarters of the topic's words, mixing
-// multiple choice with AI-graded sentence production. Graded but not saved, and
-// it doesn't affect the review schedule.
-async function loadTopicQuiz(supabase: Supabase, topic: string) {
-  const [{ data: topicWords }, { data: pool }] = await Promise.all([
-    supabase.from("words").select("*").eq("topic", topic).limit(2000),
-    fetchDistractorPool(supabase),
+// Practice quiz for a single topic: four fifths of the topic's words, 60% of
+// the questions from Gemini (AI-written multiple choice + AI-graded sentence
+// production). Graded but not saved, and it doesn't affect the review schedule.
+//
+// The AI multiple choice is generated here rather than at answer time because
+// the question has to exist before it can be shown. `ensureAiQuestions` serves
+// the cache when it's warm, so only the first visit to a topic pays for it.
+async function loadTopicQuiz(supabase: Supabase, userId: string, topic: string) {
+  const [{ data: topicWords }, pool, { data: quiz }] = await Promise.all([
+    supabase.from("words").select("*").eq("topic", topic).limit(PAGE_SIZE),
+    fetchDistractorPool(),
+    supabase
+      .from("quizzes")
+      .select("id")
+      .eq("user_id", userId)
+      .eq("type", "topic")
+      .eq("topic", topic)
+      .maybeSingle(),
   ]);
 
-  return buildTopicQuizQuestions(topicWords ?? [], pool ?? [], `topic:${topic}`);
+  const seed = `topic:${topic}`;
+  const plan = planTopicQuiz(topicWords ?? [], seed);
+  const aiQuestions = await ensureAiQuestions(supabase, aiMcqTargets(plan));
+  const questions = buildTopicQuizQuestions(plan, pool, seed, aiQuestions);
+  const answers = await fetchAnswers(supabase, quiz?.id);
+
+  return resumeState(questions, answers);
 }
 
 function Blurb({ children }: { children: React.ReactNode }) {
@@ -247,7 +263,7 @@ export default async function QuizPage({
   let daily: Awaited<ReturnType<typeof loadDailyQuiz>> | null = null;
   let weekly: Awaited<ReturnType<typeof loadWeeklyQuiz>> | null = null;
   let topics: [string, number][] = [];
-  let topicQuestions: Awaited<ReturnType<typeof loadTopicQuiz>> = [];
+  let topicQuiz: Awaited<ReturnType<typeof loadTopicQuiz>> | null = null;
   let bandQuestions: ReturnType<typeof buildBandLevelQuestions> = [];
 
   if (user) {
@@ -263,16 +279,18 @@ export default async function QuizPage({
 
     if (activeTab === "topic") {
       if (topic) {
-        topicQuestions = await loadTopicQuiz(supabase, topic);
+        topicQuiz = await loadTopicQuiz(supabase, user.id, topic);
       } else {
-        const { data: rows } = await supabase.from("words").select("topic").limit(10000);
-        topics = countTopics(rows ?? []);
+        topics = await fetchTopicCounts(supabase);
       }
     }
 
     if (activeTab === "band") {
-      const { data: bandPool } = await supabase.from("words").select("*").limit(60);
-      bandQuestions = buildBandLevelQuestions(bandPool ?? [], 10);
+      // A stratified sample from the database, not the first 60 rows it
+      // happened to return — the test is meaningless unless the words are
+      // spread across the bands it claims to measure.
+      const { data: bandPool } = await supabase.rpc("band_sample", { p_per_band: 8 });
+      bandQuestions = buildBandLevelQuestions(bandPool ?? []);
     }
   }
 
@@ -355,9 +373,11 @@ export default async function QuizPage({
           <>
             <Blurb>
               Practice quiz on <span className="font-medium capitalize">{topic}</span> —{" "}
-              {topicQuestions.length} questions covering 75% of the topic&apos;s words, of which{" "}
-              {topicSentenceCount(topicQuestions.length)} ask you to write a sentence, graded by AI.
-              It isn&apos;t saved and doesn&apos;t affect your review schedule.
+              {topicQuiz?.questions.length ?? 0} questions drawn from the topic&apos;s words.{" "}
+              {topicAiCount(topicQuiz?.questions.length ?? 0)} of them come from AI: half ask you to
+              spot the sentence that uses the word correctly, half ask you to write a sentence of
+              your own for AI grading. Your place is saved as you go, so you can stop and come back
+              — but this is practice, so it doesn&apos;t affect your review schedule.
             </Blurb>
 
             <div className="w-full max-w-3xl">
@@ -380,8 +400,16 @@ export default async function QuizPage({
               </Link>
             </div>
 
-            {topicQuestions.length > 0 ? (
-              <QuizPlayer questions={topicQuestions} persist={false} />
+            {topicQuiz && topicQuiz.questions.length > 0 ? (
+              <QuizPlayer
+                questions={topicQuiz.questions}
+                startIndex={topicQuiz.startIndex}
+                initialCorrect={topicQuiz.correctCount}
+                initialAnswers={topicQuiz.initialAnswers}
+                quizKind="topic"
+                quizTopic={topic}
+                onFinishNote="Practice only — your review schedule is unchanged."
+              />
             ) : (
               <p className="mt-12 text-text/70">No words in this topic yet.</p>
             )}
@@ -389,9 +417,10 @@ export default async function QuizPage({
         ) : (
           <>
             <Blurb>
-              Pick a topic to practise the words in it. Each quiz covers 75% of that topic&apos;s
-              words, with about three in ten asking you to write a sentence for AI grading. Nothing
-              is saved and your review schedule is untouched.
+              Pick a topic to practise the words in it. Each quiz is up to {TOPIC_MAX_QUESTIONS}{" "}
+              questions drawn from that topic, and 60% of them are AI — half AI-written multiple
+              choice, half sentences you write for AI grading. Your place is saved as you go;
+              they&apos;re practice, so your review schedule is untouched.
             </Blurb>
 
             <div className="w-full max-w-5xl">

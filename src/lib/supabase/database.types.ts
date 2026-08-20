@@ -2,7 +2,7 @@
 // regenerate with `supabase gen types typescript` and replace this file.
 
 export type WordStatus = "new" | "learning" | "learned";
-export type QuizType = "daily" | "weekly";
+export type QuizType = "daily" | "weekly" | "topic";
 export type QuestionType = "mcq" | "fill_blank" | "sentence";
 
 export interface Database {
@@ -30,6 +30,28 @@ export interface Database {
           created_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["words"]["Insert"]>;
+        Relationships: [];
+      };
+      ai_questions: {
+        Row: {
+          id: string;
+          word_id: string;
+          prompt: string;
+          options: string[];
+          correct_option: string;
+          model: string;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          word_id: string;
+          prompt: string;
+          options: string[];
+          correct_option: string;
+          model?: string;
+          created_at?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["ai_questions"]["Insert"]>;
         Relationships: [];
       };
       user_words: {
@@ -69,14 +91,18 @@ export interface Database {
           id: string;
           user_id: string;
           type: QuizType;
-          quiz_date: string;
+          // Dated for daily/weekly, null for topic; `topic` is the other way
+          // round. Enforced by quizzes_date_or_topic_check.
+          quiz_date: string | null;
+          topic: string | null;
           created_at: string;
         };
         Insert: {
           id?: string;
           user_id: string;
           type: QuizType;
-          quiz_date: string;
+          quiz_date?: string | null;
+          topic?: string | null;
           created_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["quizzes"]["Insert"]>;
@@ -110,9 +136,45 @@ export interface Database {
         Update: Partial<Database["public"]["Tables"]["quiz_answers"]["Insert"]>;
         Relationships: [];
       };
+      // Written only by `claim_ai_grade` (security definer). Readable by its
+      // owner; there is no insert or update policy, so the Insert/Update
+      // shapes below are for completeness rather than for the app to use.
+      ai_usage: {
+        Row: {
+          user_id: string;
+          usage_date: string;
+          sentence_grades: number;
+        };
+        Insert: {
+          user_id: string;
+          usage_date: string;
+          sentence_grades?: number;
+        };
+        Update: Partial<Database["public"]["Tables"]["ai_usage"]["Insert"]>;
+        Relationships: [];
+      };
     };
     Views: Record<string, never>;
-    Functions: Record<string, never>;
+    Functions: {
+      topic_counts: {
+        Args: Record<string, never>;
+        Returns: { topic: string; word_count: number }[];
+      };
+      unseen_words: {
+        Args: { p_limit: number };
+        Returns: Database["public"]["Tables"]["words"]["Row"][];
+      };
+      band_sample: {
+        Args: { p_per_band?: number };
+        Returns: Database["public"]["Tables"]["words"]["Row"][];
+      };
+      // Spends one unit of the caller's daily AI allowance; false means they
+      // were already over `p_limit`.
+      claim_ai_grade: {
+        Args: { p_day: string; p_limit: number };
+        Returns: boolean;
+      };
+    };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;
   };

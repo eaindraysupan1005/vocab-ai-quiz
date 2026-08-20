@@ -2,18 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import type { BandQuestion } from "@/lib/quiz-generation";
-
-function estimateBand(questions: BandQuestion[], correctIds: Set<string>): number | null {
-  const correctBands = questions
-    .filter((q) => correctIds.has(q.id))
-    .map((q) => q.bandLevel)
-    .filter((b): b is number => b != null);
-
-  if (correctBands.length === 0) return null;
-  const avg = correctBands.reduce((sum, b) => sum + b, 0) / correctBands.length;
-  return Math.round(avg * 2) / 2;
-}
+import { estimateBand, type BandQuestion } from "@/lib/quiz-generation";
 
 export default function BandLevelQuiz({ questions }: { questions: BandQuestion[] }) {
   const router = useRouter();
@@ -29,7 +18,7 @@ export default function BandLevelQuiz({ questions }: { questions: BandQuestion[]
 
   if (finished) {
     const score = correctIds.size;
-    const band = estimateBand(questions, correctIds);
+    const { band, breakdown } = estimateBand(questions, correctIds);
 
     return (
       <div className="w-full max-w-2xl rounded-xl border border-primary/30 bg-primary/[0.06] p-6 text-center shadow-sm">
@@ -38,11 +27,35 @@ export default function BandLevelQuiz({ questions }: { questions: BandQuestion[]
           You scored {score} of {questions.length}.
         </p>
         <p className="mt-3 text-2xl font-semibold text-primary">
-          {band != null ? `Estimated band: ${band.toFixed(1)}` : "Not enough correct answers to estimate a band"}
+          {band != null
+            ? `Estimated band: ${band.toFixed(1)}`
+            : `Below band ${breakdown[0]?.band.toFixed(1) ?? "5.0"}`}
         </p>
-        <p className="mt-2 text-xs text-text/50">
-          This is a rough demo estimate based on the band level of the words you got right — not an
-          official IELTS score.
+
+        {/* Where they stopped matters more than the single number — the
+            estimate is the last rung they cleared, so showing the rungs makes
+            it obvious why. */}
+        <div className="mt-4 flex flex-col gap-1.5">
+          {breakdown.map((rung) => {
+            const cleared = rung.correct * 2 > rung.total;
+            return (
+              <div
+                key={rung.band}
+                className="flex items-center justify-between gap-3 rounded-lg border border-text/10 px-4 py-2 text-sm"
+              >
+                <span className="text-text/70">Band {rung.band.toFixed(1)}</span>
+                <span className={cleared ? "text-green-700 dark:text-green-400" : "text-text/50"}>
+                  {rung.correct} of {rung.total}
+                  {cleared ? " · cleared" : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+
+        <p className="mt-4 text-xs text-text/50">
+          A rough demo estimate: the highest level where you got more than half right, counting up
+          from the easiest and stopping at the first one you missed. Not an official IELTS score.
         </p>
         <button
           type="button"

@@ -1,8 +1,4 @@
-function addDaysIso(days: number): string {
-  const d = new Date();
-  d.setDate(d.getDate() + days);
-  return d.toISOString().slice(0, 10);
-}
+import { addDaysIso } from "@/lib/dates";
 
 // Days until the next review, by how many rungs up the ladder a word has
 // climbed. A word seen correctly again and again backs off quickly; the top

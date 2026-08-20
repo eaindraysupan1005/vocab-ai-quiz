@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import AppShell from "@/components/AppShell";
-import TopicCards, { countTopics } from "@/components/TopicCards";
+import TopicCards from "@/components/TopicCards";
+import { fetchTopicCounts } from "@/lib/topics";
 
 export default async function TopicsPage() {
   const supabase = await createClient();
@@ -8,8 +9,7 @@ export default async function TopicsPage() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const { data: rows } = await supabase.from("words").select("topic").limit(10000);
-  const topics = countTopics(rows ?? []);
+  const topics = await fetchTopicCounts(supabase);
 
   return (
     <AppShell title="Topics" email={user?.email}>

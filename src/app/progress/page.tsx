@@ -2,23 +2,16 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { BATCH_SIZE } from "@/lib/daily-batch";
 import { weekStartIso } from "@/lib/quiz-dates";
+import { addDaysIso, isoDayOf, startOfDayUtc } from "@/lib/dates";
 import AppShell from "@/components/AppShell";
 
 // One full batch a day, every day of the week.
 const WEEKLY_GOAL = BATCH_SIZE * 7;
 const TREND_DAYS = 7;
 
-function isoDay(date: Date) {
-  return date.toISOString().slice(0, 10);
-}
-
 function lastNDays(n: number): string[] {
   const days: string[] = [];
-  for (let i = n - 1; i >= 0; i--) {
-    const d = new Date();
-    d.setDate(d.getDate() - i);
-    days.push(isoDay(d));
-  }
+  for (let i = n - 1; i >= 0; i--) days.push(addDaysIso(-i));
   return days;
 }
 
@@ -55,9 +48,8 @@ export default async function ProgressPage() {
   }
 
   const weekStart = weekStartIso();
-  const trendStart = new Date();
-  trendStart.setDate(trendStart.getDate() - (TREND_DAYS - 1));
-  trendStart.setHours(0, 0, 0, 0);
+  const trendDays = lastNDays(TREND_DAYS);
+  const trendStart = startOfDayUtc(trendDays[0]);
 
   const [
     { count: learnedThisWeek },
@@ -69,7 +61,7 @@ export default async function ProgressPage() {
       .from("user_words")
       .select("word_id", { count: "exact", head: true })
       .eq("user_id", user.id)
-      .gte("learned_at", `${weekStart}T00:00:00.000Z`),
+      .gte("learned_at", startOfDayUtc(weekStart)),
     supabase
       .from("user_words")
       .select("word_id", { count: "exact", head: true })
@@ -79,7 +71,7 @@ export default async function ProgressPage() {
       .from("quiz_answers")
       .select("created_at, is_correct")
       .eq("user_id", user.id)
-      .gte("created_at", trendStart.toISOString()),
+      .gte("created_at", trendStart),
     supabase
       .from("user_words")
       .select("word_id, times_correct, times_wrong")
@@ -93,14 +85,14 @@ export default async function ProgressPage() {
   // never move once enough answers pile up.
   const perDay = new Map<string, { correct: number; total: number }>();
   for (const answer of recentAnswers ?? []) {
-    const day = answer.created_at.slice(0, 10);
+    const day = isoDayOf(answer.created_at);
     const entry = perDay.get(day) ?? { correct: 0, total: 0 };
     entry.total++;
     if (answer.is_correct) entry.correct++;
     perDay.set(day, entry);
   }
 
-  const trend = lastNDays(TREND_DAYS).map((day) => {
+  const trend = trendDays.map((day) => {
     const entry = perDay.get(day);
     return {
       day,

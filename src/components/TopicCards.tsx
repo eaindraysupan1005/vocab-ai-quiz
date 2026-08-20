@@ -47,13 +47,3 @@ export default function TopicCards({
     </ul>
   );
 }
-
-// Counts words per topic from a bare list of topic values.
-export function countTopics(rows: { topic: string | null }[]): [string, number][] {
-  const counts = new Map<string, number>();
-  for (const row of rows) {
-    if (!row.topic) continue;
-    counts.set(row.topic, (counts.get(row.topic) ?? 0) + 1);
-  }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1]);
-}
