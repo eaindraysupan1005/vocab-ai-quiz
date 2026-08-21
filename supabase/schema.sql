@@ -237,7 +237,7 @@ $$;
 create or replace function unseen_words(p_limit int)
 returns setof words
 language sql
-stable
+volatile
 as $$
   select w.*
   from words w
@@ -245,7 +245,7 @@ as $$
     select 1 from user_words uw
     where uw.word_id = w.id and uw.user_id = auth.uid()
   )
-  order by w.band_level asc nulls last, w.word asc
+  order by random()
   limit p_limit;
 $$;
 

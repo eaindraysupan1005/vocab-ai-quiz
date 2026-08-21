@@ -165,6 +165,11 @@ Not roadmap steps — corrections to things that were quietly wrong across the a
   before rather than breaking it for everyone.
   *Not covered:* topic-quiz question generation, which is bounded a different way — it's capped per
   request and fills a shared cache, so it converges instead of recurring.
+- **`unseen_words` now orders randomly instead of by `band_level asc`.** Band 5.0/5.5 alone hold
+  185 of the bank's 2,060 words — more than a full 20-word batch — so every brand-new account's
+  first several days of Daily Words were 100% band 5, and any later top-up from the unseen pool hit
+  the lowest remaining band first rather than sampling across 5.0–9.0.
+  ([006](../supabase/migrations/20260821000001_random-unseen-words.sql), applied 2026-08-21.)
 - **Topic quizzes are capped at `TOPIC_MAX_QUESTIONS` (40).** The 80% coverage rule was written
   before anyone looked at the real topic sizes. `topic_counts` against the live bank gives
   `general` 553 of 2060 words, so 80% of it was a **443-question quiz asking for 133 AI-graded
@@ -188,12 +193,13 @@ idempotent statements live in `supabase/migrations/`, named for the Supabase CLI
 [002 — topic quizzes](../supabase/migrations/20260818090002_quizzes-topic.sql),
 [003 — the RPCs](../supabase/migrations/20260818090003_rpcs.sql),
 [004 — close the ai_questions insert hole](../supabase/migrations/20260818090004_ai-questions-lockdown.sql),
-[005 — the AI usage allowance](../supabase/migrations/20260818090005_ai-usage.sql).
+[005 — the AI usage allowance](../supabase/migrations/20260818090005_ai-usage.sql),
+[006 — random unseen-word ordering](../supabase/migrations/20260821000001_random-unseen-words.sql).
 
-**All five are applied to the live database** (`supabase db push`, run 2026-08-21) — the AI
-question cache, topic quizzes, the three RPCs, and both fixes above are live. The topic quiz,
-topic cards, the daily batch's new-word pick, and the band test all depend on this and now work
-against the real database.
+**All six are applied to the live database** (`supabase db push`, run 2026-08-21) — the AI
+question cache, topic quizzes, the three RPCs, both fixes above, and the random-order fix are all
+live. The topic quiz, topic cards, the daily batch's new-word pick, and the band test all depend on
+this and now work against the real database.
 
 ## Tech stack
 Next.js (frontend + API routes) · PostgreSQL via Supabase · Supabase Auth · Google Gemini API ·
