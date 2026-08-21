@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -55,9 +56,9 @@ export default function Sidebar() {
     <aside className="relative z-10 flex w-20 shrink-0 flex-col items-center gap-6 border-r border-text/10 bg-background py-5 shadow-[2px_0_10px_-4px_rgba(0,0,0,0.12)]">
       <Link
         href="/"
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-[#0f1704] shadow-sm"
+        className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full shadow-sm"
       >
-        V
+        <Image src="/Logo.png" alt="Vocably" width={40} height={40} className="h-full w-full object-cover" />
       </Link>
 
       <nav className="flex flex-col items-stretch gap-2">

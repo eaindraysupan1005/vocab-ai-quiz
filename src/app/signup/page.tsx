@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 import PasswordInput from "@/components/PasswordInput";
@@ -14,7 +15,8 @@ export default async function SignupPage({
   return (
     <div className="flex flex-1 flex-col bg-background text-text">
       <header className="flex items-center justify-between px-6 py-5">
-        <Link href="/" className="text-lg font-semibold">
+        <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
+          <Image src="/Logo.png" alt="Vocably" width={28} height={28} className="rounded-full" />
           Vocably
         </Link>
         <ThemeToggle />

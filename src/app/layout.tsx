@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "Vocably — IELTS Vocabulary Prep",
   description:
     "Learn a daily batch of IELTS vocabulary, get quizzed on it, and track your progress toward band 8.0.",
+  icons: {
+    icon: "/Logo.png",
+    apple: "/Logo.png",
+  },
 };
 
 const themeInitScript = `
